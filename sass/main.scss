@@ -1,0 +1,177 @@
+$primary: #F6F7FF;
+$white: #f0f0f0;
+$primary-rgb: rgb(17, 30, 86);
+
+/* @import '../node_modules/bootstrap/scss/bootstrap.scss'; */
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+    transition: $property $duration $ease;
+  }
+
+  * {
+    box-sizing: border-box;
+    &::before, &::after {
+      box-sizing: border-box;
+    }
+  }
+    
+  //bug on BS variables file, bs-primary-rgb does not change
+  .bg-primary{
+    //background-color: $primary-rgb !important;
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(40% 30% at -25% -15%, #4A46C8FF 6%, #073AFF00 100%),radial-gradient(42% 53% at 15% 111%, #4F3558FF 20%, #073AFF00 100%),radial-gradient(50% 50% at 115% 70%, #22325DFF 57%, #073AFF00 100%),radial-gradient(50% 54% at 72% 23%, #0F1F53FF 44%, #073AFF00 100%),radial-gradient(50% 73% at 96% 74%, #111e56 9%, #1C2864FF 56%, #073AFF00 100%),linear-gradient(125deg, #111e56 1%, #111e56 100%);
+  }
+  
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: "Work Sans", sans-serif;
+    &.learn-more {
+      width: 12rem;
+      height: auto;
+      .circle {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: #0d9ea9;
+        border-radius: 1.625rem;
+        .icon {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          background: $white;
+          &.arrow {
+            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+            left: 0.625rem;
+            width: 1.125rem;
+            height: 0.125rem;
+            background: none;
+            &::before {
+              position: absolute;
+              content: '';
+              top: -0.25rem;
+              right: 0.0625rem;
+              width: 0.625rem;
+              height: 0.625rem;
+              border-top: 0.125rem solid #fff;
+              border-right: 0.125rem solid #fff;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+      .button-text {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: $white;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+    &:hover {
+      .circle {
+        width: 100%;
+        .icon {
+          &.arrow {
+          background: $white;
+          transform: translate(1rem, 0);
+          }
+        }
+      }
+      .button-text {
+        color: $white;
+      }
+    }
+  }
+  
+  @media screen and (min-width: 601px) {
+    .font-scale {
+      font-size: 18px;
+    }
+  }
+  
+  @media screen and (min-width: 801px) {
+    .font-scale {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .font-scale {
+      font-size: 24px;
+    }
+  }
+
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    .font-scale {
+      font-size: 16px;
+    }
+  }
+
+.company{
+  color: $blue-500;
+}
+
+.project-square{
+  padding: 16px;
+  border-radius: 8px;
+  background: linear-gradient(340.55deg,rgba(46,92,255,.15) -1.95%,rgba(0,0,0,0) 26.83%),linear-gradient(146.92deg,rgba(46,92,255,.15) 5.13%,rgba(0,0,0,0) 28.78%),linear-gradient(149.68deg,rgba(255,255,255,.1) 1.74%,rgba(255,255,255,0) 93.25%);
+  backdrop-filter: blur(12px);
+  border: rgb(255 255 255 / .1) solid 1px;
+  cursor: pointer;
+  font-family: "Work Sans, sans-serif";
+  font-weight: 600;
+  font-size: 16px;
+  transition-duration: 500ms;
+  transition-property: transform;
+  transition-timing-function: ease-in;
+  &:hover {
+    transform: scale(1.01, 1.01) translateZ(0px) translate3d(0px, 0px, 0px);
+    transition-duration: 300ms;
+    transition-property: transform, box-shadow;
+    transition-timing-function: ease-out;
+  };
+  & img{
+    border-radius: 6px;
+  }
+}
+
+.curtains-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.BasicPlane {
+  width: 100vw;
+  height: 100vh;
+}
+
+.BasicPlane img {
+  display: none;
+}
