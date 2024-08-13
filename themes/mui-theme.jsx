@@ -83,7 +83,7 @@ theme = createTheme(theme , {
         fontSize: 14,
         color: '#fff',
         fontFamily: "Work Sans, sans-serif",
-        lineHeight: "36px",
+        lineHeight: "32px",
         fontStyle: 'italic',
         fontWeight: 400,
         letterSpacing: '-.018em'

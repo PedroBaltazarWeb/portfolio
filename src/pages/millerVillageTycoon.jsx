@@ -103,7 +103,16 @@ const MillerVillageTycoonPage = () => {
                             <ProjectBasicInfo 
                                 info="Miller Village Tycoon gamifies the asthma monitoring process (Forced Expiratory Maneuver) for adolescents aged 14 to 17 by integrating it into a village-building game, aiming to enhance adherence to disease monitoring. Nevertheless, the main and only objective is to seamlessly incorporate the maneuver into the game's storyline.">
                             </ProjectBasicInfo>
-                            <ProjectSteps topic="1. Research & Interviews">
+                            <ProjectSteps topic="1. Research & Interviews"
+                                firstStepDescription="Gathering user insights and data to inform and guide the design process."
+                                secondStep="2. Concept"
+                                secondStepDescription= "Defining the project's vision and core ideas based on research findings."
+                                thirdStep= "3. Wireframing"
+                                thirdStepDescription= "Creating a structural blueprint of the design to outline key elements and user flow."
+                                fourthStep= "4. Prototype"
+                                fourthStepDescription= "Developing an interactive, testable version of the design to explore and refine functionality."
+                                fifthStep= "5. Evaluation"
+                                fifthStepDescription= "Assessing the prototype through user feedback and testing to identify areas for improvement.">
                             </ProjectSteps>
                         </Box>
                     }
@@ -163,7 +172,7 @@ const MillerVillageTycoonPage = () => {
                                 </Typography>
 
                                 <Box pb={2} pt={5} sx={{textAlign: 'center'}}>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RvKJQWcq8fQ?si=fQcRLi6qrt510hk6&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FV-Rb_LJ1j4?si=t9gOP1nkFKihoXlD&amp;controls=0&amp;start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                     <Typography variant="caption" component='p' pb={3} pt={2} textAlign='center'>What is FEM?</Typography>
                                 </Box> 
 
@@ -247,19 +256,31 @@ const MillerVillageTycoonPage = () => {
                     }
                     fourthProjectStep={
                         <ProjectSection topic="4. Prototype">
-                            <Typography variant="stepTitleHeader" mb={2}>Hi-Fi</Typography>
-                            <Box mx='auto'>
+                            <Typography variant="stepTitleHeader" mb={2} mt={3}>Hi-Fi</Typography>
+                            <Box mx='auto' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(5),
+                                            },
+                                        }}>
                                 <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fs0OQx8uxyLyBD134jB3W4f%2FHi-Fi-FEM%3Fnode-id%3D1-4%26starting-point-node-id%3D1%253A2%26show-proto-sidebar%3D1%26scaling%3Dscale-down%26t%3D8lX1z6yzrlFYKqLF-1" />
                             </Box>
                             <Typography variant="stepTitleHeader" mb={2}>Design System</Typography>
-                            <Box mx='auto'>
+                            <Box mx='auto' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(5),
+                                            },
+                                        }}>
                                 <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2F5dkB8O9OnEH5UvA9JGxzYx%2FDesign-System-of-Miller-Village-Tycoon%3Fnode-id%3D0-1%26t%3DGMrMy2bq17s5TG5w-1" />
                             </Box>
                         </ProjectSection>       
                     }
                     fifthProjectStep={
                         <ProjectSection backgroundColor="#0B1231" topic="5. Evaluation">
-                            <Typography variant="stepTitleHeader" mb={2} >Executive Summary</Typography>
+                            <Typography variant="stepTitleHeader" mb={2} mt={3}>Executive Summary</Typography>
                             <Box sx={{[theme.breakpoints.up('md')]: {padding: '32px 160px'}}}>
                                 <Accordion sx={{bgcolor: "#1a2241", color: "#fff" }}>
                                     <AccordionSummary
@@ -694,7 +715,7 @@ const MillerVillageTycoonPage = () => {
                     <Table sx={{ minWidth: 650 }} aria-label="simple table">
                         <TableHead>
                             <TableRow>
-                                <StyledTableCell><Typography variant="regularText" fontWeight="700">Participante</Typography></StyledTableCell>
+                                <StyledTableCell><Typography variant="regularText" fontWeight="700">Participant</Typography></StyledTableCell>
                                 <StyledTableCell><Typography variant="regularText" fontWeight="700">P1</Typography></StyledTableCell>
                                 <StyledTableCell><Typography variant="regularText" fontWeight="700">P2</Typography></StyledTableCell>
                                 <StyledTableCell><Typography variant="regularText" fontWeight="700">P3</Typography></StyledTableCell>
@@ -707,7 +728,7 @@ const MillerVillageTycoonPage = () => {
                         </TableHead>
                         <TableBody>
                             <StyledTableRow>
-                                <TableCell><Typography variant="regularText" fontWeight="700">Idade</Typography></TableCell>
+                                <TableCell><Typography variant="regularText" fontWeight="700">Age</Typography></TableCell>
                                 <TableCell><Typography variant="regularText">12</Typography></TableCell>
                                 <TableCell><Typography variant="regularText">35</Typography></TableCell>
                                 <TableCell><Typography variant="regularText">29</Typography></TableCell>
@@ -718,7 +739,7 @@ const MillerVillageTycoonPage = () => {
                                 <TableCell><Typography variant="regularText">24</Typography></TableCell>
                             </StyledTableRow>
                             <StyledTableRow>
-                                <TableCell><Typography variant="regularText" fontWeight="700">Sexo</Typography></TableCell>
+                                <TableCell><Typography variant="regularText" fontWeight="700">Gender</Typography></TableCell>
                                 <TableCell><Typography variant="regularText">M</Typography></TableCell>
                                 <TableCell><Typography variant="regularText">M</Typography></TableCell>
                                 <TableCell><Typography variant="regularText">F</Typography></TableCell>
@@ -730,85 +751,72 @@ const MillerVillageTycoonPage = () => {
                             </StyledTableRow>
 
                             <StyledTableRow>
-                                <TableCell><Typography variant="regularText" fontWeight="700">Asmático</Typography></TableCell>
+                                <TableCell><Typography variant="regularText" fontWeight="700">Asthmatic</Typography></TableCell>
 
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">S</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">S</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">No</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">No</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Yes</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">No</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">No</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">No</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">No</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Yes</Typography></TableCell>
                             </StyledTableRow>
 
                             <StyledTableRow>
-                                <TableCell><Typography variant="regularText" fontWeight="700">Tipo de teste</Typography></TableCell>
+                                <TableCell><Typography variant="regularText" fontWeight="700">Test type</Typography></TableCell>
 
-                                <TableCell><Typography variant="regularText">Presencial</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">In-person</Typography></TableCell>
                                 <TableCell><Typography variant="regularText">Online</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Presencial</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">In-person</Typography></TableCell>
                                 <TableCell><Typography variant="regularText">Online</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">S</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Online</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Online</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Online</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">In-person</Typography></TableCell>
                             </StyledTableRow>
                             
                             <StyledTableRow>
-                                <TableCell><Typography variant="regularText" fontWeight="700">Tipo de teste</Typography></TableCell>
+                                <TableCell><Typography variant="regularText" fontWeight="700">Accompanied</Typography></TableCell>
 
-                                <TableCell><Typography variant="regularText">Presencial</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Online</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Presencial</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Online</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">S</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">No</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">No</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">No</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Yes</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Yes</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Yes</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Yes</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">No</Typography></TableCell>
                             </StyledTableRow>
 
                             <StyledTableRow>
-                                <TableCell><Typography variant="regularText" fontWeight="700">Acompanhado</Typography></TableCell>
+                                <TableCell><Typography variant="regularText" fontWeight="700">Test environment</Typography></TableCell>
 
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">S</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">S</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">S</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">S</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">N</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Home</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Home</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Office</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Home</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Home</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Home</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Home</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Office</Typography></TableCell>
                             </StyledTableRow>
 
                             <StyledTableRow>
-                                <TableCell><Typography variant="regularText" fontWeight="700">Ambiente de teste</Typography></TableCell>
+                                <TableCell><Typography variant="regularText" fontWeight="700">Profession</Typography></TableCell>
 
-                                <TableCell><Typography variant="regularText">Casa</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Casa</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Escritório</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Casa</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Casa</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Casa</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Casa</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Escritório</Typography></TableCell>
-                            </StyledTableRow>
-
-                            <StyledTableRow>
-                                <TableCell><Typography variant="regularText" fontWeight="700">Profissão</Typography></TableCell>
-
-                                <TableCell><Typography variant="regularText">Estudante</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Student</Typography></TableCell>
                                 <TableCell><Typography variant="regularText">Interior Designer</Typography></TableCell>
                                 <TableCell><Typography variant="regularText">UX Designer</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Estudante</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Estudante</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Estudante</Typography></TableCell>
-                                <TableCell><Typography variant="regularText">Estudante</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Student</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Student</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Student</Typography></TableCell>
+                                <TableCell><Typography variant="regularText">Student</Typography></TableCell>
                                 <TableCell><Typography variant="regularText">UI Designer</Typography></TableCell>
                             </StyledTableRow>
 
                             <StyledTableRow>
-                                <TableCell><Typography variant="regularText" fontWeight="700">Nacionalidade</Typography></TableCell>
+                                <TableCell><Typography variant="regularText" fontWeight="700">Nationality</Typography></TableCell>
 
                                 <TableCell><Typography variant="regularText">PT</Typography></TableCell>
                                 <TableCell><Typography variant="regularText">PT</Typography></TableCell>
@@ -824,7 +832,7 @@ const MillerVillageTycoonPage = () => {
                 </TableContainer>
             </Box>
 
-            <Box mb={5}>
+            <Box mb={5} mt={4}>
                 <Accordion sx={{bgcolor: "#1a2241", color: "#fff" }}>
                     <AccordionSummary
                     expandIcon={<ExpandMoreIcon sx={{color: "#fff"}}/>}
@@ -994,7 +1002,7 @@ const MillerVillageTycoonPage = () => {
             Although seven out of the eight.            </Typography>
 
 
-                            <Box pt={2} mx='auto'>
+                            <Box pt={2} mx='auto' mb={5}>
                                 <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FAdnr2VrucX5ZQwjK9kV2BB%2FHuman-Results%3Fnode-id%3D0-1%26t%3DDpYpsbRUnbq4V665-1" />
                             </Box>
 
