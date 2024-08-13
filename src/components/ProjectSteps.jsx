@@ -34,7 +34,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
     return (
         <Grid container
             direction="row"
-            spacing={2}
+            spacing={5}
             my={5}
             py={5}
             justifyContent="center"
@@ -59,7 +59,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                     </Box>
                     <Stack direction='column' width={300}>
                         <Typography variant="stepTitle">{firstStep}</Typography>
-                        <Typography variant="regularText">{firstStepDescription}</Typography>
+                        <Typography variant="caption" fontStyle="normal">{firstStepDescription}</Typography>
                     </Stack>
                 </Stack>
             </Grid>
@@ -82,7 +82,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                     </Box>
                     <Stack direction='column' width={300}>
                         <Typography variant="stepTitle">{secondStep}</Typography>
-                        <Typography variant="regularText">{secondStepDescription}</Typography>
+                        <Typography variant="caption" fontStyle="normal">{secondStepDescription}</Typography>
                     </Stack>
                 </Stack>
             </Grid>
@@ -105,7 +105,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                     </Box>
                     <Stack direction='column' width={300}>
                         <Typography variant="stepTitle">{thirdStep}</Typography>
-                        <Typography variant="regularText">{thirdStepDescription}</Typography>
+                        <Typography variant="caption" fontStyle="normal">{thirdStepDescription}</Typography>
                     </Stack>
                 </Stack>
             </Grid>
@@ -129,7 +129,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                 
                     <Stack direction='column' width={300}>
                         <Typography variant="stepTitle">{fourthStep}</Typography>
-                        <Typography variant="regularText">{fourthStepDescription}</Typography>
+                        <Typography variant="caption" fontStyle="normal">{fourthStepDescription}</Typography>
                     </Stack>
                 </Stack>
             </Grid>
@@ -152,7 +152,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                     </Box>
                     <Stack direction='column' width={300}>
                         <Typography variant="stepTitle">{fifthStep}</Typography>
-                        <Typography variant="regularText">{fifthStepDescription}</Typography>
+                        <Typography variant="caption" fontStyle="normal">{fifthStepDescription}</Typography>
                     </Stack>
                 </Stack>
             </Grid>
