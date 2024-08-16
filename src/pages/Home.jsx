@@ -8,15 +8,12 @@ import SmMpdsWebPreview from '../images/sm_mpdsWebPreview.svg'
 import NeuroPreview from '../images/neuroPreview.svg';
 import PrismaProduzEsocialPreview from '../images/PrismaProduzEsocialPreview.svg';
 import MillerVillagePreview from '../images/millerVillagePreview.svg';
-import MillerVillage from './millerVillageTycoon';
-import Neuro from './neuro';
-import PrismaEsocialProduz from './prismaEsocialProduz';
-import MpdsWeb from './mpdsWeb';
-import MpdsWounds from './mpdsWounds';
-import Layout from '../components/Layout';
 import Ai from '../images/techsIcons/ai.svg';
 import Affinity from '../images/techsIcons/affinity.svg';
+import AffinityPhoto from '../images/techsIcons/affinityPhoto.svg';
 import Icomoon from '../images/techsIcons/Icomoon.svg';
+import Lottie from '../images/techsIcons/lottie.svg';
+import Miro from '../images/techsIcons/miro.svg';
 import CSS from '../images/techsIcons/css3.svg';
 import HTML from '../images/techsIcons/html5.svg';
 import JS from '../images/techsIcons/js.svg';
@@ -26,13 +23,14 @@ import Git from '../images/techsIcons/git.svg';
 import Kotlin from '../images/techsIcons/Kotlin.svg';
 import Material from '../images/techsIcons/materialui.svg';
 import Ps from '../images/techsIcons/ps.svg';
+import Ae from '../images/techsIcons/aftereffects.svg';
 import ReactIcon from '../images/techsIcons/react.svg';
 import Sass from '../images/techsIcons/sass.svg';
 import Uxpin from '../images/techsIcons/uxpin.svg'
 import Storybook from '../images/techsIcons/storybook.svg';
 import Chromatic from '../images/techsIcons/chromatic.svg'
 import Tooltip from '@mui/material/Tooltip';
-import { ThemeProvider, Typography, Chip, Hidden } from "@mui/material";
+import { Typography, Chip, Hidden } from "@mui/material";
 import theme from '../../themes/mui-theme'
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -49,7 +47,6 @@ import {
     useNavigate,
     Outlet,
 } from "react-router-dom";
-
 
 const LazyProjectCard = withLazyLoad(ProjectCard);
 
@@ -369,11 +366,23 @@ const Home = () => {
                   <Tooltip title="Adobe PS" arrow  placement="top">
                   <div className="my-auto"><img width="50" className="px-2" src={Ps} /></div>  
                   </Tooltip>
+                  <Tooltip title="After Effects" arrow  placement="top">
+                  <div className="my-auto"><img width="50" className="px-2" src={Ae} /></div>  
+                  </Tooltip>
                   <Tooltip title="Affinity" arrow  placement="top">
                   <div className="my-auto"><img width="50" className="px-2" src={Affinity} /> </div> 
                   </Tooltip>
+                  <Tooltip title="Affinity Photo" arrow  placement="top">
+                  <div className="my-auto"><img width="50" className="px-2" src={AffinityPhoto} /> </div> 
+                  </Tooltip>
                   <Tooltip title="Icomoon" arrow  placement="top">
                   <div className="my-auto"><img width="50" className="px-2" src={Icomoon} /> </div> 
+                  </Tooltip>
+                  <Tooltip title="Lottie Files" arrow  placement="top">
+                  <div className="my-auto"><img width="50" className="px-2" src={Lottie} /> </div> 
+                  </Tooltip>
+                  <Tooltip title="Miro" arrow  placement="top">
+                  <div className="my-auto"><img width="50" className="px-2" src={Miro} /> </div> 
                   </Tooltip>
                 </Stack>
               </Box>

@@ -2,9 +2,9 @@ import * as React from "react"
 import "@fontsource/work-sans";
 import "@fontsource/noto-sans";
 import "../../css/main.min.css";
-import wifiMachine from '../images/lottie/wifi_machine.json';
+import wifiMachine from '../images/lottie/wifi_machine_f3m.json';
 import mpdsWoundsPatientList from '../images/mpdsAndroidProject/patientList.png';
-import cardsEmptyState from '../images/lottie/cards.json';
+import cardsEmptyState from '../images/lottie/cards_f3m.json';
 import lottie from "lottie-web";
 import { ThemeProvider, Typography, Stack, Box} from "@mui/material";
 import LayoutProject from '../components/LayoutProject';
