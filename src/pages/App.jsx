@@ -13,6 +13,7 @@ import MpdsWounds from './mpdsWounds';
 import Layout from '../components/Layout';
 import { ThemeProvider } from "@mui/material";
 import theme from '../../themes/mui-theme';
+import Footer from '../components/Footer'
 import {
     BrowserRouter as Router,
     Routes,
@@ -32,6 +33,7 @@ const App = () => {
               <Route path="/mpdsWounds" element={<MpdsWounds />} />
               <Route path="/mpdsWeb" element={<MpdsWeb />} />
             </Routes>
+            <Footer />
           </Layout>
       </ThemeProvider>
     </Router>
