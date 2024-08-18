@@ -37,7 +37,6 @@ const LayoutProject = ({header, projectSteps, firstProjectStep, secondProjectSte
           {fifthProjectStep}
         </Container>
       </Box>
-      <Footer></Footer>
     </Box>
   )
 }

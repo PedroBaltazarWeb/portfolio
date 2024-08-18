@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Box } from "@mui/material"
-import Footer from "./Footer"
 import theme from '../../themes/mui-theme'
 
 const Layout = ({children}) => {
@@ -20,7 +19,6 @@ const Layout = ({children}) => {
       backgroundRepeat: 'no-repeat', */
       bgcolor: theme.palette.primary.main }}>
       {children}
-      <Footer></Footer>
     </Box>
   )
 }

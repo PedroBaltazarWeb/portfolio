@@ -13,7 +13,10 @@ import Affinity from '../images/techsIcons/affinity.svg';
 import AffinityPhoto from '../images/techsIcons/affinityPhoto.svg';
 import Icomoon from '../images/techsIcons/Icomoon.svg';
 import Lottie from '../images/techsIcons/lottie.svg';
+import Itchio from '../images/techsIcons/itchio.svg';
 import Miro from '../images/techsIcons/miro.svg';
+import Soundcloud from '../images/techsIcons/soundcloud.svg';
+import Dribbble from '../images/techsIcons/dribbble.svg';
 import CSS from '../images/techsIcons/css3.svg';
 import HTML from '../images/techsIcons/html5.svg';
 import JS from '../images/techsIcons/js.svg';
@@ -39,13 +42,10 @@ import { keyframes } from '@emotion/react';
 import Container from '@mui/material/Container';
 import withLazyLoad from '../components/WithLazyLoading';
 import ProjectCard from '../components/ProjectCard';
+import IconButton from '@mui/material/IconButton';
 import {
     BrowserRouter as Router,
-    Routes,
-    Route,
     Link,
-    useNavigate,
-    Outlet,
 } from "react-router-dom";
 
 const LazyProjectCard = withLazyLoad(ProjectCard);
@@ -219,7 +219,7 @@ const projectCardsProps = [
     id: 5,
     itemGrid: { xs: 12, sm: 6},
     path: '/mpdsWeb',
-    imageSrc: SmMpdsWebPreview, // Example image URL
+    imageSrc: SmMpdsWebPreview,
     altText: 'MpDS Web Image Preview',
     company: 'F3M',
     projectTitle: 'MpDS Web',
@@ -258,7 +258,8 @@ const projectCardsProps = [
 const useStyles ={
   '&.MuiContainer-root':{
     color: theme.palette.action.main,
-    fontFamily: "Noto Sans, sans-serif"
+    fontFamily: "Noto Sans, sans-serif",
+    pb: 5
   } 
 }
 
@@ -304,7 +305,7 @@ const Home = () => {
                   justifyContent="center"
                   alignItems="center"
                   spacing={2}
-                  mb={2}>
+                  mb={3}>
                     <Tooltip title="Kotlin" arrow  placement="top">
                       <img width="35" src={Kotlin}/>
                     </Tooltip>
@@ -389,13 +390,13 @@ const Home = () => {
             </Hidden>
             <Box mt={3} textAlign='center'>
               <Chip
-              label="&#128679; Under Maintenance (still, you can see the projects!) &#128679;"
-              sx={{
-                animation: `${colorChange} 32s linear infinite`,
-                mx: 'auto',
-                color: '#444444',
-                fontWeight: 700,
-                fontFamily: 'Work Sans',
+                label="&#128679; Under Maintenance (still, you can see the projects!) &#128679;"
+                sx={{
+                  animation: `${colorChange} 32s linear infinite`,
+                  mx: 'auto',
+                  color: '#444444',
+                  fontWeight: 700,
+                  fontFamily: 'Work Sans',
               }}/>
             </Box>
             
@@ -405,6 +406,7 @@ const Home = () => {
                 justifyContent="space-between"
                 alignItems="stretch"
                 spacing={2}
+                mb={5}
                 mt={3}>
                 {projectCardsProps.map((props, path) => (
                     <Grid item xs={props.itemGrid.xs} 
@@ -418,29 +420,36 @@ const Home = () => {
                 ))}
               </Grid>
 
-              <Typography variant="stepTitle" component="p" fontWeight={500} pt={5} pb={5}>
-                I also do music and free assets. Be my guest.
-              </Typography>
-
-                <Grid container spacing={2}>
-                  <Grid item xs={6}>
-                    <iframe width="100%" height="167" className="mt-2" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1274570797&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <iframe width="100%" height="167" className="mt-2" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1049697826&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <iframe width="100%" height="167" className="mt-2" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1075024516&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <iframe width="100%" height="167" className="mt-2" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1088778952&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <iframe width="100%" height="167" frameBorder="0" src="https://itch.io/embed/1306439"><a href="https://baltazzzar.itch.io/vehicle-assets">Vehicle Assets by Baltazzzar</a></iframe>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <iframe src="https://itch.io/embed/1450862" width="100%" height="167" frameBorder="0"><a href="https://baltazzzar.itch.io/old-building">Old Building by Baltazzzar</a></iframe>                  </Grid>
-                </Grid>            
+              <Stack direction="column" spacing={1} alignItems="center" justifyContent="center"
+                sx={{
+                  background: 'linear-gradient(to right, rgb(11 18 49 / 20%), #0B1231)',
+                  marginTop: '32px',
+                  padding: '16px',
+                  borderRadius: '16px',
+                  maxWidth: 400,
+                  margin: '0 auto',
+                  backdropFilter: 'blur(12px)',
+                  border: 'rgb(255 255 255 / .1) solid 1px'
+                }}>
+                  <Typography variant="regularText" component='p' fontStyle='italic' textAlign='center' pb={1}>Other Stops</Typography>
+                  <Stack direction="row" spacing={3} alignItems="center" justifyContent="center">
+                    <IconButton disableRipple aria-label="Soundcloud">
+                      <a href="https://soundcloud.com/sarges-2" target="_blank" cursor="pointer">
+                        <img width="35" height="35" src={Soundcloud} />
+                      </a>
+                    </IconButton>
+                    <IconButton disableRipple aria-label="itch.io" >
+                      <a href="https://baltazzzar.itch.io/" target="_blank">
+                        <img width="35" height="35" src={Itchio} />
+                      </a>
+                    </IconButton>
+                    <IconButton disableRipple aria-label="Dribbble">
+                      <a href="https://www.dribbble.com/" target="_blank"  style={{ cursor: 'pointer' }}>
+                        <img width="35" height="35" src={Dribbble} />
+                      </a>
+                    </IconButton>
+                  </Stack>
+              </Stack>      
             </Container>
           </>
   )
