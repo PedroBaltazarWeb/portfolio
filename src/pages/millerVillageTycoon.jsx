@@ -118,7 +118,7 @@ const MillerVillageTycoonPage = () => {
                     }
                     firstProjectStep={
                         <ProjectSection topic="1. Research & Interviews" >
-                            <Box mb={10}>
+                            <Box mb={5}>
                                 <Typography variant="pRegularText" component='p' >
                                     All started with InspirersKids, an extension of the <Link sx={{color: '#00B9C4'}} href="https://cintesis.eu/en/portfolio-items/airdoc/">AIRDOC ecosystem</Link> by MEDIDA and CINTESIS, which developed a mobile app for caregivers of children and adolescents with chronic or acute respiratory conditions to securely transmit medical data to a central server.
                                 </Typography>
@@ -153,8 +153,7 @@ const MillerVillageTycoonPage = () => {
                                             md: theme.spacing(0),
                                             },
                                         }}>
-                                    The Lung Function module allowed users to record the sound of their respiration by following simple instructions and then send this information directly to their doctor.
-                                    My objective was to implement gamification on it, — oriented to the Forced Expiratory Maneuver procedure — for adolescents with asthma, aged 14 to 17. 
+                                        My initial goal was to create an experience where patients could monitor their condition while also having fun and feeling connected to it. It was brought to my attention that the current state of the app seems too "standardized" for teenagers, so I focused on understanding this audience through papers and interviews.
                                 </Typography>
 
                                 <Typography variant="emphasisRegularText" component='p' sx={{
@@ -173,13 +172,92 @@ const MillerVillageTycoonPage = () => {
 
                                 <Box pb={2} pt={5} sx={{textAlign: 'center'}}>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/FV-Rb_LJ1j4?si=t9gOP1nkFKihoXlD&amp;controls=0&amp;start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    <Typography variant="caption" component='p' pb={3} pt={2} textAlign='center'>What is FEM?</Typography>
+                                    <Typography variant="caption" component='p' pb={3} pt={2} textAlign='center'>Forced Expiratory Maneuver in the context of spirometry</Typography>
                                 </Box> 
 
                                 <Typography variant="pRegularText" component='p'>
-                                    I reviewed literature on asthma and related topics, initially collaborating with two colleagues whose contributions were irrelevant due to their locations in Mozambique and Russia, leading them to leave the project which focused on the Portuguese context.
+                                I reviewed literature on asthma, particularly in teenagers, as well as related topics. One of these topics was the Forced Expiratory Maneuver (FEM), which will have great importance in this project, applied in the lung function module. The video above demonstrates this technique in the context of spirometry.
                                 </Typography>
-                            </Box>
+                                <Box sx={{[theme.breakpoints.up('md')]: {padding: '0px 160px 32px 160px'}}}>
+                                    <Accordion sx={{bgcolor: "#1a2241", color: "#fff" }}>
+                                        <AccordionSummary
+                                            expandIcon={<ExpandMoreIcon sx={{color: "#fff"}}/>}
+                                            aria-controls="panel1-content"
+                                            id="panel1-header">
+                                            <Typography variant="regularText" fontWeight={700}>Instructions to make the FEM with a mobile phone in the Lung Function module</Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <List dense>
+                                                <ListItem>
+                                                    <ListItemIcon>
+                                                        <ArrowRightAltIcon color="action"/>
+                                                    </ListItemIcon>
+                                                    <ListItemText
+                                                        primary={<Typography variant="regularText">Hold the smartphone or tablet at arm's length with your elbow slightly bent;</Typography>}
+                                                    />
+                                                </ListItem>
+                                                <ListItem>
+                                                    <ListItemIcon>
+                                                        <ArrowRightAltIcon color="action"/>
+                                                    </ListItemIcon>
+                                                    <ListItemText
+                                                        primary={<Typography variant="regularText">Start recording by pressing the record button (if the device's sound is activate, you will hear a beep);</Typography>}
+                                                    />
+                                                </ListItem>
+                                                <ListItem>
+                                                    <ListItemIcon>
+                                                        <ArrowRightAltIcon color="action"/>
+                                                    </ListItemIcon>
+                                                    <ListItemText
+                                                        primary={<Typography variant="regularText">Inhale quickly and fully to full lung capacity;</Typography>}
+                                                    />
+                                                </ListItem>
+                                                <ListItem>
+                                                    <ListItemIcon>
+                                                        <ArrowRightAltIcon color="action"/>
+                                                    </ListItemIcon>
+                                                    <ListItemText
+                                                        primary={<Typography variant="regularText">Keeping your mouth open, exhale with maximum force, without hesitation and as long as possible;</Typography>}
+                                                    />
+                                                </ListItem>
+                                                <ListItem>
+                                                    <ListItemIcon>
+                                                        <ArrowRightAltIcon color="action"/>
+                                                    </ListItemIcon>
+                                                    <ListItemText
+                                                        primary={<Typography variant="regularText">The registration will end automatically after the preset time (if the device sound is activated, you will hear a beep);</Typography>}
+                                                    />
+                                                </ListItem>
+                                                <Typography variant="regularText" component='p' sx={{marginTop: 4}}>Repeat registration if: </Typography>
+                                                <ListItem>
+                                                    <ListItemIcon>
+                                                        <ArrowRightAltIcon color="action"/>
+                                                    </ListItemIcon>
+                                                    <ListItemText
+                                                        primary={<Typography variant="regularText">Cough or noise other than exhalation was produced durig recording;</Typography>}
+                                                    />
+                                                </ListItem>
+                                                <ListItem>
+                                                    <ListItemIcon>
+                                                        <ArrowRightAltIcon color="action"/>
+                                                    </ListItemIcon>
+                                                    <ListItemText
+                                                        primary={<Typography variant="regularText">Failed to maintain open mouth position throughout the recording;</Typography>}
+                                                    />
+                                                </ListItem>
+                                                <ListItem>
+                                                    <ListItemIcon>
+                                                        <ArrowRightAltIcon color="action"/>
+                                                    </ListItemIcon>
+                                                    <ListItemText
+                                                        primary={<Typography variant="regularText">Did not complete the expiration until the end of the registratiom: in this case increase the registration time before repeating.</Typography>}
+                                                    />
+                                                </ListItem>
+                                            </List>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    </Box>
+                                </Box>
                             <Typography variant="stepTitleHeader" mb={2}>Interview Guide & User Persona</Typography>
                             <Typography variant="pRegularText" component='p' sx={{
                                             pb: {
@@ -205,7 +283,7 @@ const MillerVillageTycoonPage = () => {
                                             md: theme.spacing(5),
                                             },
                                         }}>
-                            The Informed Consent Form consisted of two parts: an Information Sheet, which provided details about the study, and a Certificate of Consent for signatures if you chose to participate, including an assent form for children under 16.
+                            An Informed Consent Form was developed and consisted of two parts: an Information Sheet, which provided details about the study, and a Certificate of Consent for signatures if you chose to participate, including an assent form for children under 16.
                         </Typography>
 
                         <Box mx='auto'>
@@ -216,7 +294,35 @@ const MillerVillageTycoonPage = () => {
                     }
                     secondProjectStep={
                         <ProjectSection topic="2. Concept">
-                            <Typography variant="pRegularText" component='p'>"Exploring themes ranging from race cars to vessels reminiscent of the Age of Discovery, various ideas were considered. Ultimately, the concept of a 'city builder' resonated most with me, offering an endless, engaging process. The progression of structures and technologies, coupled with strategic village planning, promises players a visually immersive journey rich in challenges and social interactions. This is particularly true when integrating the trading feature, allowing players to engage with others facing similar health challenges." MOODBOARDS</Typography>
+                            <Typography variant="pRegularText" component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(0),
+                                            },
+                                        }}>
+                                I decided to focus on Lung Function because this module allows users to record the sound of their breathing by following simple instructions and then send this information directly to their doctor.
+                                According to my research, incorporating gamification centered around the Forced Expiratory Maneuver procedure would be the most effective approach to engage adolescents with asthma, ages 14 to 17, and make the process more appealing to them.
+                            </Typography>
+
+                            <Typography variant="emphasisRegularText" component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(0),
+                                            },
+                                        }}>
+                            To understand the current preferences of Portuguese teenagers, I conducted both literary and online research. Additionally, I held in-person meetings and phone calls to create mood boards that explored their interests, such as games, TV shows, colors, and fashion.
+                            </Typography>
+                            <Typography pt={2} variant="pRegularText" component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(5),
+                                            },
+                                        }}>
+                                Exploring themes ranging from race cars to vessels reminiscent of the Age of Discovery, various ideas were considered. Ultimately, the concept of a 'city builder' resonated most with the user, offering an endless, engaging process. The progression of structures and technologies, coupled with strategic village planning, promises players a visually immersive journey rich in challenges and social interactions. This is particularly true when integrating the trading feature, allowing players to engage with others facing similar health challenges."
+                            </Typography>
                         </ProjectSection> 
                     }
                     thirdProjectStep={
