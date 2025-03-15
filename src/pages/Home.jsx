@@ -34,7 +34,6 @@ import Storybook from '../images/techsIcons/storybook.svg';
 import Chromatic from '../images/techsIcons/chromatic.svg'
 import Tooltip from '@mui/material/Tooltip';
 import { Typography, Chip, Hidden } from "@mui/material";
-import theme from '../../themes/mui-theme'
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -47,8 +46,17 @@ import {
     BrowserRouter as Router,
     Link,
 } from "react-router-dom";
+import backgroundAfter from '../images/pedro_baltazar_cracha.svg';
+import shining from '../images/shining.webp';
+import theme from '../../themes/mui-theme';
 
 const LazyProjectCard = withLazyLoad(ProjectCard);
+
+const flashEffect = keyframes`
+  0% { opacity: 0; transform: scale(1); }
+  50% { opacity: 0; transform: scale(1); }
+  95% { opacity: 1; transform: scale(1); }
+`;
 
 const projectCardsProps = [
   {
@@ -284,122 +292,172 @@ const colorChange = keyframes`
 const Home = () => {
   return (
           <>
-            <Container maxWidth="lg" component='main' sx={useStyles["&.MuiContainer-root"]}>
-              <Typography variant="stepTitle" component="p" fontWeight={500} pt={5} pb={5}>
-                Hello! I'm Pedro Baltazar Relvas. Whether as a Product Designer or UI Developer, my goal is to create efficient and meaningful products. With a focus on healthcare, I enjoy collaborating in cross-functional teams, aiming for simplicity, usability, and a smooth user experience.
+            <Box sx={{
+              backgroundColor: '#295395',
+              backgroundPosition: 'center center',
+              backgroundRepeat: 'repeat, no-repeat',
+              backgroundSize: '2.5rem, cover',
+  position: 'relative', 
+  '&::after': {
+    background: `url(${backgroundAfter})`,
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    height: 86,
+    content: '""',
+    width: '100%',
+    position: 'absolute',
+    bottom: -50,
+    left: 0,
+    marginTop: 43,
+    zIndex: 2
+  },
+  '&:before':{
+    background: `url(${shining})`,
+    height: 87,
+    content: '""',
+    width: 174,
+    position: 'absolute',
+    bottom: -35,
+    right: {
+      xs: '5%',
+      sm: '15%',
+      md: '15%',
+      lg: '15%'
+    },
+    zIndex: 3,
+    mixBlendMode: 'plus-lighter',
+    animation: `${flashEffect} 3s 1`,
+  }
+}}>
+              <Container maxWidth="lg" component='header' sx={useStyles["&.MuiContainer-root"]}>
+                <Typography variant="stepTitle" component="p" fontWeight={500} pt={5} pb={5}>
+                  Hello! I'm Pedro Baltazar Relvas. Whether as a Product Designer or UI Developer, my goal is to create efficient and meaningful products. With a focus on healthcare, I enjoy collaborating in cross-functional teams, aiming for simplicity, usability, and a smooth user experience.
+                </Typography>
+
+              <Hidden smDown>
+                <Box sx={{
+                    background: 'linear-gradient(to right, rgb(11 18 49 / 20%), #0B1231)',
+                    padding: '24px',
+                    borderRadius: '16px',
+                    maxWidth: 700,
+                    margin: '0 auto',
+                    backdropFilter: 'blur(12px)',
+                    border: 'rgb(255 255 255 / .1) solid 1px'
+                  }}>
+                  <Typography variant="regularText" component='p' fontStyle='italic' textAlign='center' pb={2}>Designing and coding with:</Typography>
+      
+                  <Stack direction="row"
+                    justifyContent="center"
+                    alignItems="center"
+                    spacing={2}
+                    mb={3}>
+                      <Tooltip title="Kotlin" arrow  placement="top">
+                        <img width="35" src={Kotlin}/>
+                      </Tooltip>
+                      <Tooltip title="HTML 5" arrow  placement="top">
+                        <img width="35" src={HTML} />
+                      </Tooltip>
+                      
+                      <Tooltip title="CSS 3" arrow  placement="top">
+                        <img width="35" height="35" src={CSS}/>
+                      </Tooltip>
+                      
+                      <Tooltip title="Javascript" arrow  placement="top">
+                        <img width="35" src={JS}/>
+                      </Tooltip>
+                      
+                      <Tooltip title="React.JS" arrow  placement="top">
+                        <img width="35" src={ReactIcon}/>
+                      </Tooltip>
+                      
+                      <Tooltip title="Bootstrap" arrow  placement="top">
+                        <img width="35" src={Bootstrap} />
+                      </Tooltip>
+                      
+                      <Tooltip title="Sass" arrow placement="top">
+                        <img width="35" src={Sass} />
+                      </Tooltip>
+                      
+                      <Tooltip title="Material" arrow  placement="top">
+                        <img width="35" src={Material} /> 
+                      </Tooltip>
+                      
+                      <Tooltip title="Git" arrow  placement="top">
+                        <img width="35" src={Git} />
+                      </Tooltip>
+                      
+                      <Tooltip title="Storybook" arrow  placement="top">
+                        <img height="35" src={Storybook} />
+                      </Tooltip>
+                      
+                      <Tooltip title="Chromatic" arrow  placement="top">
+                        <img width="35" src={Chromatic} />
+                      </Tooltip>
+                  </Stack>
+
+                  <Stack direction="row"
+                    justifyContent="center"
+                    alignItems="center"
+                    spacing={0}
+                    mt={1}>
+                    <Tooltip title="Figma" arrow  placement="top">
+                      <div className="my-auto"><img height="34" className="px-2" src={Figma} /> </div> 
+                    </Tooltip>
+                    <Tooltip title="UXPin" arrow  placement="top">
+                    <div className="my-auto"><img width="50" className="px-2" src={Uxpin} /> </div> 
+                    </Tooltip>
+                    <Tooltip title="Adobe AI" arrow  placement="top">
+                    <div className="my-auto"><img width="50" className="px-2" src={Ai} /></div>  
+                    </Tooltip>
+                    <Tooltip title="Adobe PS" arrow  placement="top">
+                    <div className="my-auto"><img width="50" className="px-2" src={Ps} /></div>  
+                    </Tooltip>
+                    <Tooltip title="After Effects" arrow  placement="top">
+                    <div className="my-auto"><img width="50" className="px-2" src={Ae} /></div>  
+                    </Tooltip>
+                    <Tooltip title="Affinity" arrow  placement="top">
+                    <div className="my-auto"><img width="50" className="px-2" src={Affinity} /> </div> 
+                    </Tooltip>
+                    <Tooltip title="Affinity Photo" arrow  placement="top">
+                    <div className="my-auto"><img width="50" className="px-2" src={AffinityPhoto} /> </div> 
+                    </Tooltip>
+                    <Tooltip title="Icomoon" arrow  placement="top">
+                    <div className="my-auto"><img width="50" className="px-2" src={Icomoon} /> </div> 
+                    </Tooltip>
+                    <Tooltip title="Lottie Files" arrow  placement="top">
+                    <div className="my-auto"><img width="50" className="px-2" src={Lottie} /> </div> 
+                    </Tooltip>
+                    <Tooltip title="Miro" arrow  placement="top">
+                    <div className="my-auto"><img width="50" className="px-2" src={Miro} /> </div> 
+                    </Tooltip>
+                  </Stack>
+                </Box>
+              </Hidden>
+              
+              </Container>
+              </Box>
+
+              <Typography textAlign='center' variant="stepTitle" component="h2" fontWeight={500} pt={5} mt={4} sx={{
+                 color: theme.palette.action.main,
+                 fontFamily: "Noto Sans, sans-serif",
+              }}>
+                  Projetos
               </Typography>
 
-            <Hidden smDown>
-              <Box sx={{
-                  background: 'linear-gradient(to right, rgb(11 18 49 / 20%), #0B1231)',
-                  padding: '24px',
-                  borderRadius: '16px',
-                  maxWidth: 700,
-                  margin: '0 auto',
-                  backdropFilter: 'blur(12px)',
-                  border: 'rgb(255 255 255 / .1) solid 1px'
-                }}>
-                <Typography variant="regularText" component='p' fontStyle='italic' textAlign='center' pb={2}>Designing and coding with:</Typography>
-    
-                <Stack direction="row"
-                  justifyContent="center"
-                  alignItems="center"
-                  spacing={2}
-                  mb={3}>
-                    <Tooltip title="Kotlin" arrow  placement="top">
-                      <img width="35" src={Kotlin}/>
-                    </Tooltip>
-                    <Tooltip title="HTML 5" arrow  placement="top">
-                      <img width="35" src={HTML} />
-                    </Tooltip>
-                    
-                    <Tooltip title="CSS 3" arrow  placement="top">
-                      <img width="35" height="35" src={CSS}/>
-                    </Tooltip>
-                    
-                    <Tooltip title="Javascript" arrow  placement="top">
-                      <img width="35" src={JS}/>
-                    </Tooltip>
-                    
-                    <Tooltip title="React.JS" arrow  placement="top">
-                      <img width="35" src={ReactIcon}/>
-                    </Tooltip>
-                    
-                    <Tooltip title="Bootstrap" arrow  placement="top">
-                      <img width="35" src={Bootstrap} />
-                    </Tooltip>
-                    
-                    <Tooltip title="Sass" arrow placement="top">
-                      <img width="35" src={Sass} />
-                    </Tooltip>
-                    
-                    <Tooltip title="Material" arrow  placement="top">
-                      <img width="35" src={Material} /> 
-                    </Tooltip>
-                    
-                    <Tooltip title="Git" arrow  placement="top">
-                      <img width="35" src={Git} />
-                    </Tooltip>
-                    
-                    <Tooltip title="Storybook" arrow  placement="top">
-                      <img height="35" src={Storybook} />
-                    </Tooltip>
-                    
-                    <Tooltip title="Chromatic" arrow  placement="top">
-                      <img width="35" src={Chromatic} />
-                    </Tooltip>
-                </Stack>
-
-                <Stack direction="row"
-                  justifyContent="center"
-                  alignItems="center"
-                  spacing={0}
-                  mt={1}>
-                  <Tooltip title="Figma" arrow  placement="top">
-                    <div className="my-auto"><img height="34" className="px-2" src={Figma} /> </div> 
-                  </Tooltip>
-                  <Tooltip title="UXPin" arrow  placement="top">
-                  <div className="my-auto"><img width="50" className="px-2" src={Uxpin} /> </div> 
-                  </Tooltip>
-                  <Tooltip title="Adobe AI" arrow  placement="top">
-                  <div className="my-auto"><img width="50" className="px-2" src={Ai} /></div>  
-                  </Tooltip>
-                  <Tooltip title="Adobe PS" arrow  placement="top">
-                  <div className="my-auto"><img width="50" className="px-2" src={Ps} /></div>  
-                  </Tooltip>
-                  <Tooltip title="After Effects" arrow  placement="top">
-                  <div className="my-auto"><img width="50" className="px-2" src={Ae} /></div>  
-                  </Tooltip>
-                  <Tooltip title="Affinity" arrow  placement="top">
-                  <div className="my-auto"><img width="50" className="px-2" src={Affinity} /> </div> 
-                  </Tooltip>
-                  <Tooltip title="Affinity Photo" arrow  placement="top">
-                  <div className="my-auto"><img width="50" className="px-2" src={AffinityPhoto} /> </div> 
-                  </Tooltip>
-                  <Tooltip title="Icomoon" arrow  placement="top">
-                  <div className="my-auto"><img width="50" className="px-2" src={Icomoon} /> </div> 
-                  </Tooltip>
-                  <Tooltip title="Lottie Files" arrow  placement="top">
-                  <div className="my-auto"><img width="50" className="px-2" src={Lottie} /> </div> 
-                  </Tooltip>
-                  <Tooltip title="Miro" arrow  placement="top">
-                  <div className="my-auto"><img width="50" className="px-2" src={Miro} /> </div> 
-                  </Tooltip>
-                </Stack>
+              <Box mt={3} textAlign='center'>
+                <Chip
+                  label="&#128679; Under Maintenance (still, you can see the projects!) &#128679;"
+                  sx={{
+                    animation: `${colorChange} 32s linear infinite`,
+                    mx: 'auto',
+                    color: '#444444',
+                    fontWeight: 700,
+                    fontFamily: 'Work Sans',
+                }}/>
               </Box>
-            </Hidden>
-            <Box mt={3} textAlign='center'>
-              <Chip
-                label="&#128679; Under Maintenance (still, you can see the projects!) &#128679;"
-                sx={{
-                  animation: `${colorChange} 32s linear infinite`,
-                  mx: 'auto',
-                  color: '#444444',
-                  fontWeight: 700,
-                  fontFamily: 'Work Sans',
-              }}/>
-            </Box>
-            
+
+
+            <Container maxWidth="lg" component='main' sx={useStyles["&.MuiContainer-root"]}>
               <Grid
                 container
                 direction="row"
@@ -419,7 +477,9 @@ const Home = () => {
                     </Grid>
                 ))}
               </Grid>
+              </Container>
 
+              <Container maxWidth="lg" component='footer' sx={useStyles["&.MuiContainer-root"]}>
               <Stack direction="column" spacing={1} alignItems="center" justifyContent="center"
                 sx={{
                   background: 'linear-gradient(to right, rgb(11 18 49 / 20%), #0B1231)',
@@ -450,7 +510,8 @@ const Home = () => {
                     </IconButton>
                   </Stack>
               </Stack>      
-            </Container>
+              </Container>
+              
           </>
   )
 }

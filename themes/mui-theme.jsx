@@ -106,6 +106,13 @@ theme = createTheme(theme , {
         fontSize: 10,
         opacity: .7
       },
+      noteTitle:{ 
+        fontFamily: '"Concert One", sans-serif',
+        fontSize: 20
+      },
+      noteText:{
+        fontFamily: '"Caveat", cursive'
+      },
       // Disable h3 variant
       h3: undefined,
     },
