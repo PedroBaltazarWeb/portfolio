@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Box } from "@mui/material"
 import theme from '../../themes/mui-theme'
-
+import backgroundImage from '../images/pattern_wall.webp';
 const Layout = ({children}) => {
 
   const { pathname } = useLocation();
@@ -13,11 +13,11 @@ const Layout = ({children}) => {
 
   return (
     <Box sx={{
-      /* background: "url(/bg-rising-planet.png)",
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat', */
-      bgcolor: theme.palette.primary.main }}>
+      backgroundImage: `url(${backgroundImage}), linear-gradient(to bottom, #0a1928 0%, #111E56 50%, #111E56 100%)`,
+  backgroundPosition: 'center center',
+  backgroundRepeat: 'repeat, no-repeat',
+  backgroundSize: '2.5rem, cover',
+  position: 'relative' }}>
       {children}
     </Box>
   )

@@ -38,6 +38,7 @@ import DeviceHubIcon from '@mui/icons-material/DeviceHub';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import {StyledTableCell, StyledTableRow} from '../../src/pages/styles/millerVillage/useStyles'
 import Grid from '@mui/material/Grid';
+import LibraryCard from './../components/LibraryCard'
 
 const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
 const pData = [2400, 1398, 9800, 3908, 4800, 3800, 4300];
@@ -179,83 +180,7 @@ const MillerVillageTycoonPage = () => {
                                 I reviewed literature on asthma, particularly in teenagers, as well as related topics. One of these topics was the Forced Expiratory Maneuver (FEM), which will have great importance in this project, applied in the lung function module. The video above demonstrates this technique in the context of spirometry.
                                 </Typography>
                                 <Box sx={{[theme.breakpoints.up('md')]: {padding: '0px 160px 32px 160px'}}}>
-                                    <Accordion sx={{bgcolor: "#1a2241", color: "#fff" }}>
-                                        <AccordionSummary
-                                            expandIcon={<ExpandMoreIcon sx={{color: "#fff"}}/>}
-                                            aria-controls="panel1-content"
-                                            id="panel1-header">
-                                            <Typography variant="regularText" fontWeight={700}>Instructions to make the FEM with a mobile phone in the Lung Function module</Typography>
-                                        </AccordionSummary>
-                                        <AccordionDetails>
-                                            <List dense>
-                                                <ListItem>
-                                                    <ListItemIcon>
-                                                        <ArrowRightAltIcon color="action"/>
-                                                    </ListItemIcon>
-                                                    <ListItemText
-                                                        primary={<Typography variant="regularText">Hold the smartphone or tablet at arm's length with your elbow slightly bent;</Typography>}
-                                                    />
-                                                </ListItem>
-                                                <ListItem>
-                                                    <ListItemIcon>
-                                                        <ArrowRightAltIcon color="action"/>
-                                                    </ListItemIcon>
-                                                    <ListItemText
-                                                        primary={<Typography variant="regularText">Start recording by pressing the record button (if the device's sound is activate, you will hear a beep);</Typography>}
-                                                    />
-                                                </ListItem>
-                                                <ListItem>
-                                                    <ListItemIcon>
-                                                        <ArrowRightAltIcon color="action"/>
-                                                    </ListItemIcon>
-                                                    <ListItemText
-                                                        primary={<Typography variant="regularText">Inhale quickly and fully to full lung capacity;</Typography>}
-                                                    />
-                                                </ListItem>
-                                                <ListItem>
-                                                    <ListItemIcon>
-                                                        <ArrowRightAltIcon color="action"/>
-                                                    </ListItemIcon>
-                                                    <ListItemText
-                                                        primary={<Typography variant="regularText">Keeping your mouth open, exhale with maximum force, without hesitation and as long as possible;</Typography>}
-                                                    />
-                                                </ListItem>
-                                                <ListItem>
-                                                    <ListItemIcon>
-                                                        <ArrowRightAltIcon color="action"/>
-                                                    </ListItemIcon>
-                                                    <ListItemText
-                                                        primary={<Typography variant="regularText">The registration will end automatically after the preset time (if the device sound is activated, you will hear a beep);</Typography>}
-                                                    />
-                                                </ListItem>
-                                                <Typography variant="regularText" component='p' sx={{marginTop: 4}}>Repeat registration if: </Typography>
-                                                <ListItem>
-                                                    <ListItemIcon>
-                                                        <ArrowRightAltIcon color="action"/>
-                                                    </ListItemIcon>
-                                                    <ListItemText
-                                                        primary={<Typography variant="regularText">Cough or noise other than exhalation was produced durig recording;</Typography>}
-                                                    />
-                                                </ListItem>
-                                                <ListItem>
-                                                    <ListItemIcon>
-                                                        <ArrowRightAltIcon color="action"/>
-                                                    </ListItemIcon>
-                                                    <ListItemText
-                                                        primary={<Typography variant="regularText">Failed to maintain open mouth position throughout the recording;</Typography>}
-                                                    />
-                                                </ListItem>
-                                                <ListItem>
-                                                    <ListItemIcon>
-                                                        <ArrowRightAltIcon color="action"/>
-                                                    </ListItemIcon>
-                                                    <ListItemText
-                                                        primary={<Typography variant="regularText">Did not complete the expiration until the end of the registratiom: in this case increase the registration time before repeating.</Typography>}
-                                                    />
-                                                </ListItem>
-                                            </List>
-                                        </AccordionDetails>
-                                    </Accordion>
+                                    <LibraryCard></LibraryCard>
                                     </Box>
                                 </Box>
                             <Typography variant="stepTitleHeader" mb={2}>Interview Guide & User Persona</Typography>
