@@ -1,17 +1,27 @@
 import React, { useEffect } from 'react';
-import { useLocation } from "@reach/router";
 import { Box } from "@mui/material"
 import Footer from '../components/Footer';
 import backgroundImage from '../images/pattern_wall.webp';
+import { ThemeProvider } from "@mui/material";
+import CssBaseline from '@mui/material/CssBaseline';
+import theme from '../../themes/mui-theme';
+import { useLocation } from "@reach/router";
 const Layout = ({children}) => {
-
   const location = useLocation();
-  useEffect(() => {
-    window.scrollTo({top: 0, behavior: 'instant'})
-  }, [location])
 
-  return (
-    <Box sx={{
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    document.documentElement.style.scrollBehavior = "auto"; 
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  
+  return (<>
+ 
+   <Box sx={{
       background: `
       url(${backgroundImage}), 
       linear-gradient(180deg, rgba(21,25,71,1) 0%, rgba(36,40,109,1) 82%)`,
@@ -19,8 +29,11 @@ const Layout = ({children}) => {
       backgroundRepeat: 'repeat no-repeat',
       backgroundSize: '64rem, cover'}}>
       {children}
-      <Footer />
+      
     </Box>
+    <Footer />
+  </>
+   
   )
 }
 
