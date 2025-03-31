@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Router } from "@reach/router"; 
 import { ThemeProvider } from "@mui/material";
 import theme from '../../themes/mui-theme';
 import CssBaseline from '@mui/material/CssBaseline';
 import Layout from '../components/Layout';
-import Footer from '../components/Footer';
 import Home from './Home';
 import MillerVillage from './millerVillageTycoon';
 import Neuro from './neuro';
@@ -20,27 +19,19 @@ const App = () => {
   }, []);
 
   if (!isClient) {
-    return null; // Prevents SSR from rendering
+    return null; 
   }
 
   return (
-    <Router>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
         <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/millerVillageTycoon" element={<MillerVillage />} />
-            <Route path="/neuro" element={<Neuro />} />
-            <Route path="/prismaEsocialProduz" element={<PrismaEsocialProduz />} />
-            <Route path="/mpdsWounds" element={<MpdsWounds />} />
-            <Route path="/mpdsWeb" element={<MpdsWeb />} />
-          </Routes>
-          <Footer />
+          <Home path="/Home" />
         </Layout>
-      </ThemeProvider>
-    </Router>
+      
+    </ThemeProvider>
   );
 };
+
 
 export default App;

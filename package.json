@@ -44,7 +44,6 @@
     "sass": "^1.50.0"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
-    "react-router-dom": "^6.26.0"
+    "gh-pages": "^3.2.3"
   }
 }
