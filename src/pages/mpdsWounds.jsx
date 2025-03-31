@@ -15,17 +15,6 @@ import Grid from '@mui/material/Grid';
 
 const MpdsWoundsPage = () => {
 
-  /* React.useEffect(() => {
-    lottie.loadAnimation({
-      container: document.querySelector("#wifiMachine"),
-      animationData: wifiMachine
-    });
-    lottie.loadAnimation({
-      container: document.querySelector("#cardsEmptyState"),
-      animationData: cardsEmptyState
-    });
-  }, []); */
-
   return (
   <>
      <ThemeProvider theme={theme}>
