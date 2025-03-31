@@ -21,9 +21,7 @@ import ProjectCard from '../components/ProjectCard';
 import Separator from '../images/separator.svg';
 import WIP from '../images/WIP.png';
 import MUILink from '@mui/material/Link';
-import {
-    Link
-} from "react-router-dom";
+import { Link } from "gatsby";
 import backgroundAfter from '../images/pedro_baltazar_cracha.svg';
 import shining from '../images/shining.webp';
 import logo from '../images/logo.svg';
@@ -47,7 +45,7 @@ const projectCardsProps = [
     id: 1,
     numberBadge: <><img width={120} src={badgeOne} /></>,
     itemGrid: { xs: 12, sm: 6, md: 6, lg: 4},
-    path: './millerVillageTycoon',
+    path: '/millerVillageTycoon',
     imageSrc: MillerVillagePreview, 
     altText: 'Miller Village Tycoon Image Preview',
     company: 'Cintesis & Univ. do Porto',

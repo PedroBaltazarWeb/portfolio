@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "@reach/router";
 import { Box } from "@mui/material"
-import theme from '../../themes/mui-theme'
+import Footer from '../components/Footer';
 import backgroundImage from '../images/pattern_wall.webp';
 const Layout = ({children}) => {
 
-  const { pathname } = useLocation();
-
+  const location = useLocation();
   useEffect(() => {
     window.scrollTo({top: 0, behavior: 'instant'})
-  }, [pathname])
+  }, [location])
 
   return (
     <Box sx={{
@@ -20,6 +19,7 @@ const Layout = ({children}) => {
       backgroundRepeat: 'repeat no-repeat',
       backgroundSize: '64rem, cover'}}>
       {children}
+      <Footer />
     </Box>
   )
 }
