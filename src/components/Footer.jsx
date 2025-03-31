@@ -8,8 +8,9 @@ import Link from '@mui/material/Link';
 
 const Footer = () => {
   return (
-    <Stack component="footer" textAlign="center" 
-    mt={5}  spacing={0}>
+    <Stack component="footer" textAlign="center" sx={{
+      background: 'rgba(36,40,109,1)'
+    }} spacing={0}>
       <img src={cityFooter}></img>
       <Stack
         sx={{

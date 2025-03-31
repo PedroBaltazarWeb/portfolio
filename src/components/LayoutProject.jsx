@@ -2,6 +2,7 @@ import * as React from "react"
 import { Container, Box } from "@mui/material"
 import pattern from '../images/pattern_wall.webp';
 import Separator from '../images/separator.svg';
+import Footer from "./Footer";
 
 const LayoutProject = ({header, projectSteps, firstProjectStep, secondProjectStep, thirdProjectStep, fourthProjectStep, fifthProjectStep}) => {
   return (
@@ -63,6 +64,7 @@ const LayoutProject = ({header, projectSteps, firstProjectStep, secondProjectSte
           {fifthProjectStep}
         </Container>
       </Box>
+          <Footer />
     </Box>
   )
 }

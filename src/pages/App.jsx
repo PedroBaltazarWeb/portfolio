@@ -5,12 +5,7 @@ import theme from '../../themes/mui-theme';
 import CssBaseline from '@mui/material/CssBaseline';
 import Layout from '../components/Layout';
 import Home from './Home';
-import MillerVillage from './millerVillageTycoon';
-import Neuro from './neuro';
-import PrismaEsocialProduz from './prismaEsocialProduz';
-import MpdsWeb from './mpdsWeb';
-import MpdsWounds from './mpdsWounds';
-
+import Footer from '../components/Footer';
 const App = () => {
   const [isClient, setIsClient] = useState(false);
 
@@ -22,13 +17,14 @@ const App = () => {
     return null; 
   }
 
+  
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
         <Layout>
           <Home path="/Home" />
         </Layout>
-      
     </ThemeProvider>
   );
 };
