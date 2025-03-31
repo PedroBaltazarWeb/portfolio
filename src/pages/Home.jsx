@@ -22,8 +22,7 @@ import Separator from '../images/separator.svg';
 import WIP from '../images/WIP.png';
 import MUILink from '@mui/material/Link';
 import {
-    BrowserRouter as Router,
-    Link,
+    Link
 } from "react-router-dom";
 import backgroundAfter from '../images/pedro_baltazar_cracha.svg';
 import shining from '../images/shining.webp';
