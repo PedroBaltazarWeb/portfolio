@@ -1,6 +1,4 @@
 import { createTheme } from "@mui/material";
-import HarperScript from './../src/fonts/HarperScript-Rounded.otf';
-//import HarperScript from './../public/fonts/HarperScript-Rounded.otf';
 
 let theme = createTheme()
 
@@ -17,10 +15,14 @@ theme = createTheme(theme , {
       MuiCssBaseline: {
         styleOverrides: `
           @font-face {
-            font-family: 'HarperScript';
-            src: local('HarperScript'), local('HarperScript-Rounded'), url(${HarperScript}) format('otf');
-          }
-        `,
+          font-family: 'HarperScript';
+          src: url('/fonts/HarperScript-Rounded.woff2') format('woff2'),
+               url('/fonts/HarperScript-Rounded.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+      `,
       },
     },
     typography: {
