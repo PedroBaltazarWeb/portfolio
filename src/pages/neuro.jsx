@@ -18,7 +18,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import {StyledTableCell, StyledTableRow} from '../../src/pages/styles/millerVillage/useStyles';
+import {StyledTableCell, StyledTableRow} from '../../src/styles/millerVillage/useStyles';
 import Paper from '@mui/material/Paper';
 
 const useStyles ={

@@ -36,7 +36,7 @@ import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import IframeWithLoading from '../components/IframeWithLoading';
 import DeviceHubIcon from '@mui/icons-material/DeviceHub';
 import VideocamIcon from '@mui/icons-material/Videocam';
-import {StyledTableCell, StyledTableRow} from '../../src/pages/styles/millerVillage/useStyles'
+import {StyledTableCell, StyledTableRow} from '../../src/styles/millerVillage/useStyles'
 import Grid from '@mui/material/Grid';
 import LibraryCard from './../components/LibraryCard'
 

@@ -6,8 +6,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Pedro Baltazar Relvas Portfolio`,
-        short_name: `PBR Portfolio`,
+        name: `Pedro Baltazar Portfolio`,
+        short_name: `PB Portfolio`,
         lang: `en`,
         display: `standalone`,
         icon: `src/images/favicon-16x16.png`,
