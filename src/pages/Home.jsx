@@ -9,7 +9,7 @@ import "../../css/main.min.css";
 import MpdsWoundsPreview from '../images/mpdsWoundsPreview.webp';
 import SmMpdsWebPreview from '../images/sm_mpdsWebPreview.webp'
 import NeuroPreview from '../images/neuroPreview.svg';
-import PrismaProduzEsocialPreview from '../images/prismaProduzEsocialPreview.webp';
+import PrismaProduzEsocialPreview from '../images/prismaPreview.webp';
 import MillerVillagePreview from '../images/millerVillagePreview.svg';
 import { Typography, Chip, Hidden } from "@mui/material";
 import Grid from '@mui/material/Grid';
