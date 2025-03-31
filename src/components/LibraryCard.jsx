@@ -187,7 +187,7 @@ const LibraryCard = () => {
                     Keeping your mouth open, exhale with maximum force, without hesitation and as long as possible;
                 </li>
                 <li>
-                    The registration will end automatically after the preset time (if the device sound is activated, you will hear a beep);
+                    The registration will end automatically after the preset time (if the device sound is activated, you will hear a beep).
                 </li>
             </Box>
         </Box>

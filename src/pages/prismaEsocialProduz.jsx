@@ -8,22 +8,14 @@ import LayoutProject from '../components/LayoutProject';
 import ProjectHeader from '../components/ProjectHeader';
 import Link from '@mui/material/Link';
 import ProjectSection from '../components/ProjectSection';
-import EsocialFirstIlus from '../images/prismaEsocialProduz/esocialIlust1.svg';
-import designSprintOne from '../images/prismaEsocialProduz/designsprint1.jpg';
-import designSprintTwo from '../images/prismaEsocialProduz/designsprint2.jpg';
-import designSprintThree from '../images/prismaEsocialProduz/designsprint3.jpg';
-import PrismaFirstIlus from '../images/prismaEsocialProduz/prismaIlust1.svg';
-import PrismaSecondIlus from '../images/prismaEsocialProduz/prismaIlust2.svg';
-import ProduzFirstIlus from '../images/prismaEsocialProduz/produzIlust1.svg';
-import ProduzSecondIlus from '../images/prismaEsocialProduz/produzIlust2.svg';
-import f3mLogo from '../images/techsIcons/f3m.svg';
-import downloadTheApp from '../images/mpdsAndroidProject/downloadTheApp.svg';
-import PrismaLogin from '../images/prismaEsocialProduz/prismaLogin.png';
-import PrismaLogo from '../images/prismaEsocialProduz/prismaLogo.svg';
-import ProduzLogo from '../images/prismaEsocialProduz/produzLogo.svg';
-import EsocialLogo from '../images/prismaEsocialProduz/esocialLogo.svg';
-import AllThree from '../images/prismaEsocialProduz/allThree.png';
-import Layout from '../components/Layout';
+import EsocialFirstIlus from '../images/prismaEsocialProduz/esocialIlust1.webp';
+import designSprintOne from '../images/prismaEsocialProduz/designsprint1.webp';
+import designSprintTwo from '../images/prismaEsocialProduz/designsprint2.webp';
+import designSprintThree from '../images/prismaEsocialProduz/designsprint3.webp';
+import PrismaFirstIlus from '../images/prismaEsocialProduz/prismaIlust1.webp';
+import ProduzFirstIlus from '../images/prismaEsocialProduz/produzIlust1.webp';
+import PrismaLogin from '../images/prismaEsocialProduz/prismaLogin.webp';
+import AllThree from '../images/prismaEsocialProduz/allThree.webp';
 
 import { Typography, Stack, Box, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
@@ -32,50 +24,21 @@ import ImageGallery from "../components/ImageGallery";
 const imagesFirstGallery = [
   {
     src: designSprintOne,
-    title: 'Mpds To the Moon Illustration',
-    description: 'Mpds To the Moon Illustration;'
-  },
-  {
-    src: designSprintTwo,
-    title: 'Mpds To the Moon Illustration',
-    description: 'Mpds To the Moon Illustration;'
+    title: 'Design Sprint Process',
+    description: 'Photo of the team on the first day!'
   },
   {
     src: designSprintThree,
-    title: 'Mpds To the Moon Illustration',
-    description: 'Mpds To the Moon Illustration;'
+    title: 'Design Sprint Process',
+    description: 'Turning storyboard into a prototype'
+  },
+  {
+    src: designSprintTwo,
+    title: 'Design Sprint Process',
+    description: 'Interviewing users and learning by watching them react to your prototype'
   }
 ];
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  fontFamily: "Noto Sans, sans-serif"
-  //fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-
-const briefCase = {
-  fontFamily: "Work Sans, sans-serif",
-  fontSize: 30,
-  fontWeight: 500,
-  paddingRight: 75
-}
-
-const detailsCase = {
-  fontFamily: "Work Sans, sans-serif",
-  fontSize: 14,
-  color: "#5a498f",
-  fontWeight: 700
-}
-
-const detail = {
-  fontSize: 14,
-  color: "#5a498f",
-  fontWeight: 600
-}
-
-
-// markup
 const PrismaProduzESocialPage = () => {
   return (
   <>
@@ -89,7 +52,7 @@ const PrismaProduzESocialPage = () => {
                         year='2017 until Now'
                     ></ProjectHeader>
                 }
-                firstProjectStep={
+                fifthProjectStep={
                   <ProjectSection topic="The Family" >
      
                     <Typography variant="pRegularText" component='p' sx={{
@@ -98,8 +61,7 @@ const PrismaProduzESocialPage = () => {
                           sm: theme.spacing(5),
                         },
                     }}>
-                      At our company, we pride ourselves on developing innovative software solutions that cater to diverse industry needs. By bringing together three large-scale products under one development base, we foster a collaborative environment where different sectors can share insights and drive progress. This setup exemplifies our commitment to flexibility and teamwork, as our development teams and business managers work hand-in-hand to deliver exceptional results.
-                      </Typography>
+                      Developing innovative software solutions tailored to diverse industry needs is a key focus. By integrating three large-scale products into a single development base, I work alongside my colleagues to foster a collaborative environment where different sectors can share insights and drive progress. This approach reflects a strong commitment to flexibility and teamwork, as development teams and business managers collaborate closely to deliver exceptional results.    </Typography>
                   <Box textAlign='center' sx={{
                         pb: {
                           xs: theme.spacing(5),
@@ -108,7 +70,7 @@ const PrismaProduzESocialPage = () => {
                         mx: 'auto'
                     }}
                     width={{
-                          xs: 400,
+                          xs: 330,
                           sm: 700,
                           md: 800,
                           lg: 800
@@ -152,17 +114,17 @@ const PrismaProduzESocialPage = () => {
                       },
                   }}
                      >
-                      <img width='auto' height='400'
+                      <img width='330' height='auto'
                         style={{
                           borderRadius: '8px'
                         }}
                       src={PrismaFirstIlus} alt="Prisma Illustration"/>
-                      <img width='auto' height='400'
+                      <img width='330' height='auto'
                         style={{
                           borderRadius: '8px'
                         }}
                       src={ProduzFirstIlus} alt="Produz Illustration"/>
-                      <img width='auto' height='400'
+                      <img width='330' height='auto'
                         style={{
                           borderRadius: '8px'
                         }}
@@ -178,7 +140,7 @@ const PrismaProduzESocialPage = () => {
                   </Typography>
 
                   <Box textAlign='center' width={{
-                          xs: 400,
+                          xs: 330,
                           sm: 700,
                           md: 800,
                           lg: 800
@@ -260,7 +222,7 @@ const PrismaProduzESocialPage = () => {
             <ArrowRightAltIcon color="action"/>
         </ListItemIcon>
         <ListItemText
-            primary={<Typography variant="regularText">Designed logos and icons;</Typography>}
+            primary={<Typography variant="regularText">Designed logos, icons and illustrations;</Typography>}
         />
     </ListItem>
     <ListItem>
@@ -276,11 +238,13 @@ const PrismaProduzESocialPage = () => {
 
 
 <ImageGallery images={imagesFirstGallery} widthGallery={{
-                          xs: 400,
+                          xs: 330,
                           sm: 700,
                           md: 800,
                           lg: 800
                         }} heightGallery={510} marginTop={4}/>
+
+<Typography variant="caption" component='p' pb={3} pt={2} textAlign='center'>I generated the illustrations used in this "Design Sprints" gallery in: https://lenimatic.com</Typography>
 
 <Stack direction={{
                             xs: 'column',
@@ -291,10 +255,7 @@ const PrismaProduzESocialPage = () => {
                 <iframe className="w-100" height="315" src="https://www.youtube.com/embed/N8vfrCBFaYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              
               </Stack>
 </ProjectSection>
-              
                 }
-                
-               
                 />
                 </ThemeProvider>
   </> )}

@@ -40,16 +40,13 @@ import {StyledTableCell, StyledTableRow} from '../../src/pages/styles/millerVill
 import Grid from '@mui/material/Grid';
 import LibraryCard from './../components/LibraryCard'
 
-const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
-const pData = [2400, 1398, 9800, 3908, 4800, 3800, 4300];
+
+const successData = [84, 100, 94, 78];
 const xLabels = [
-  'Page A',
-  'Page B',
-  'Page C',
-  'Page D',
-  'Page E',
-  'Page F',
-  'Page G',
+  'Task 1',
+  'Task 2',
+  'Task 3',
+  'Task 4'
 ];
 
 const useStyles ={
@@ -81,19 +78,20 @@ const MillerVillageTycoonPage = () => {
     <>
         <ThemeProvider theme={theme}>
                 <LayoutProject
-                    header={
+                    header={<>
                         <ProjectHeader
                             projectTitle='Miller Village Tycoon' 
                             entities='Cintesis & Universidade do Porto' 
                             year='2022/2023'
                         ></ProjectHeader>
+                    </>
+                       
                     }
                     projectSteps={
                         <Box display='flex'
                             justifyContent="center"
                             alignItems="center"
                             flexDirection='column'
-                            bgcolor={theme.palette.primary.light}
                             pb={{
                                 xs: 1,
                                 sm: 2,
@@ -102,9 +100,9 @@ const MillerVillageTycoonPage = () => {
                                 xl: 5
                             }}>
                             <ProjectBasicInfo 
-                                info="Miller Village Tycoon gamifies the asthma monitoring process (Forced Expiratory Maneuver) for adolescents aged 14 to 17 by integrating it into a village-building game, aiming to enhance adherence to disease monitoring. Nevertheless, the main and only objective is to seamlessly incorporate the maneuver into the game's storyline.">
+                                info="Miller Village Tycoon gamifies the asthma monitoring process: Forced Expiratory Maneuver — for adolescents aged 14 to 17 by integrating it into a village-building game, aiming to enhance adherence to disease monitoring. Nevertheless, the main and only objective is to seamlessly incorporate the maneuver into the game's storyline.">
                             </ProjectBasicInfo>
-                            <ProjectSteps topic="1. Research & Interviews"
+                             {/* <ProjectSteps topic="1. Research & Interviews"
                                 firstStepDescription="Gathering user insights and data to inform and guide the design process."
                                 secondStep="2. Concept"
                                 secondStepDescription= "Defining the project's vision and core ideas based on research findings."
@@ -114,12 +112,14 @@ const MillerVillageTycoonPage = () => {
                                 fourthStepDescription= "Developing an interactive, testable version of the design to explore and refine functionality."
                                 fifthStep= "5. Evaluation"
                                 fifthStepDescription= "Assessing the prototype through user feedback and testing to identify areas for improvement.">
-                            </ProjectSteps>
+                            </ProjectSteps>  */}
                         </Box>
                     }
                     firstProjectStep={
-                        <ProjectSection topic="1. Research & Interviews" >
-                            <Box mb={5}>
+                        <ProjectSection topic="Research & Interviews" >
+                            <Box mb={5}  sx={{
+                                     [theme.breakpoints.down('md')]: {mb: 1}
+                                }}>
                                 <Typography variant="pRegularText" component='p' >
                                     All started with InspirersKids, an extension of the <Link sx={{color: '#00B9C4'}} href="https://cintesis.eu/en/portfolio-items/airdoc/">AIRDOC ecosystem</Link> by MEDIDA and CINTESIS, which developed a mobile app for caregivers of children and adolescents with chronic or acute respiratory conditions to securely transmit medical data to a central server.
                                 </Typography>
@@ -157,31 +157,63 @@ const MillerVillageTycoonPage = () => {
                                         My initial goal was to create an experience where patients could monitor their condition while also having fun and feeling connected to it. It was brought to my attention that the current state of the app seems too "standardized" for teenagers, so I focused on understanding this audience through papers and interviews.
                                 </Typography>
 
-                                <Typography variant="emphasisRegularText" component='p' sx={{
+                                <Typography variant="emphasisRegularText" my={3} component='p' sx={{
                                             pb: {
                                             xs: theme.spacing(5),
                                             sm: theme.spacing(5),
                                             md: theme.spacing(0),
                                             },
                                         }}>
-                                    At this stage, teens begin to seek more independence and responsibility, allowing us to create a positive experience without relying heavily on parents or caregivers.
+                                    At this stage, teens begin to seek more independence and responsibility, allowing me to create a positive experience without relying heavily on parents or caregivers.
                                 </Typography>
 
                                 <Typography variant="pRegularText" component='p'>
                                     By making disease management more engaging, I aimed to alleviate anxiety and depression common in this age group. Additionally, I believed this approach will increase adherence to asthma treatment, consequently reducing exacerbations in the adolescent population.
                                 </Typography>
 
-                                <Box pb={2} pt={5} sx={{textAlign: 'center'}}>
+                                <Box pb={2} pt={5} sx={{textAlign: 'center', display: {xs: 'none', sm: 'block', md: 'block'}}}>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/FV-Rb_LJ1j4?si=t9gOP1nkFKihoXlD&amp;controls=0&amp;start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <Typography variant="caption" component='p' pb={3} pt={2} textAlign='center'>Forced Expiratory Maneuver in the context of spirometry</Typography>
+                                </Box> 
+
+                                <Box pb={2} pt={5} sx={{textAlign: 'center', display: {xs: 'block', sm: 'none', md: 'none'}}}>
+                                    <iframe width="280" height="157.5" src="https://www.youtube.com/embed/FV-Rb_LJ1j4?si=t9gOP1nkFKihoXlD&amp;controls=0&amp;start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                     <Typography variant="caption" component='p' pb={3} pt={2} textAlign='center'>Forced Expiratory Maneuver in the context of spirometry</Typography>
                                 </Box> 
 
                                 <Typography variant="pRegularText" component='p'>
                                 I reviewed literature on asthma, particularly in teenagers, as well as related topics. One of these topics was the Forced Expiratory Maneuver (FEM), which will have great importance in this project, applied in the lung function module. The video above demonstrates this technique in the context of spirometry.
                                 </Typography>
-                                <Box sx={{[theme.breakpoints.up('md')]: {padding: '0px 160px 32px 160px'}}}>
+                                <Box sx={{
+                                    display: {
+                                        xs: 'none',
+                                        sm: 'block',
+                                        md: 'block',
+                                        lg: 'block'
+                                    },
+                                    [theme.breakpoints.up('md')]: {padding: '0px 160px 32px 160px'}
+                                    }}>
                                     <LibraryCard></LibraryCard>
                                     </Box>
+                                </Box>
+
+                                <Box mx='auto' sx={{
+                                    color: "#ffffff",
+                                    background: "#17192b",
+                                    width: '100%',
+                                    borderRadius: 2,
+                                    mb:  theme.spacing(3),
+                                    p: theme.spacing(2),
+                                    display: {
+                                        xs: 'block',
+                                        sm: 'none',
+                                        md: 'none',
+                                        lg: 'none'
+                                    }
+                                }}>
+                                    <Typography>
+                                        "Instructions to make the FEM with a mobile phone in the Lung Function module" available on tablet/desktop.
+                                    </Typography>
                                 </Box>
                             <Typography variant="stepTitleHeader" mb={2}>Interview Guide & User Persona</Typography>
                             <Typography variant="pRegularText" component='p' sx={{
@@ -193,13 +225,13 @@ const MillerVillageTycoonPage = () => {
                                         }}>
                                 Interviews with both adolescents and adults with asthma were conducted not only at the project's initial stage but throughout its duration. Finding participants was challenging due to privacy concerns and bureaucratic obstacles.
                             </Typography>
-                            <Typography variant="emphasisRegularText" component='p' sx={{
+                            <Typography variant="emphasisRegularText" my={3} component='p' sx={{
                                             pb: {
                                             xs: theme.spacing(5),
                                             sm: theme.spacing(5),
                                             md: theme.spacing(0),
                                             },
-                                        }}>I conducted semi-structured interviews using a thematic question guide and mind maps, obtained recording permissions and participant consent, and planned to start with easy questions while maintaining a compassionate approach.</Typography>
+                                        }}>I conducted semi-structured interviews using: a thematic question guide and mind maps; obtained recording permissions and participant consent; and planned to start with easy questions while maintaining a compassionate approach.</Typography>
 
                         <Typography pt={2} variant="pRegularText" component='p' sx={{
                                             pb: {
@@ -211,14 +243,39 @@ const MillerVillageTycoonPage = () => {
                             An Informed Consent Form was developed and consisted of two parts: an Information Sheet, which provided details about the study, and a Certificate of Consent for signatures if you chose to participate, including an assent form for children under 16.
                         </Typography>
 
-                        <Box mx='auto'>
+                        <Box mx='auto' sx={{
+                                display: {
+                                    xs: 'none',
+                                    sm: 'block',
+                                    md: 'block'
+                                }
+                            }}>
                                 <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FTawtNI1VrduA3p9H2oGNW2%2FPerfil-and-Interview-Guide---Miller-Village(English)%3Fnode-id%3D0-1%26t%3DFHXsDqmyNUFLqJGf-1" />                          
+                            </Box>
+                            
+
+                            <Box mx='auto' sx={{
+                                color: "#ffffff",
+                                background: "#17192b",
+                                width: '100%',
+                                borderRadius: 2,
+                                p: theme.spacing(2),
+                                display: {
+                                    xs: 'block',
+                                    sm: 'none',
+                                    md: 'none',
+                                    lg: 'none'
+                                }
+                            }}>
+                                <Typography>
+                                Interview Guide and User Persona available on tablet/desktop.
+                                </Typography>
                             </Box>
             
                         </ProjectSection>
                     }
                     secondProjectStep={
-                        <ProjectSection topic="2. Concept">
+                        <ProjectSection topic="Concept">
                             <Typography variant="pRegularText" component='p' sx={{
                                             pb: {
                                             xs: theme.spacing(5),
@@ -226,11 +283,11 @@ const MillerVillageTycoonPage = () => {
                                             md: theme.spacing(0),
                                             },
                                         }}>
-                                I decided to focus on Lung Function because this module allows users to record the sound of their breathing by following simple instructions and then send this information directly to their doctor.
+                                Lung Function allows users to record the sound of their breathing by following simple instructions and then send this information directly to their doctor.
                                 According to my research, incorporating gamification centered around the Forced Expiratory Maneuver procedure would be the most effective approach to engage adolescents with asthma, ages 14 to 17, and make the process more appealing to them.
                             </Typography>
 
-                            <Typography variant="emphasisRegularText" component='p' sx={{
+                            <Typography variant="emphasisRegularText" component='p' my={3} sx={{
                                             pb: {
                                             xs: theme.spacing(5),
                                             sm: theme.spacing(5),
@@ -246,12 +303,12 @@ const MillerVillageTycoonPage = () => {
                                             md: theme.spacing(5),
                                             },
                                         }}>
-                                Exploring themes ranging from race cars to vessels reminiscent of the Age of Discovery, various ideas were considered. Ultimately, the concept of a 'city builder' resonated most with the user, offering an endless, engaging process. The progression of structures and technologies, coupled with strategic village planning, promises players a visually immersive journey rich in challenges and social interactions. This is particularly true when integrating the trading feature, allowing players to engage with others facing similar health challenges."
+                                Exploring themes ranging from race cars to vessels reminiscent of the Age of Discovery, various ideas were considered. Ultimately, the concept of a 'city builder' resonated most with the user, offering an endless, engaging process. The progression of structures and technologies, coupled with strategic village planning, promises players a visually immersive journey rich in challenges and social interactions. This is particularly true when integrating the trading feature, allowing players to engage with others facing similar health challenges.
                             </Typography>
                         </ProjectSection> 
                     }
                     thirdProjectStep={
-                        <ProjectSection topic="3. Wireframing">
+                        <ProjectSection topic="Wireframing">
                             <Typography variant="pRegularText" component='p' sx={{
                                             pb: {
                                             xs: theme.spacing(5),
@@ -260,17 +317,41 @@ const MillerVillageTycoonPage = () => {
                                             },
                                         }}>
                                 Developing task flows and user flows allows us to comprehend the user's journey in completing the FEM. This results in a comprehensive mapping of all functionalities and information embedded in the app.
-                                Desde inicio eu fiz Functional Requirements: Structure of the mobile app do insirer kids
                             </Typography>
                             <Box mx='auto' sx={{
                                             pb: {
-                                            xs: theme.spacing(5),
-                                            sm: theme.spacing(5),
-                                            md: theme.spacing(0),
+                                                xs: theme.spacing(5),
+                                                sm: theme.spacing(5),
+                                                md: theme.spacing(0),
                                             },
+                                            display: {
+                                                xs: 'none',
+                                                sm: 'block',
+                                                md: 'block'
+                                            }
                                         }}>
                                 <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FEm9ZNkCqoUxySenf1v2VtM%2FTask-Flow-and-User-Flow%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3D1xt2Blq4oJUjDshT-1" />                          
                             </Box>
+
+                            <Box mx='auto' sx={{
+                                color: "#ffffff",
+                                background: "#17192b",
+                                width: '100%',
+                                borderRadius: 2,
+                                p: theme.spacing(2),
+                                mb: theme.spacing(5),
+                                display: {
+                                    xs: 'block',
+                                    sm: 'none',
+                                    md: 'none',
+                                    lg: 'none'
+                                }
+                            }}>
+                                <Typography>
+                                    Task flow and User Flow available on tablet/desktop.
+                                </Typography>
+                            </Box>
+
                             <Typography variant="pRegularText" component='p' sx={{
                                             pb: {
                                             xs: theme.spacing(5),
@@ -278,39 +359,126 @@ const MillerVillageTycoonPage = () => {
                                             md: theme.spacing(5),
                                             },
                                         }}>
-                                "Bringing the concept to fruition was a deliberate and necessary endeavor. As you can observe in the version history, meticulous notes were taken, and various sketches were crafted. Through 9 iterations, numerous heuristic issues were identified and rectified, granting us a degree of assurance as we embark on creating the low-fi prototype."
+                                Bringing the concept to fruition was a deliberate and necessary endeavor. As you can observe in the version history, meticulous notes were taken, and various sketches were crafted. Through 9 iterations, numerous heuristic issues were identified and rectified, granting us a degree of assurance as we embark on creating the low-fi prototype.
                             </Typography>
-                            <Box mx='auto'>
+                            <Box mx='auto' sx={{
+                                display: {
+                                    xs: 'none',
+                                    sm: 'block',
+                                    md: 'block'
+                                }
+                            }}>
                                 <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2F3tBzqbZD6XZVq20BINEqnn%2FWireframes---Miller-Village-Tycoon%3Fnode-id%3D0-1%26t%3DiR8lBorzdulONkkw-1" />
+                            </Box>
+                            <Box mx='auto' sx={{
+                                color: "#ffffff",
+                                background: "#17192b",
+                                width: '100%',
+                                borderRadius: 2,
+                                p: theme.spacing(2),
+                                display: {
+                                    xs: 'block',
+                                    sm: 'none',
+                                    md: 'none',
+                                    lg: 'none'
+                                }
+                            }}>
+                                <Typography>
+                                    Wireframes and User Flow available on tablet/desktop.
+                                </Typography>
                             </Box>
                         </ProjectSection>
                     }
                     fourthProjectStep={
-                        <ProjectSection topic="4. Prototype">
-                            <Typography variant="stepTitleHeader" mb={2} mt={3}>Hi-Fi</Typography>
+                        <ProjectSection topic="Prototype">
+ <Typography pt={2} variant="pRegularText" component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(5),
+                                            },
+                                        }}>
+After gathering positive feedback from small casual tests, I felt confident enough to proceed with the development of the high-fidelity prototype and the design system.
+ 
+
+                                        </Typography>
                             <Box mx='auto' sx={{
                                             pb: {
                                             xs: theme.spacing(5),
                                             sm: theme.spacing(5),
                                             md: theme.spacing(5),
                                             },
+                                            display: {
+                                                xs: 'none',
+                                                sm: 'block',
+                                                md: 'block'
+                                            }
                                         }}>
                                 <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fs0OQx8uxyLyBD134jB3W4f%2FHi-Fi-FEM%3Fnode-id%3D1-4%26starting-point-node-id%3D1%253A2%26show-proto-sidebar%3D1%26scaling%3Dscale-down%26t%3D8lX1z6yzrlFYKqLF-1" />
                             </Box>
-                            <Typography variant="stepTitleHeader" mb={2}>Design System</Typography>
+                            <Box mx='auto' sx={{
+                                color: "#ffffff",
+                                background: "#17192b",
+                                width: '100%',
+                                borderRadius: 2,
+                                p: theme.spacing(2),
+                                mb: theme.spacing(5),
+                                display: {
+                                    xs: 'block',
+                                    sm: 'none',
+                                    md: 'none',
+                                    lg: 'none'
+                                }
+                            }}>
+                                <Typography>
+                                    Hi-Fi Prototype available on tablet/desktop.
+                                </Typography>
+                            </Box>
+
                             <Box mx='auto' sx={{
                                             pb: {
                                             xs: theme.spacing(5),
                                             sm: theme.spacing(5),
                                             md: theme.spacing(5),
                                             },
+                                            display: {
+                                                xs: 'none',
+                                                sm: 'block',
+                                                md: 'block'
+                                            }
                                         }}>
                                 <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2F5dkB8O9OnEH5UvA9JGxzYx%2FDesign-System-of-Miller-Village-Tycoon%3Fnode-id%3D0-1%26t%3DGMrMy2bq17s5TG5w-1" />
+                            </Box>
+                            <Box mx='auto' sx={{
+                                color: "#ffffff",
+                                background: "#17192b",
+                                width: '100%',
+                                borderRadius: 2,
+                                p: theme.spacing(2),
+                                display: {
+                                    xs: 'block',
+                                    sm: 'none',
+                                    md: 'none',
+                                    lg: 'none'
+                                }
+                            }}>
+                                <Typography>
+                                    Design System available on tablet/desktop.
+                                </Typography>
                             </Box>
                         </ProjectSection>       
                     }
                     fifthProjectStep={
-                        <ProjectSection backgroundColor="#0B1231" topic="5. Evaluation">
+                        <ProjectSection backgroundColor="#0B1231" topic="Evaluation">
+                            <Typography variant="pRegularText" component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(5),
+                                            },
+                                        }}>
+                                Once I had conceptualized and illustrated all the elements that make up the design system and its subsequent prototype, it was time to put my solution to the test with a diverse range of users.
+                            </Typography>
                             <Typography variant="stepTitleHeader" mb={2} mt={3}>Executive Summary</Typography>
                             <Box sx={{[theme.breakpoints.up('md')]: {padding: '32px 160px'}}}>
                                 <Accordion sx={{bgcolor: "#1a2241", color: "#fff" }}>
@@ -993,33 +1161,80 @@ const MillerVillageTycoonPage = () => {
                         <Typography variant="regularText" fontWeight={700}>Results</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Stack direction="row" spacing={2} justifyContent="center">
+                        
+                    <Divider>Usability Tests Rates</Divider>
+                        <Stack mt={2}  mb={4} direction="row" spacing={2} justifyContent="center">
                             <Box>
-                                <Typography variant="regularText">Success Rates</Typography>
+                                <Typography variant="regularText">Success Rate</Typography>
                                 <BarChart
-                                sx={{mx: 'auto'}}
+    width={500}
+    height={300}
+    series={[
+        { 
+            data: successData, 
+            valueFormatter: (value) => `${value}%` // Format values in tooltip & legend
+        }
+    ]}
+    xAxis={[{ 
+        data: xLabels, 
+        scaleType: 'band',
+        tickLabelStyle: { fill: 'white' }
+    }]}
+    yAxis={[{
+        valueFormatter: (value) => `${value}%`,
+        tickLabelStyle: { fill: 'white' }
+    }]}
+    slotProps={{
+        legend: { labelStyle: { fill: 'white' } }, // Legend text color
+        axis: {
+            x: { stroke: 'white', tickLabelStyle: { fill: 'white' } }, // X-Axis styling
+            y: { stroke: 'white', tickLabelStyle: { fill: 'white' } }  // Y-Axis styling
+        }
+    }}
+    sx={{
+        '& .MuiChartsAxis-root line': { stroke: 'white' }, // Make axis lines white
+        '& .MuiChartsAxis-tickLabel': { fill: 'white' }, // Ensure tick labels are white
+        '& .MuiChartsAxis-tick': { stroke: 'white' } // Ensure axis ticks are white
+    }}
+/>
+                            </Box>
+                            <Box>
+                                <Typography variant="regularText">Error/Confusion Rate</Typography>
+                                <BarChart
                                     width={500}
                                     height={300}
                                     series={[
-                                        { data: pData, label: 'pv', id: 'pvId', stack: 'total' },
-                                        { data: uData, label: 'uv', id: 'uvId', stack: 'total' },
+                                        { data: [7, 0, 2, 2] },
+                                        { data: [3, 0, 3, 1] }
                                     ]}
-                                    xAxis={[{ data: xLabels, scaleType: 'band' }]}
+                                    xAxis={[{ 
+                                        data: xLabels, 
+                                        scaleType: 'band',
+                                        tickLabelStyle: { fill: 'white' }
+                                    }]}
+                                    yAxis={[{
+                                        tickLabelStyle: { fill: 'white' }
+                                    }]}
+                                    slotProps={{
+                                        legend: { labelStyle: { fill: 'white' } }, // Legend text color
+                                        axis: {
+                                            x: { stroke: 'white', tickLabelStyle: { fill: 'white' } }, // X-Axis styling
+                                            y: { stroke: 'white', tickLabelStyle: { fill: 'white' } }  // Y-Axis styling
+                                        }
+                                    }}
+                                    sx={{
+                                        '& .MuiChartsAxis-root line': { stroke: 'white' }, // Make axis lines white
+                                        '& .MuiChartsAxis-tickLabel': { fill: 'white' }, // Ensure tick labels are white
+                                        '& .MuiChartsAxis-tick': { stroke: 'white' } // Ensure axis ticks are white
+                                    }}
                                 />
                             </Box>
-                            <Box>
-                                <Typography variant="regularText">Success Rates</Typography>
-                                <BarChart
-                                sx={{mx: 'auto'}}
-                                    width={500}
-                                    height={300}
-                                    series={[
-                                        { data: pData, label: 'pv', id: 'pvId', stack: 'total' },
-                                        { data: uData, label: 'uv', id: 'uvId', stack: 'total' },
-                                    ]}
-                                    xAxis={[{ data: xLabels, scaleType: 'band' }]}
-                                />
-                            </Box>
+                        </Stack>
+                        <Divider>System Usability Scale</Divider>
+                        <Stack direction="row" spacing={2} justifyContent="center" mt={3} pb={2}>
+                            <Typography variant="regularText">
+                                The grading result for SUS KEY is B - Excellent, with a score ranging between 85 and 91.9.
+                            </Typography>
                         </Stack>
                     </AccordionDetails>
                 </Accordion>
@@ -1029,13 +1244,37 @@ const MillerVillageTycoonPage = () => {
             Human Results                            
             </Typography>
 
-            <Typography variant="pRegularText">
-            Although seven out of the eight.            </Typography>
+            <Typography variant="pRegularText">Below, I have compiled the concrete issues detected during usability testing, screen by screen.</Typography>
 
 
-                            <Box pt={2} mx='auto' mb={5}>
+                            <Box mx='auto' mb={5} sx={{
+                                display: {
+                                    xs: 'none',
+                                    sm: 'block',
+                                    md: 'block'
+                                }
+                            }}>
                                 <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FAdnr2VrucX5ZQwjK9kV2BB%2FHuman-Results%3Fnode-id%3D0-1%26t%3DDpYpsbRUnbq4V665-1" />
                             </Box>
+
+                            <Box mx='auto' sx={{
+                                color: "#ffffff",
+                                background: "#17192b",
+                                width: '100%',
+                                borderRadius: 2,
+                                p: theme.spacing(2),
+                                display: {
+                                    xs: 'block',
+                                    sm: 'none',
+                                    md: 'none',
+                                    lg: 'none'
+                                }
+                            }}>
+                                <Typography>
+                                Human results available on tablet/desktop.
+                                </Typography>
+                            </Box>
+
 
 
                             <Typography variant="stepTitleHeader" mt={2} mb={2}>Findings and recommendations</Typography>
@@ -1196,6 +1435,14 @@ const MillerVillageTycoonPage = () => {
                                     </AccordionDetails>
                                 </Accordion>
                             </Box>
+                            <Typography variant="pRegularText"  component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(5),
+                                            }
+                                        }}>In conclusion, the usability tests revealed several areas for improvement, particularly in terms of clarity button labeling, and user guidance. Participants hesitated in text-heavy sections and found some button functions ambiguous, highlighting the need for clearer visual cues and improved feedback mechanisms. Additionally, the distinction between different FEM process stages must be reinforced to avoid confusion. To address these challenges, key adjustments will include refining button design, enhancing feedback with visuals, and reevaluating the help section’s effectiveness. These changes will aim to create a more intuitive and seamless user experience when the project is resumed.</Typography>
+
                         </ProjectSection>     
                     }
                 />

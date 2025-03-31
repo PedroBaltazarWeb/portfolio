@@ -1307,6 +1307,11 @@
   resolved "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.2.tgz"
   integrity sha512-J4yDIIthosAsRZ5CPYP/jQvUAQtlZTTD/4suA08/FEnlxqW3sKS9iAhgsa9VYLZ6vDHn/ixJgIqRQPotoBjxIw==
 
+"@fontsource/archivo@^5.2.5":
+  version "5.2.5"
+  resolved "https://registry.npmjs.org/@fontsource/archivo/-/archivo-5.2.5.tgz"
+  integrity sha512-jruUls1+n0Cp1dJh5txRfJbxx7uKtGYawi93C5MqwwWCvcqspG+RslhHAIbcvULOVwne7Kk7hyr5JUgs3yrfRg==
+
 "@fontsource/caveat@^5.1.0":
   version "5.1.0"
   resolved "https://registry.npmjs.org/@fontsource/caveat/-/caveat-5.1.0.tgz"
@@ -1316,6 +1321,11 @@
   version "5.1.0"
   resolved "https://registry.npmjs.org/@fontsource/concert-one/-/concert-one-5.1.0.tgz"
   integrity sha512-qMAKfLLKn3K68EQN59pmypAn5VP42YaxalAvCsffZh0Vm9934fUWrZFXXgrbT8y6zxJcxQOPzOlibsGfDzSiXA==
+
+"@fontsource/lato@^5.2.5":
+  version "5.2.5"
+  resolved "https://registry.npmjs.org/@fontsource/lato/-/lato-5.2.5.tgz"
+  integrity sha512-d8aogKOul7a3eYG3UzTG8PB6A0D+6tlkFQCACmKQ7qTwB3XS6QmkSW1L0vYbVE9CfCRq/Zpb5sG3gNA6yJea/A==
 
 "@fontsource/manrope@^5.0.18":
   version "5.0.20"

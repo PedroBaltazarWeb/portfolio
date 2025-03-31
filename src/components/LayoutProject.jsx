@@ -1,38 +1,64 @@
 import * as React from "react"
 import { Container, Box } from "@mui/material"
-import Footer from "./Footer"
-import theme from '../../themes/mui-theme'
+import pattern from '../images/pattern_wall.webp';
+import Separator from '../images/separator.svg';
 
 const LayoutProject = ({header, projectSteps, firstProjectStep, secondProjectStep, thirdProjectStep, fourthProjectStep, fifthProjectStep}) => {
   return (
-    <Box component="main" sx={{bgcolor: theme.palette.primary.main }}>
+    <Box component="main">
       {header}
-      <Box sx={{bgcolor: '#283982' }}>
+      <Box sx={{background: `
+            url(${pattern}), 
+            linear-gradient(180deg, rgba(21,25,71,1) 0%, rgba(36,40,109,1) 82%)`,
+            backgroundPosition: 'top left',
+            backgroundRepeat: 'repeat no-repeat',
+            backgroundSize: '64rem, cover',
+            position: 'relative',
+            '&::after, &::before': {
+              background: `url(${Separator})`,
+              backgroundSize: 'cover',
+              height: 10,
+              content: '""',
+              width: '100%',
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              margin: 'auto',
+              width: '70%',
+            },
+            '&::after': {
+              top: '-5px'
+            },
+            '&::before': {
+              bottom: '-5px'
+            }
+            }}>
         <Container  maxWidth='lg'>
           {projectSteps}
         </Container>
       </Box>
-      <Box sx={{bgcolor: '#0B1231' }} py={5}>
+      <Box sx={{bgcolor: '#0c0e22' }} py={5}>
         <Container  maxWidth='lg'>
           {firstProjectStep}
         </Container>
       </Box>
-      <Box py={5} hidden={secondProjectStep ? false : true}>
+      <Box sx={{bgcolor: '#181b43' }} py={5} hidden={secondProjectStep ? false : true}>
         <Container maxWidth='lg' py={5}>
           {secondProjectStep}
         </Container>
       </Box>
-      <Box sx={{bgcolor: '#1E2647' }} py={5} hidden={thirdProjectStep ? false : true}>
+      <Box sx={{bgcolor: '#0c0e22' }} py={5} hidden={thirdProjectStep ? false : true}>
         <Container maxWidth='lg'>
           {thirdProjectStep}
         </Container>
       </Box>
-      <Box py={5} hidden={fourthProjectStep ? false : true}>
+      <Box sx={{bgcolor: '#181b43' }} py={5} hidden={fourthProjectStep ? false : true}>
         <Container maxWidth='lg'>
           {fourthProjectStep}
         </Container>
       </Box>
-      <Box sx={{bgcolor: '#0B1231'}} py={5} hidden={fifthProjectStep ? false : true}>
+      <Box sx={{background: 'rgb(21,25,71)',
+        background: 'linear-gradient(180deg, #0c0e22 55%, rgba(36,40,109,1) 100%)'}} py={5} hidden={fifthProjectStep ? false : true}>
         <Container maxWidth='lg'>
           {fifthProjectStep}
         </Container>

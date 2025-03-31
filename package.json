@@ -18,8 +18,10 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@fontsource/archivo": "^5.2.5",
     "@fontsource/caveat": "^5.1.0",
     "@fontsource/concert-one": "^5.1.0",
+    "@fontsource/lato": "^5.2.5",
     "@fontsource/manrope": "^5.0.18",
     "@fontsource/noto-sans": "^4.5.9",
     "@fontsource/work-sans": "^4.5.7",

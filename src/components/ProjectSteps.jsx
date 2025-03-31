@@ -1,20 +1,6 @@
 import * as React from "react"
-import { Grid, Typography } from "@mui/material"
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import SearchIcon from '@mui/icons-material/Search';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
-import CreateIcon from '@mui/icons-material/Create';
-import AssessmentIcon from '@mui/icons-material/Assessment';
 
-const useStyles={
-    root: {
-
-    }
-}
-
-const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'></SearchIcon>,
+const ProjectSteps = ({/* firstIcon = <SearchIcon fontSize="large" color='action'></SearchIcon>,
     firstStep = "1. Research & Interviews",
     firstStepDescription= "I interviewed people and read many papers about asthma in teenagers.",
     secondIcon = <EmojiObjectsIcon fontSize="large" color='action'></EmojiObjectsIcon>,
@@ -29,10 +15,26 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
     fifthIcon = <AssessmentIcon fontSize="large" color='action'></AssessmentIcon>,
     fifthStep= "5. Evaluation",
     fifthStepDescription= "I interviewed people and read many papers about asthma in teenagers.",
-    isFifthSlotHidden = false
+    isFifthSlotHidden = false */
+    firstIcon,
+    firstStep,
+    firstStepDescription,
+    secondIcon,
+    secondStep,
+    secondStepDescription,
+    thirdIcon,
+    thirdStep,
+    thirdStepDescription,
+    fourthIcon,
+    fourthStep,
+    fourthStepDescription,
+    fifthIcon,
+    fifthStep,
+    fifthStepDescription,
+    isFifthSlotHidden
 }) => {
-    return (
-        <Grid container
+    return (<></>
+        /* <Grid container
             direction="row"
             spacing={5}
             my={5}
@@ -50,7 +52,8 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                         width: 85,
                         height: 85,
                         borderRadius: 1,
-                        bgcolor: '#107684',
+                        background: 'rgb(235,197,0)',
+                        background: 'linear-gradient(180deg, rgba(235,197,0,1) 0%, rgba(212,126,92,1) 100%)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -73,7 +76,8 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                         width: 85,
                         height: 85,
                         borderRadius: 1,
-                        bgcolor: '#00B9C4',
+                        background: 'rgb(235,197,0)',
+                        background: 'linear-gradient(180deg, rgba(235,197,0,1) 0%, rgba(212,126,92,1) 100%)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -96,7 +100,8 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                         width: 85,
                         height: 85,
                         borderRadius: 1,
-                        bgcolor: '#179EEA',
+                        background: 'rgb(235,197,0)',
+                        background: 'linear-gradient(180deg, rgba(235,197,0,1) 0%, rgba(212,126,92,1) 100%)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -119,7 +124,8 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                         width: 85,
                         height: 85,
                         borderRadius: 1,
-                        bgcolor: '#C043AC',
+                        background: 'rgb(235,197,0)',
+                        background: 'linear-gradient(180deg, rgba(235,197,0,1) 0%, rgba(212,126,92,1) 100%)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -143,7 +149,8 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                         width: 85,
                         height: 85,
                         borderRadius: 1,
-                        bgcolor: '#C2614C',
+                        background: 'rgb(235,197,0)',
+                        background: 'linear-gradient(180deg, rgba(235,197,0,1) 0%, rgba(212,126,92,1) 100%)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -156,7 +163,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                     </Stack>
                 </Stack>
             </Grid>
-        </Grid>
+        </Grid> */
     )
 }
 
