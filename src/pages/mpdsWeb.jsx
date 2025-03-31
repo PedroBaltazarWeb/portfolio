@@ -7,30 +7,29 @@ import LayoutProject from '../components/LayoutProject';
 import theme from '../../themes/mui-theme'
 import ProjectHeader from '../components/ProjectHeader';
 import ProjectSection from '../components/ProjectSection';
-import mpdsAndroidFinalSection from '../images/mpdsAndroidProject/mpdsAndroidFinal.svg';
-import login from '../images/mpdsWeb/login.png';
-import fourScreens from '../images/mpdsWeb/4screens.png';
-import site from '../images/mpdsWeb/site.png';
-import api from '../images/mpdsWeb/api.svg';
-import security from '../images/mpdsWeb/security.svg';
-import downloadTheApp from '../images/mpdsAndroidProject/downloadTheApp.svg';
+import mpdsAndroidFinalSection from '../images/mpdsAndroidProject/mpdsAndroidFinal.webp';
+import login from '../images/mpdsWeb/login.webp';
+import fourScreens from '../images/mpdsWeb/4screens.webp';
+import site from '../images/mpdsWeb/site.webp';
+import api from '../images/mpdsWeb/api.webp';
+import security from '../images/mpdsWeb/security.webp';
 import ImageGallery from "../components/ImageGallery";
 
 const imagesFirstGallery = [
   {
     src: mpdsAndroidFinalSection,
-    title: 'Mpds To the Moon Illustration',
-    description: 'Mpds To the Moon Illustration;'
+    title: 'To the Moon Illustration',
+    description: 'Illustration used in the authentication email'
   },
   {
     src: login,
     title: 'Login UI',
-    description: 'Login UI'
+    description: 'The current login page'
   },
   {
     src: fourScreens,
     title: 'UI MPDS Web',
-    description: 'UI MPDS Web'
+    description: 'Current UI of the software'
   },
 ];
 
@@ -38,17 +37,17 @@ const imagesSecondGallery = [
   {
     src: site,
     title: 'Site UI',
-    description: 'Site UI'
+    description: 'First concept'
   },
   {
     src: api,
     title: 'API Illustration',
-    description: 'API Illustration'
+    description: 'Part of the current website'
   },
   {
     src: security,
     title: 'Security Illustration',
-    description: 'Security Illustration'
+    description: 'Part of the current website'
   },
 ];
 
@@ -65,7 +64,7 @@ const MpdsWeb = () => {
                   year='2019 - 2020'
               ></ProjectHeader>
           }
-          firstProjectStep={
+          fifthProjectStep={
           <>
             <ProjectSection topic="The Beginning">
               <Typography variant="pRegularText" component='p' sx={{
@@ -78,7 +77,7 @@ const MpdsWeb = () => {
               </Typography>
               
               <ImageGallery images={imagesFirstGallery} widthGallery={{
-                          xs: 400,
+                          xs: 330,
                           sm: 700,
                           md: 800,
                           lg: 800
@@ -95,7 +94,7 @@ const MpdsWeb = () => {
               </Typography>
 
               <ImageGallery images={imagesSecondGallery} widthGallery={{
-                          xs: 400,
+                          xs: 330,
                           sm: 700,
                           md: 800,
                           lg: 800
@@ -117,12 +116,10 @@ const MpdsWeb = () => {
               alignItems="center"
               spacing={5}
               mt={5}>
-              <img src={downloadTheApp} width="175" alt="Download App Illustration"/>
-              <Button variant="contained" color="primary">
-                <Link sx={{color: theme.palette.common.white}} href="https://mpds.f3m.pt/en/mpds-web-en/">
+              
+                <Link color={theme.palette.primary.main} href="https://mpds.f3m.pt/en/mpds-web-en/">
                   See the official website
                 </Link>
-              </Button>
             </Stack>
             
 
@@ -134,30 +131,3 @@ const MpdsWeb = () => {
   </> )}
 
 export default MpdsWeb
-
-
-
-
-
-
-
-
-
-/* import * as React from "react"
-import "@fontsource/work-sans";
-import "@fontsource/noto-sans";
-import "../../css/main.min.css";
-import mpdsAndroidFinalSection from '../images/mpdsAndroidProject/mpdsAndroidFinal.svg';
-import spaceBackground from '../images/mpdsWeb/spaceBackground.png';
-import login from '../images/mpdsWeb/login.png';
-import fourScreens from '../images/mpdsWeb/4screens.png';
-import mpdsLogo from '../images/mpdsWeb/mpdsLogo.svg';
-import f3mLogo from '../images/techsIcons/f3m.svg';
-import site from '../images/mpdsWeb/site.png';
-import api from '../images/mpdsWeb/api.svg';
-import security from '../images/mpdsWeb/security.svg';
-import downloadTheApp from '../images/mpdsAndroidProject/downloadTheApp.svg';
-import MajorButton from '../components/MajorButton';
-import Layout from '../components/Layout';
-import Container from '@mui/material/Container';
-*/

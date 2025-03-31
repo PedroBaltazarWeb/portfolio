@@ -1,69 +1,93 @@
 import { createTheme } from "@mui/material";
+import HarperScript from './../src/fonts/HarperScript-Rounded.otf';
+//import HarperScript from './../public/fonts/HarperScript-Rounded.otf';
 
 let theme = createTheme()
 
 theme = createTheme(theme , {
+    components: {
+      MuiTypography: {
+        styleOverrides: {
+          root: {
+            fontKerning: 'normal',
+            letterSpacing: 0,
+          },
+        },
+      },
+      MuiCssBaseline: {
+        styleOverrides: `
+          @font-face {
+            font-family: 'HarperScript';
+            src: local('HarperScript'), local('HarperScript-Rounded'), url(${HarperScript}) format('otf');
+          }
+        `,
+      },
+    },
     typography: {
       projectTitleHeader: { 
-          fontSize: 40,
-          color: '#fff',
-          fontFamily: "Work Sans, sans-serif",
-          fontWeight: 500,
-          textTransform: 'uppercase'
-        },
+        fontSize: 64,
+        color: '#fff',
+        fontFamily: 'HarperScript',
+        fontWeight: 500,
+      },
+      h2:{
+        fontFamily: 'HarperScript',
+        fontSize: 64,
+        lineHeight: 1.4,
+      },
       projectInfoHeader: { 
-        fontSize: 28,
-        color: '#0D6EFD',
-        fontFamily: "Work Sans, sans-serif",
-        textTransform: 'uppercase'
+        fontSize: 22,
+        color: '#fff',
+        fontFamily: "manrope, sans-serif",
       },
       stepTitleHeader: {
         fontSize: 22,
         color: '#fff',
-        fontFamily: "Work Sans, sans-serif",
+        fontFamily: "manrope, sans-serif",
         fontWeight: 600,
         [theme.breakpoints.up('md')]: {
           padding: '0px 160px'
         }
       },
       stepTitle: {
-        fontSize: 22,
+        fontSize: 20,
         color: '#fff',
-        fontFamily: "Work Sans, sans-serif",
-        fontWeight: 600,
+        fontFamily: "manrope, sans-serif",
+        fontWeight: 400,
+        lineHeight: 1.5
       },
       stepText: {
-        fontSize: 22,
+        fontSize: 28,
         color: '#fff',
         fontWeight: 600,
-        fontFamily: "Work Sans, sans-serif",
+        fontFamily: "manrope, sans-serif",
         [theme.breakpoints.up('md')]: {
           padding: '0px 160px'
         }
       },
       miniTitle: {
         fontSize: 20,
-        fontWeight: 700,
+        fontWeight: 600,
         color: '#fff',
-        fontFamily: "Work Sans, sans-serif",
+        fontFamily: "manrope, sans-serif",
         lineHeight: 1.5,
-        letterSpacing: '-.018em'
+        letterSpacing: 0
       },
       regularText: {
         fontSize: 18,
         color: '#fff',
-        fontFamily: "Work Sans, sans-serif",
-        lineHeight: "38px",
-        fontWeight: 400,
-        letterSpacing: '-.018em'
+        fontFamily: "manrope, sans-serif",
+        fontWeight: 300,
+        lineHeight: 1.5,
+        letterSpacing: 0
       },
       pRegularText: {
         fontSize: 18,
         color: '#fff',
-        fontFamily: "Work Sans, sans-serif",
-        lineHeight: "38px",
-        fontWeight: 400,
-        letterSpacing: '-.018em',
+        fontFamily: "manrope, sans-serif",
+        lineHeight: 1.5,
+        fontWeight: 300,
+        letterSpacing: 0,
         [theme.breakpoints.up('md')]: {
           padding: '32px 160px'
         }
@@ -71,8 +95,8 @@ theme = createTheme(theme , {
       emphasisRegularText: {
         fontSize: 28,
         color: '#fff',
-        fontFamily: "Work Sans, sans-serif",
-        lineHeight: "48px",
+        fontFamily: "manrope, sans-serif",
+        lineHeight: 1.5,
         fontWeight: 500,
         letterSpacing: '-.028em',
         [theme.breakpoints.up('md')]: {
@@ -82,26 +106,41 @@ theme = createTheme(theme , {
       caption: {
         fontSize: 14,
         color: '#fff',
-        fontFamily: "Work Sans, sans-serif",
+        fontFamily: "manrope, sans-serif",
         lineHeight: "32px",
         fontStyle: 'italic',
         fontWeight: 400,
         letterSpacing: '-.018em'
       },
       cardCompanyHeader:{
-        fontFamily: "Work Sans, sans-serif", 
+        fontFamily: "manrope, sans-serif",
         letterSpacing: '.1em',
-        color: "#0d6efd"
+        color: "#fff",
+        fontWeight: 200,
+        lineHeight: 1.6,
       },
       cardProjectTitle:{
-        fontFamily: "'Noto Sans', sans-serif", 
+        fontFamily: "manrope, sans-serif",
         letterSpacing: '.1em',
-        fontSize: '1.5rem',
+        fontSize: 24,
+        fontWeight: '700',
+        lineHeight: 1.5
+      },
+      projectType:{
+        fontFamily: "manrope, sans-serif",
+        fontSize: 18,
+        fontWeight: '600',
+        lineHeight: 1.5
+      },
+      cardProjectSubtitle:{
+        fontFamily: "manrope, sans-serif",
+        letterSpacing: '.1em',
+        fontSize: 17,
         fontWeight: '500',
-        lineHeight: '1.2'
+        lineHeight: 1.5
       },
       subjectText:{
-        fontFamily: "'Noto Sans', sans-serif", 
+        fontFamily: "manrope, sans-serif",
         fontWeight: 400, 
         fontSize: 10,
         opacity: .7
@@ -113,17 +152,24 @@ theme = createTheme(theme , {
       noteText:{
         fontFamily: '"Caveat", cursive'
       },
+      footerTools:{
+        fontSize: 16,
+        color: '#fff',
+        fontFamily: "manrope, sans-serif",
+        fontWeight: 400,
+        lineHeight: 1.6
+      },
       // Disable h3 variant
       h3: undefined,
     },
     palette: {
         primary: {
-            main: '#111E56',
+            main: '#E2B921',
             light: '#283982',
             dark: '#1A2241',
         },
         secondary: {
-            main: '#E0C2FF',
+            main: '#28F691',
             light: '#F5EBFF',
             contrastText: '#47008F',
         },

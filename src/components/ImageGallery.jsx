@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, CardMedia, CardContent, Typography, Button, Box } from '@mui/material';
+import { Card, CardMedia, CardContent, Typography, Button, Box, Stack } from '@mui/material';
 
 const ImageGallery =  ({ images, widthGallery = 800, marginTop = 0, heightGallery }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,14 +34,20 @@ const ImageGallery =  ({ images, widthGallery = 800, marginTop = 0, heightGaller
             </CardContent>
           </Card>
 
-      <Box mt={2}>
-        <Button variant="contained" color="primary" onClick={handlePrevious} sx={{ mr: 2 }}>
+      <Stack direction={"row"} spacing={2} justifyContent="center"
+              alignItems="center" mt={2}>
+        <Button variant="contained" onClick={handlePrevious} sx={{background: "#44a28c", 
+        '&:hover':{
+          background: "#206d5b"
+        }}}>
           Previous
         </Button>
-        <Button variant="contained" color="primary" onClick={handleNext}>
+        <Button variant="contained" sx={{background: "#44a28c", '&:hover':{
+          background: "#206d5b"
+        }}} onClick={handleNext}>
           Next
-        </Button>
-      </Box>
+          </Button>
+        </Stack>
     </Box>
   );
 };

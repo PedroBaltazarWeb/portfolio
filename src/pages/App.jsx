@@ -3,6 +3,9 @@ import React, { useEffect } from 'react';
 import "@fontsource/work-sans";
 import "@fontsource/noto-sans";
 import "@fontsource/manrope";
+import "@fontsource/archivo"; // Defaults to weight 400
+import "@fontsource/archivo/400.css"; // Specify weight
+import "@fontsource/archivo/400-italic.css"; // Specify weight and style
 import "../../css/main.min.css";
 import Home from './Home';
 import MillerVillage from './millerVillageTycoon';
@@ -14,6 +17,7 @@ import Layout from '../components/Layout';
 import { ThemeProvider } from "@mui/material";
 import theme from '../../themes/mui-theme';
 import Footer from '../components/Footer'
+import CssBaseline from '@mui/material/CssBaseline';
 import {
     BrowserRouter as Router,
     Routes,
@@ -24,6 +28,7 @@ const App = () => {
   return (
     <Router>
       <ThemeProvider theme={theme}>
+          <CssBaseline />
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />

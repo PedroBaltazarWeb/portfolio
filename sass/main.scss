@@ -34,7 +34,7 @@ button {
     background: transparent;
     padding: 0;
     font-size: inherit;
-    font-family: "Work Sans", sans-serif;
+    font-family: "Work Sans";
     &.learn-more {
       width: 12rem;
       height: auto;
@@ -135,29 +135,7 @@ button {
   color: $blue-500;
 }
 
-.project-square{
-  padding: 16px;
-  border-radius: 8px;
-  background: linear-gradient(340.55deg,rgba(46,92,255,.15) -1.95%,rgba(0,0,0,0) 26.83%),linear-gradient(146.92deg,rgba(46,92,255,.15) 5.13%,rgba(0,0,0,0) 28.78%),linear-gradient(149.68deg,rgba(255,255,255,.1) 1.74%,rgba(255,255,255,0) 93.25%);
-  backdrop-filter: blur(12px);
-  border: rgb(255 255 255 / .1) solid 1px;
-  cursor: pointer;
-  font-family: "Work Sans, sans-serif";
-  font-weight: 600;
-  font-size: 16px;
-  transition-duration: 500ms;
-  transition-property: transform;
-  transition-timing-function: ease-in;
-  &:hover {
-    transform: scale(1.01, 1.01) translateZ(0px) translate3d(0px, 0px, 0px);
-    transition-duration: 300ms;
-    transition-property: transform, box-shadow;
-    transition-timing-function: ease-out;
-  };
-  & img{
-    border-radius: 6px;
-  }
-}
+
 
 .curtains-canvas {
   position: fixed;

@@ -2,24 +2,20 @@ import * as React from "react"
 import "@fontsource/work-sans";
 import "@fontsource/noto-sans";
 import "../../css/main.min.css";
-import wifiMachine from '../images/lottie/wifi_machine_f3m.json';
-import mpdsWoundsPatientList from '../images/mpdsAndroidProject/patientList.png';
-import cardsEmptyState from '../images/lottie/cards_f3m.json';
-import lottie from "lottie-web";
+import mpdsWoundsPatientList from '../images/mpdsAndroidProject/patientList.webp';
 import { ThemeProvider, Typography, Stack, Box} from "@mui/material";
 import LayoutProject from '../components/LayoutProject';
 import theme from '../../themes/mui-theme'
 import ProjectHeader from '../components/ProjectHeader';
 import ProjectSection from '../components/ProjectSection';
-import mpdsAndroidFirstSection from '../images/mpdsAndroidProject/mpdsAndroidBegin.svg';
-import mpdsWoundsScreenShootsApp from '../images/mpdsAndroidProject/screenShootsApp.png';
+import mpdsAndroidFirstSection from '../images/mpdsAndroidProject/mpdsAndroidBegin.webp';
+import mpdsWoundsScreenShootsApp from '../images/mpdsAndroidProject/screenShootsApp.webp';
 import History from '../images/mpdsAndroidProject/history.svg';
+import Grid from '@mui/material/Grid';
 
-
-// markup
 const MpdsWoundsPage = () => {
 
-  React.useEffect(() => {
+  /* React.useEffect(() => {
     lottie.loadAnimation({
       container: document.querySelector("#wifiMachine"),
       animationData: wifiMachine
@@ -28,7 +24,7 @@ const MpdsWoundsPage = () => {
       container: document.querySelector("#cardsEmptyState"),
       animationData: cardsEmptyState
     });
-  }, []);
+  }, []); */
 
   return (
   <>
@@ -42,7 +38,7 @@ const MpdsWoundsPage = () => {
                         year='2018 - 2019'
                     ></ProjectHeader>
                 }
-                firstProjectStep={
+                fifthProjectStep={
                   <ProjectSection topic="The Beginning">
                     
                     <Typography variant="pRegularText" component='p' sx={{
@@ -62,7 +58,7 @@ const MpdsWoundsPage = () => {
                         mx: 'auto'
                     }}
                     width={{
-                          xs: 400,
+                          xs: 330,
                           sm: 700,
                           md: 800,
                           lg: 800
@@ -87,7 +83,7 @@ const MpdsWoundsPage = () => {
                     </Typography>
                   
                     <Box textAlign='center' width={{
-                          xs: 400,
+                          xs: 330,
                           sm: 600,
                           md: 600,
                           lg: 600
@@ -115,8 +111,7 @@ const MpdsWoundsPage = () => {
                           sm: theme.spacing(5),
                         },
                     }}>
-                      Between RecyclerViews, ConstraintLayouts and Webviews - 
-                      the UI was also tested by me in several Android devices, meticulously searching for any inconsistency. 
+                      The UI was also tested by me in several Android devices, meticulously searching for any inconsistency. 
                       Furthermore, the "Dev" Team which I belonged, was constantly managed by the UX Designer and Business Manager, which consequently drove
                       the solution to what the user expected when he tested the prototype and gave us their respectives suggestions.
                     </Typography>
@@ -129,7 +124,7 @@ const MpdsWoundsPage = () => {
                         mx: 'auto'
                     }}
                     width={{
-                          xs: 400,
+                          xs: 330,
                           sm: 700,
                           md: 800,
                           lg: 800
@@ -156,15 +151,41 @@ const MpdsWoundsPage = () => {
                     </Typography>
              
 
-                  <Stack direction="row" spacing={5} textAlign='center'>
-                    <div id="wifiMachine" style={{background: '#daf1f3', borderRadius: "8px"}}/>
-                    <div id="cardsEmptyState" style={{background: '#efefea', borderRadius: "8px"}}/>
-                  </Stack>
+                   
+                    {/* <Grid
+                      container
+                      direction="row"
+                      justifyContent="center"
+                      alignItems="stretch"
+                      spacing={2}
+                      mt={2}>
+                        <Grid item xs={12} sm={6} lg={6}>
+                      <div id="wifiMachine" style={{background: '#daf1f3', borderRadius: "8px"}}/>
+                      </Grid>
+                      <Grid item xs={12} sm={6} lg={6}>
+                      <div id="cardsEmptyState" style={{background: '#efefea', borderRadius: "8px"}}/>
+                      </Grid>
+                    </Grid> */}
 
-                  <Stack direction="row" spacing={4} textAlign='center' mt={4}>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/fU0UvvScXkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/nDxhJGgn7us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </Stack>
+                  
+                  <Grid
+                    container
+                    direction="row"
+                    justifyContent="center"
+                    alignItems="stretch"
+                    spacing={2}
+                    mt={2}>
+                      <Grid item xs={12} sm={12} lg={6}>
+                    
+                          <iframe width="100%" height="315" src="https://www.youtube.com/embed/fU0UvvScXkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      
+                      </Grid>
+                      <Grid item xs={12} sm={12} lg={6}>
+                      
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/nDxhJGgn7us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      
+                    </Grid>
+                  </Grid>
 
                   <Box textAlign='center' my={5} py={5}>
                       <img src={History} width="150" alt="Screen Shoots"/>

@@ -13,11 +13,12 @@ const Layout = ({children}) => {
 
   return (
     <Box sx={{
-      backgroundImage: `url(${backgroundImage}), linear-gradient(to bottom, #0a1928 0%, #111E56 50%, #111E56 100%)`,
-  backgroundPosition: 'center center',
-  backgroundRepeat: 'repeat, no-repeat',
-  backgroundSize: '2.5rem, cover',
-  position: 'relative' }}>
+      background: `
+      url(${backgroundImage}), 
+      linear-gradient(180deg, rgba(21,25,71,1) 0%, rgba(36,40,109,1) 82%)`,
+      backgroundPosition: 'top left',
+      backgroundRepeat: 'repeat no-repeat',
+      backgroundSize: '64rem, cover'}}>
       {children}
     </Box>
   )
