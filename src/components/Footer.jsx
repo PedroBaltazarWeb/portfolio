@@ -61,7 +61,8 @@ const Footer = () => {
           <Typography variant="footerTools">Figjam</Typography>
         </Stack>
 
-        <Typography variant="footerTools" py={2}>Download my CV, <Link href="#" color={theme.palette.primary.main}>here</Link>.</Typography>
+        <Typography variant="footerTools" py={2}>Download my CV, <Link href="/files/cv_pedro_baltazar.pdf"
+      download color={theme.palette.primary.main}>here</Link>.</Typography>
         <Typography color={'#fff'} fontSize={14} py={3}>This website was designed and developed by <Typography component={'span'} fontSize={14} mt={5} color={theme.palette.secondary.main}>Pedro Baltazar</Typography></Typography>
       </Stack>
     </Stack>
