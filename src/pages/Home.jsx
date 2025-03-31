@@ -6,10 +6,10 @@ import "@fontsource/archivo"; // Defaults to weight 400
 import "@fontsource/archivo/400.css"; // Specify weight
 import "@fontsource/archivo/400-italic.css"; // Specify weight and style
 import "../../css/main.min.css";
-import MpdsWoundsPreview from '../images/MpdsWoundsPreview.webp';
+import MpdsWoundsPreview from '../images/mpdsWoundsPreview.webp';
 import SmMpdsWebPreview from '../images/sm_mpdsWebPreview.webp'
 import NeuroPreview from '../images/neuroPreview.svg';
-import PrismaProduzEsocialPreview from '../images/PrismaProduzEsocialPreview.webp';
+import PrismaProduzEsocialPreview from '../images/prismaProduzEsocialPreview.webp';
 import MillerVillagePreview from '../images/millerVillagePreview.svg';
 import { Typography, Chip, Hidden } from "@mui/material";
 import Grid from '@mui/material/Grid';
