@@ -169,6 +169,12 @@ const Home = () => {
                 content: '""',
                 width: 174,
                 position: 'absolute',
+                display: {
+                  xs: 'none',
+                  sm: 'none',
+                  md: 'block',
+                  lg: 'block'
+                },
                 right: {
                   xs: '5%',
                   sm: '15%',
