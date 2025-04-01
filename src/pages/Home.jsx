@@ -227,7 +227,7 @@ const Home = () => {
               <Typography textAlign='center' variant="h2" component="h2" fontWeight={500} mt={4} mb={5} pb={2} sx={{
                  color: theme.palette.action.main
               }}>
-                  Projetos
+                  Projects
               </Typography>
 
             <Container maxWidth="lg" component='main' sx={useStyles["&.MuiContainer-root"]}>
