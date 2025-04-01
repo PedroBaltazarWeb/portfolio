@@ -28,7 +28,7 @@ const MpdsWoundsPage = () => {
                     ></ProjectHeader>
                 }
                 fifthProjectStep={
-                  <ProjectSection topic="The Beginning">
+                  <ProjectSection topic="">
                     
                     <Typography variant="pRegularText" component='p' sx={{
                         pb: {

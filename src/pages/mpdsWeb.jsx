@@ -66,7 +66,7 @@ const MpdsWeb = () => {
           }
           fifthProjectStep={
           <>
-            <ProjectSection topic="The Beginning">
+            <ProjectSection topic="">
               <Typography variant="pRegularText" component='p' sx={{
                         pb: {
                           xs: theme.spacing(5),
