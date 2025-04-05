@@ -171,7 +171,7 @@ theme = createTheme(theme , {
             dark: '#1A2241',
         },
         secondary: {
-            main: '#28F691',
+            main: 'rgb(174 187 255)',
             light: '#F5EBFF',
             contrastText: '#47008F',
         },

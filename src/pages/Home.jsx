@@ -188,7 +188,7 @@ const Home = () => {
               }
             }}>
               <Container maxWidth="lg" component='header' sx={useStyles["&.MuiContainer-root"]}>
-              <Box position='absolute' left={160} width={350} height={'100%'} mt={5} top={250} sx={{
+             {/*  <Box position='absolute' left={160} width={350} height={'100%'} mt={5} top={250} sx={{
                 backgroundImage: `url(${WIP})`,
                 backgroundSize: 350,
                 backgroundRepeat: 'no-repeat',
@@ -207,7 +207,7 @@ const Home = () => {
                   fontFamily: '"Caveat", cursive',
                   fontSize: 22
                 }}>There's a ton I'm still refining, but go ahead and check out my projects. More updates are on the way!</Typography>
-              </Box>
+              </Box> */}
                 <Grid container spacing={4} py={5} px={3} sx={{
     justifyContent: "center",
     alignItems: "center",
