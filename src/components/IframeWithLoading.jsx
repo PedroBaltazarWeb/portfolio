@@ -38,6 +38,7 @@ const IframeWithLoading = ({ src }) => {
         <iframe
             ref={iframeRef}
             src={src}
+            loading="lazy"
             width="720" 
             height="450" 
             allowFullScreen

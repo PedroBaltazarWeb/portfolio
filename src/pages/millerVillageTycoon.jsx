@@ -173,12 +173,12 @@ const MillerVillageTycoonPage = () => {
                                 </Typography>
 
                                 <Box pb={2} pt={5} sx={{textAlign: 'center', display: {xs: 'none', sm: 'block', md: 'block'}}}>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FV-Rb_LJ1j4?si=t9gOP1nkFKihoXlD&amp;controls=0&amp;start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/FV-Rb_LJ1j4?si=t9gOP1nkFKihoXlD&amp;controls=0&amp;start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                     <Typography variant="caption" component='p' pb={3} pt={2} textAlign='center'>Forced Expiratory Maneuver in the context of spirometry</Typography>
                                 </Box> 
 
                                 <Box pb={2} pt={5} sx={{textAlign: 'center', display: {xs: 'block', sm: 'none', md: 'none'}}}>
-                                    <iframe width="280" height="157.5" src="https://www.youtube.com/embed/FV-Rb_LJ1j4?si=t9gOP1nkFKihoXlD&amp;controls=0&amp;start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <iframe loading="lazy" width="280" height="157.5" src="https://www.youtube.com/embed/FV-Rb_LJ1j4?si=t9gOP1nkFKihoXlD&amp;controls=0&amp;start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                     <Typography variant="caption" component='p' pb={3} pt={2} textAlign='center'>Forced Expiratory Maneuver in the context of spirometry</Typography>
                                 </Box> 
 
