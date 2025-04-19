@@ -21,7 +21,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import {StyledTableCell, StyledTableRow} from '../../src/styles/millerVillage/useStyles';
 import Paper from '@mui/material/Paper';
-import Madalena from './../images/millerVillageTycoonProject/madalena_button.webp'
 import { Stack, Button } from "@mui/material";
 
 
@@ -117,7 +116,7 @@ const NeuroPage = () => {
                                 }
                             }}>
                                 <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
-                                    <img height={136} width={113} src={Madalena} />                                                                  
+                                                                                                 
                                     <Button variant="contained"
                                         sx={{
                                             background: "#44a28c", 
@@ -320,7 +319,7 @@ const NeuroPage = () => {
                                 }
                             }}>
                                 <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
-                                    <img height={136} width={113} src={Madalena} />                                                                  
+                                                                                                    
                                     <Button variant="contained"
                                         sx={{
                                             background: "#44a28c", 
@@ -457,7 +456,7 @@ const NeuroPage = () => {
                                 }
                             }}>
                                 <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
-                                    <img height={136} width={113} src={Madalena} />                                                                  
+                                                                                                    
                                     <Button variant="contained"
                                         sx={{
                                             background: "#44a28c", 
