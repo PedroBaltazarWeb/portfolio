@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useState } from 'react';
 import "@fontsource/work-sans";
 import "@fontsource/noto-sans";
 import "../../css/main.min.css";
@@ -8,7 +8,7 @@ import ProjectHeader from '../components/ProjectHeader';
 import ProjectBasicInfo from '../components/ProjectBasicInfo';
 import ProjectSteps from '../components/ProjectSteps';
 import ProjectSection from '../components/ProjectSection';
-import { Typography, Stack, Avatar, Accordion, AccordionSummary, Tooltip, AccordionDetails, Box, Link, List, ListItem, ListItemIcon, ListItemText, Divider } from "@mui/material";
+import { Typography, Stack, Button, Accordion, AccordionSummary, Tooltip, AccordionDetails, Box, Link, List, ListItem, ListItemIcon, ListItemText, Divider } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { ThemeProvider } from "@mui/material";
 import theme from '../../themes/mui-theme'
@@ -40,7 +40,7 @@ import VideocamIcon from '@mui/icons-material/Videocam';
 import {StyledTableCell, StyledTableRow} from '../../src/styles/millerVillage/useStyles'
 import Grid from '@mui/material/Grid';
 import LibraryCard from './../components/LibraryCard'
-import { Router, useLocation } from "@reach/router";
+import Madalena from './../images/millerVillageTycoonProject/madalena_button.webp'
 
 const successData = [84, 100, 94, 78];
 const xLabels = [
@@ -63,10 +63,15 @@ const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
+
 const MillerVillageTycoonPage = () => {
 
     const [open, setOpen] = React.useState(false);
-    
+    const [showIframeInterview, setShowIframeInterview] = useState(false);
+    const [showIframeUserTaskFlow, setShowIframeUserTaskFlow] = useState(false);
+    const [showIframeDesignSystem, setShowIframeDesignSystem] = useState(false);
+    const [showIframeHumanResults, setShowIframeHumanResults] = useState(false);
+
     const handleClickOpen = () => {
         setOpen(true);
     };
@@ -244,15 +249,38 @@ const MillerVillageTycoonPage = () => {
                             An Informed Consent Form was developed and consisted of two parts: an Information Sheet, which provided details about the study, and a Certificate of Consent for signatures if you chose to participate, including an assent form for children under 16.
                         </Typography>
 
-                        <Box mx='auto' sx={{
+                        <Stack direction='column' textAlign={'center'} sx={{
                                 display: {
                                     xs: 'none',
                                     sm: 'block',
                                     md: 'block'
                                 }
                             }}>
-                                <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FTawtNI1VrduA3p9H2oGNW2%2FPerfil-and-Interview-Guide---Miller-Village(English)%3Fnode-id%3D0-1%26t%3DFHXsDqmyNUFLqJGf-1" />                          
-                            </Box>
+                                <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
+                                    <img height={136} width={113} src={Madalena} />                                                                  
+                                    <Button variant="contained"
+                                        sx={{
+                                            background: "#44a28c", 
+                                            '&:hover':{
+                                                background: "#206d5b"
+                                            },
+                                            height: 50,
+                                            width: 260
+                                        }}
+                                        color="primary"
+                                        onClick={() => setShowIframeInterview(prev => !prev)}>
+                                        {showIframeInterview ? "Hide Interview Guide & User Persona" : "View Interview Guide & User Persona"}
+                                    </Button>
+                                </Stack>
+                                
+      
+                                {showIframeInterview && (
+                                    <Box mt={4}>
+                                        <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FTawtNI1VrduA3p9H2oGNW2%2FPerfil-and-Interview-Guide---Miller-Village(English)%3Fnode-id%3D0-1%26t%3DFHXsDqmyNUFLqJGf-1" />                          
+                                    </Box>
+                                )}
+                          
+                           </Stack>
                             
 
                             <Box mx='auto' sx={{
@@ -319,20 +347,44 @@ const MillerVillageTycoonPage = () => {
                                         }}>
                                 Developing task flows and user flows allows us to comprehend the user's journey in completing the FEM. This results in a comprehensive mapping of all functionalities and information embedded in the app.
                             </Typography>
-                            <Box mx='auto' sx={{
-                                            pb: {
-                                                xs: theme.spacing(5),
-                                                sm: theme.spacing(5),
-                                                md: theme.spacing(0),
+                            
+
+                                    
+                                <Stack direction='column' textAlign={'center'} sx={{
+                                display: {
+                                    xs: 'none',
+                                    sm: 'block',
+                                    md: 'block'
+                                }
+                            }}>
+                                <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
+                                    <img height={136} width={113} src={Madalena} />                                                                  
+                                    <Button variant="contained"
+                                        sx={{
+                                            background: "#44a28c", 
+                                            '&:hover':{
+                                                background: "#206d5b"
                                             },
-                                            display: {
-                                                xs: 'none',
-                                                sm: 'block',
-                                                md: 'block'
-                                            }
-                                        }}>
-                                <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FEm9ZNkCqoUxySenf1v2VtM%2FTask-Flow-and-User-Flow%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3D1xt2Blq4oJUjDshT-1" />                          
-                            </Box>
+                                            height: 50,
+                                            width: 260
+                                        }}
+                                        color="primary"
+                                        onClick={() => setShowIframeUserTaskFlow(prev => !prev)}>
+                                        {showIframeUserTaskFlow ? "Hide Flows" : "View Flows"}
+                                    </Button>
+                                </Stack>
+                                
+      
+                                {showIframeUserTaskFlow && (
+                                    <Box mt={4}>
+                                        <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FEm9ZNkCqoUxySenf1v2VtM%2FTask-Flow-and-User-Flow%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3D1xt2Blq4oJUjDshT-1" />                          
+                                    </Box>
+                                )}
+                          
+                           </Stack>
+
+
+
 
                             <Box mx='auto' sx={{
                                 color: "#ffffff",
@@ -369,8 +421,12 @@ const MillerVillageTycoonPage = () => {
                                     md: 'block'
                                 }
                             }}>
-                                <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2F3tBzqbZD6XZVq20BINEqnn%2FWireframes---Miller-Village-Tycoon%3Fnode-id%3D0-1%26t%3DiR8lBorzdulONkkw-1" />
-                            </Box>
+
+<iframe width="720" 
+            height="450"
+            allowFullScreen
+            src="https://embed.figma.com/board/3tBzqbZD6XZVq20BINEqnn/Wireframes?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+                                  </Box>
                             <Box mx='auto' sx={{
                                 color: "#ffffff",
                                 background: "#17192b",
@@ -415,7 +471,7 @@ After gathering positive feedback from small casual tests, I felt confident enou
                                                 md: 'block'
                                             }
                                         }}>
-                                <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fs0OQx8uxyLyBD134jB3W4f%2FHi-Fi-FEM%3Fnode-id%3D1-4%26starting-point-node-id%3D1%253A2%26show-proto-sidebar%3D1%26scaling%3Dscale-down%26t%3D8lX1z6yzrlFYKqLF-1" />
+                                <iframe width="720" height="750" src="https://embed.figma.com/proto/s0OQx8uxyLyBD134jB3W4f/Hi-Fi-FEM?node-id=1-4&starting-point-node-id=1%3A2&show-proto-sidebar=1&embed-host=share" allowfullscreen></iframe> 
                             </Box>
                             <Box mx='auto' sx={{
                                 color: "#ffffff",
@@ -436,20 +492,37 @@ After gathering positive feedback from small casual tests, I felt confident enou
                                 </Typography>
                             </Box>
 
-                            <Box mx='auto' sx={{
-                                            pb: {
-                                            xs: theme.spacing(5),
-                                            sm: theme.spacing(5),
-                                            md: theme.spacing(5),
+                            <Stack direction='column' textAlign={'center'} sx={{
+                                display: {
+                                    xs: 'none',
+                                    sm: 'block',
+                                    md: 'block'
+                                }
+                            }}>
+                                <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
+                                    <img height={136} width={113} src={Madalena} />                                                                  
+                                    <Button variant="contained"
+                                        sx={{
+                                            background: "#44a28c", 
+                                            '&:hover':{
+                                                background: "#206d5b"
                                             },
-                                            display: {
-                                                xs: 'none',
-                                                sm: 'block',
-                                                md: 'block'
-                                            }
-                                        }}>
-                                <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2F5dkB8O9OnEH5UvA9JGxzYx%2FDesign-System-of-Miller-Village-Tycoon%3Fnode-id%3D0-1%26t%3DGMrMy2bq17s5TG5w-1" />
-                            </Box>
+                                            height: 50,
+                                            width: 260
+                                        }}
+                                        color="primary"
+                                        onClick={() => setShowIframeDesignSystem(prev => !prev)}>
+                                        {showIframeDesignSystem ? "Hide Design System" : "View Design System"}
+                                    </Button>
+                                </Stack>
+                                
+                                {showIframeDesignSystem && (
+                                    <Box mt={4}>
+                                        <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2F5dkB8O9OnEH5UvA9JGxzYx%2FDesign-System-of-Miller-Village-Tycoon%3Fnode-id%3D0-1%26t%3DGMrMy2bq17s5TG5w-1" />                          
+                                    </Box>
+                                )}
+                            </Stack>
+
                             <Box mx='auto' sx={{
                                 color: "#ffffff",
                                 background: "#17192b",
@@ -1242,21 +1315,48 @@ After gathering positive feedback from small casual tests, I felt confident enou
             </Box>
 
             <Typography variant="stepTitleHeader" display='block' fontWeight={700}>
-            Human Results                            
+                Human Results                            
             </Typography>
 
             <Typography variant="pRegularText">Below, I have compiled the concrete issues detected during usability testing, screen by screen.</Typography>
-
-
-                            <Box mx='auto' mb={5} sx={{
+                            
+            <Stack pb={3} direction='column' textAlign={'center'} sx={{
                                 display: {
                                     xs: 'none',
                                     sm: 'block',
                                     md: 'block'
                                 }
                             }}>
-                                <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FAdnr2VrucX5ZQwjK9kV2BB%2FHuman-Results%3Fnode-id%3D0-1%26t%3DDpYpsbRUnbq4V665-1" />
-                            </Box>
+                                <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
+                                    <img height={136} width={113} src={Madalena} />                                                                  
+                                    <Button variant="contained"
+                                        sx={{
+                                            background: "#44a28c", 
+                                            '&:hover':{
+                                                background: "#206d5b"
+                                            },
+                                            height: 50,
+                                            width: 260
+                                        }}
+                                        color="primary"
+                                        onClick={() => setShowIframeHumanResults(prev => !prev)}>
+                                        {showIframeHumanResults ? "Hide Human Results" : "View Human Results"}
+                                    </Button>
+                                </Stack>
+                                
+      
+                                {showIframeHumanResults && (
+                                    <Box mt={4}>
+                                                            <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FAdnr2VrucX5ZQwjK9kV2BB%2FHuman-Results%3Fnode-id%3D0-1%26t%3DDpYpsbRUnbq4V665-1" />                          
+                                                    
+                                                            </Box>
+                                )}
+                          
+            </Stack>
+
+
+
+
 
                             <Box mx='auto' sx={{
                                 color: "#ffffff",

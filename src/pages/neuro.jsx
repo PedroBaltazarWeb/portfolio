@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import "@fontsource/work-sans";
 import "@fontsource/noto-sans";
 import "../../css/main.min.css";
@@ -20,6 +21,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import {StyledTableCell, StyledTableRow} from '../../src/styles/millerVillage/useStyles';
 import Paper from '@mui/material/Paper';
+import Madalena from './../images/millerVillageTycoonProject/madalena_button.webp'
+import { Stack, Button } from "@mui/material";
+
 
 const useStyles ={
     '&.MuiTableContainer-root':{
@@ -32,6 +36,11 @@ const useStyles ={
   
 
 const NeuroPage = () => {
+
+    const [showIframeInterviewGuide, setShowIframeInterviewGuide] = useState(false);
+    const [showIframeUserPersonas, setShowIframeUserPersonas] = useState(false);
+    const [showIframeDesignSystem, setShowIframeDesignSystem] = useState(false);
+
     return (
     <>
         <ThemeProvider theme={theme}>
@@ -97,21 +106,44 @@ const NeuroPage = () => {
                                 The research aims to examine healthcare professionals perceptions of digital tools and compare them with existing literature. Additionally, it seeks to identify the main challenges encountered when administering cognitive screening tests in remote or digital settings.
                             </Typography>
 
-                          
-                            <Box mx='auto' sx={{
-                                my:  theme.spacing(2),
-                                pb: {
-                                xs: theme.spacing(5),
-                                sm: theme.spacing(5),
-                                },
+
+
+
+                            <Stack direction='column' textAlign={'center'} sx={{
                                 display: {
                                     xs: 'none',
                                     sm: 'block',
                                     md: 'block'
                                 }
                             }}>
-                                <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FAmTjzEYYrXNZxjUqrVl2dH%2FInterview-Guide-and-Terms---Neuro-(English)%3Fnode-id%3D0-1%26t%3DSzk3UmdhtH4WcSlA-1" />                          
-                            </Box>
+                                <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
+                                    <img height={136} width={113} src={Madalena} />                                                                  
+                                    <Button variant="contained"
+                                        sx={{
+                                            background: "#44a28c", 
+                                            '&:hover':{
+                                                background: "#206d5b"
+                                            },
+                                            height: 50,
+                                            width: 260
+                                        }}
+                                        color="primary"
+                                        onClick={() => setShowIframeInterviewGuide(prev => !prev)}>
+                                        {showIframeInterviewGuide ? "Hide Interview Guide" : "View Interview Guide"}
+                                    </Button>
+                                </Stack>
+                                
+      
+                                {showIframeInterviewGuide && (
+                                    <Box mt={4}>
+                                    <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FAmTjzEYYrXNZxjUqrVl2dH%2FInterview-Guide-and-Terms---Neuro-(English)%3Fnode-id%3D0-1%26t%3DSzk3UmdhtH4WcSlA-1" />                          
+                            
+                                    </Box>
+                                )}
+                          
+                           </Stack>
+
+
                             <Box mx='auto' sx={{
                                 color: "#ffffff",
                                 background: "#17192b",
@@ -280,20 +312,37 @@ const NeuroPage = () => {
                                 The analysis of exploratory interviews with healthcare professionals using cognitive screening tests highlighted the heterogeneity of both examiners and examinees. While all interviewed professionals considered themselves technologically proficient, they acknowledged varying levels of digital literacy among their peers and noted some skepticism toward digital tools in healthcare. To address this, personas were created to represent different digital literacy profiles.
                             </Typography>
                             
-                            <Box mx='auto' sx={{
-                                my:  theme.spacing(2),
-                                pb: {
-                                xs: theme.spacing(5),
-                                sm: theme.spacing(5),
-                                },
+                            <Stack direction='column' textAlign={'center'} sx={{
                                 display: {
                                     xs: 'none',
                                     sm: 'block',
                                     md: 'block'
                                 }
                             }}>
-                                <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2Fp9TUzzu4SdiAyRuNJCuOC2%2FPerfis---Neuro-(English)%3Fnode-id%3D0-1%26t%3DVvEdpHEOGnH7z6g2-1" />                          
-                            </Box>
+                                <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
+                                    <img height={136} width={113} src={Madalena} />                                                                  
+                                    <Button variant="contained"
+                                        sx={{
+                                            background: "#44a28c", 
+                                            '&:hover':{
+                                                background: "#206d5b"
+                                            },
+                                            height: 50,
+                                            width: 260
+                                        }}
+                                        color="primary"
+                                        onClick={() => setShowIframeUserPersonas(prev => !prev)}>
+                                        {showIframeUserPersonas ? "Hide User Personas" : "View User Personas"}
+                                    </Button>
+                                </Stack>
+                                
+                                {showIframeUserPersonas && (
+                                    <Box mt={4}>
+                                        <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2Fp9TUzzu4SdiAyRuNJCuOC2%2FPerfis---Neuro-(English)%3Fnode-id%3D0-1%26t%3DVvEdpHEOGnH7z6g2-1" />                          
+                                    </Box>
+                                )}
+                           </Stack>
+
                             <Box mx='auto' sx={{
                                 color: "#ffffff",
                                 background: "#17192b",
@@ -400,21 +449,41 @@ const NeuroPage = () => {
                                 </Typography>
                             </Box>
 
-                            
-                            <Box mx='auto' sx={{
-                                my:  theme.spacing(2),
-                                pb: {
-                                xs: theme.spacing(5),
-                                sm: theme.spacing(5),
-                                },
+                            <Stack direction='column' textAlign={'center'} sx={{
                                 display: {
                                     xs: 'none',
                                     sm: 'block',
                                     md: 'block'
                                 }
                             }}>
-                                <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FaotvAKYQufaIaoWPTMm2ky%2FNeuro---Design-System%3Fnode-id%3D0-1%26t%3D5kFkKPZDLZE0g8dX-1" />  
-                            </Box>
+                                <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
+                                    <img height={136} width={113} src={Madalena} />                                                                  
+                                    <Button variant="contained"
+                                        sx={{
+                                            background: "#44a28c", 
+                                            '&:hover':{
+                                                background: "#206d5b"
+                                            },
+                                            height: 50,
+                                            width: 260
+                                        }}
+                                        color="primary"
+                                        onClick={() => setShowIframeDesignSystem(prev => !prev)}>
+                                        {showIframeDesignSystem ? "Hide Design System" : "View Design System"}
+                                    </Button>
+                                </Stack>
+                                
+      
+                                {showIframeDesignSystem && (
+                                    <Box mt={4}>
+                                        <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FaotvAKYQufaIaoWPTMm2ky%2FNeuro---Design-System%3Fnode-id%3D0-1%26t%3D5kFkKPZDLZE0g8dX-1" />                          
+                                    </Box>
+                                )}
+                          
+                           </Stack>
+
+
+                            
 
                             <Box mx='auto' sx={{
                                 color: "#ffffff",
