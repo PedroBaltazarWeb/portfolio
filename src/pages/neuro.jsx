@@ -67,7 +67,6 @@ const NeuroPage = () => {
                     }
                     firstProjectStep={
                         <ProjectSection topic="Introduction">
-                            <Box mb={10}>
                                 <Typography variant="pRegularText" component='p' sx={{
                                 pb: {
                                 xs: theme.spacing(5),
@@ -77,31 +76,23 @@ const NeuroPage = () => {
                                     The COVID-19 pandemic highlighted the necessity for digital alternatives to traditional cognitive screening tests, as remote interventions became crucial during lockdowns. These digital tools, such as the online versions of the MMSE, Corsi Block-Tapping Test, and MoCA, have proven effective in overcoming geographical and psychomotor limitations. They also significantly reduced healthcare costs and increased the efficiency of neurocognitive rehabilitation.
                                 </Typography>
 
-                                <Typography variant="emphasisRegularText" my={3} component='p' sx={{
-                                pb: {
-                                xs: theme.spacing(5),
-                                sm: theme.spacing(5),
-                                },
-                            }}>
-                                    This platform, designed for healthcare professionals working with the elderly, addresses challenges such as reduced emotional contact and technical interruptions during remote assessments, ensuring more effective and accessible cognitive evaluations.
+                                <Typography variant="emphasisRegularText" component='p'>
+                                    This platform, designed for healthcare professionals working with the elderly, addresses <Typography variant="emphasisRegularText" component='span' sx={{color: 'rgb(174 187 255)', [theme.breakpoints.up('md')]: {
+          padding: 0
+        }}}>challenges such as reduced emotional contact and technical interruptions</Typography> during remote assessments, ensuring <Typography variant="emphasisRegularText" component='span' sx={{color: 'rgb(174 187 255)', [theme.breakpoints.up('md')]: {
+          padding: 0
+        }}}>more effective and accessible cognitive evaluations</Typography>.
                                 </Typography>
 
                                 <Typography variant="pRegularText" component='p' >   
                                     Cognitive screening tools like the Mini Mental State Examination (MMSE), Corsi Block-Tapping Test, and Montreal Cognitive Assessment (MoCA) are essential in clinical settings. The MMSE assesses multiple cognitive domains with a 30-point scale but has few digital alternatives. The Corsi Block-Tapping Test evaluates visuo-spatial working memory, with digital versions enhancing administration and data tracking. The MoCA, designed to detect mild cognitive impairment, has several digital versions for remote use, including Telephone MoCA and MoCA duo, improving accessibility and integration with Electronic Health Records (EHR).
                                 </Typography>
-                            </Box>
                         </ProjectSection>
 
                     }
                     secondProjectStep={
                         <ProjectSection topic="Research & Interviews">
-                            <Typography variant="pRegularText" component='p' sx={{
-                                pb: {
-                                xs: theme.spacing(2),
-                                sm: theme.spacing(2),
-                                md: theme.spacing(5)
-                                },
-                            }}>   
+                            <Typography variant="pRegularText" component='p'>   
                                 The research aims to examine healthcare professionals perceptions of digital tools and compare them with existing literature. Additionally, it seeks to identify the main challenges encountered when administering cognitive screening tests in remote or digital settings.
                             </Typography>
 
@@ -117,14 +108,13 @@ const NeuroPage = () => {
                             }}>
                                 <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
                                                                                                  
-                                    <Button variant="contained"
+                                    <Button variant="outlined"
                                         sx={{
-                                            background: "#44a28c", 
+                                            width: 260,
+                                            background: showIframeInterviewGuide ? '#e2b92133' : 'unset',
                                             '&:hover':{
-                                                background: "#206d5b"
-                                            },
-                                            height: 50,
-                                            width: 260
+                                                background: showIframeInterviewGuide ? '#e2b92133' : 'unset',
+                                            }
                                         }}
                                         color="primary"
                                         onClick={() => setShowIframeInterviewGuide(prev => !prev)}>
@@ -163,7 +153,7 @@ const NeuroPage = () => {
                             </Box>
 
                             <Typography variant="pRegularText" component='p' sx={{
-                                my:  theme.spacing(2),
+                                mb: 4,
                                 pb: {
                                 xs: theme.spacing(5),
                                 sm: theme.spacing(5),
@@ -177,7 +167,7 @@ const NeuroPage = () => {
                                 Six participants, including clinical psychologists, researchers, senior diagnostic and therapeutic technicians, were selected based on specific criteria: they were healthcare professionals experienced in administering the tests under review. Recruitment involved contacting eight individuals, resulting in six positive responses, no negative responses, and two unanswered contacts. Interviews were conducted via Zoom (four) and in a mixed setting (two), with a designated online room and a scheduled date/time. Each session included a moderator guiding the interview and an observer noting key details. Before commencing, participants received an introduction covering researcher introductions, gratitude for participation, consent for audio and screen recording and explanation of interview goals. Informed consent was also obtained, ensuring ethical standards were met throughout the process.
                             </Typography>
 
-                            <Typography variant="stepTitleHeader" display='block' fontWeight={700}>
+                            <Typography variant="stepTitleHeader" pt={4}>
                                 Characterization of the participants                           
                             </Typography>
 
@@ -185,12 +175,17 @@ const NeuroPage = () => {
                                 The participants were classified based on the number of applications, on average per week in any context, as follows: zero applications correspond to no experience, up to two applications indicate little experience, between two and four applications represent moderate experience, and more than four applications signify extensive experience.            
                             </Typography>
 
-                            <Box pb={1}>
+                            <Box pb={1} sx={{ width: '100%'}}>
                                 <TableContainer sx={useStyles["&.MuiTableContainer-root"]} component={Paper}>
-                                    <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                                    <Table  sx={{ minWidth: 650 }} aria-label="simple table">
                                         <TableHead>
                                             <TableRow>
-                                                <StyledTableCell><Typography variant="regularText" fontWeight="700">Participant</Typography></StyledTableCell>
+                                                <StyledTableCell sx={{
+                  position: 'sticky',
+                  left: 0,
+                  backgroundColor: '#0B1231',
+                  zIndex: 1,
+                }}><Typography variant="regularText" fontWeight="700">Participant</Typography></StyledTableCell>
                                                 <StyledTableCell><Typography variant="regularText" fontWeight="700">P1</Typography></StyledTableCell>
                                                 <StyledTableCell><Typography variant="regularText" fontWeight="700">P2</Typography></StyledTableCell>
                                                 <StyledTableCell><Typography variant="regularText" fontWeight="700">P3</Typography></StyledTableCell>
@@ -201,7 +196,12 @@ const NeuroPage = () => {
                                         </TableHead>
                                         <TableBody>
                                             <StyledTableRow>
-                                                <TableCell><Typography variant="regularText" fontWeight="700">Age</Typography></TableCell>
+                                                <TableCell  sx={{
+                  position: 'sticky',
+                  left: 0,
+                  backgroundColor: '#0B1231',
+                  zIndex: 1,
+                }}><Typography variant="regularText" fontWeight="700">Age</Typography></TableCell>
                                                 <TableCell><Typography variant="regularText">31</Typography></TableCell>
                                                 <TableCell><Typography variant="regularText">32</Typography></TableCell>
                                                 <TableCell><Typography variant="regularText">27</Typography></TableCell>
@@ -210,7 +210,12 @@ const NeuroPage = () => {
                                                 <TableCell><Typography variant="regularText">26</Typography></TableCell>
                                             </StyledTableRow>
                                             <StyledTableRow>
-                                                <TableCell><Typography variant="regularText" fontWeight="700">Gender</Typography></TableCell>
+                                                <TableCell sx={{
+                  position: 'sticky',
+                  left: 0,
+                  backgroundColor: '#0B1231',
+                  zIndex: 1,
+                }}><Typography variant="regularText" fontWeight="700">Gender</Typography></TableCell>
                                                 <TableCell><Typography variant="regularText">F</Typography></TableCell>
                                                 <TableCell><Typography variant="regularText">M</Typography></TableCell>
                                                 <TableCell><Typography variant="regularText">F</Typography></TableCell>
@@ -220,7 +225,12 @@ const NeuroPage = () => {
                                             </StyledTableRow>
 
                                             <StyledTableRow>
-                                                <TableCell><Typography variant="regularText" fontWeight="700">Education</Typography></TableCell>
+                                                <TableCell sx={{
+                  position: 'sticky',
+                  left: 0,
+                  backgroundColor: '#0B1231',
+                  zIndex: 1,
+                }}><Typography variant="regularText" fontWeight="700">Education</Typography></TableCell>
 
                                                 <TableCell><Typography variant="regularText">Clinical and Health Psychology, Specialization in Neuropsychology</Typography></TableCell>
                                                 <TableCell><Typography variant="regularText">Clinical and Health Psychology</Typography></TableCell>
@@ -231,7 +241,12 @@ const NeuroPage = () => {
                                             </StyledTableRow>
 
                                             <StyledTableRow>
-                                                <TableCell><Typography variant="regularText" fontWeight="700">Profession</Typography></TableCell>
+                                                <TableCell sx={{
+                  position: 'sticky',
+                  left: 0,
+                  backgroundColor: '#0B1231',
+                  zIndex: 1,
+                }}><Typography variant="regularText" fontWeight="700">Profession</Typography></TableCell>
 
                                                 <TableCell><Typography variant="regularText">Psychologist and Researcher</Typography></TableCell>
                                                 <TableCell><Typography variant="regularText">Researcher</Typography></TableCell>
@@ -243,7 +258,12 @@ const NeuroPage = () => {
 
                                             
                                             <StyledTableRow>
-                                                <TableCell><Typography variant="regularText" fontWeight="700">MoCA</Typography></TableCell>
+                                                <TableCell sx={{
+                  position: 'sticky',
+                  left: 0,
+                  backgroundColor: '#0B1231',
+                  zIndex: 1,
+                }}><Typography variant="regularText" fontWeight="700">MoCA</Typography></TableCell>
 
                                                 <TableCell><Typography variant="regularText">Extensive experience</Typography></TableCell>
                                                 <TableCell><Typography variant="regularText">Extensive experience</Typography></TableCell>
@@ -254,7 +274,12 @@ const NeuroPage = () => {
                                             </StyledTableRow>
                                             
                                             <StyledTableRow>
-                                                <TableCell><Typography variant="regularText" fontWeight="700">Corsi Test</Typography></TableCell>
+                                                <TableCell sx={{
+                  position: 'sticky',
+                  left: 0,
+                  backgroundColor: '#0B1231',
+                  zIndex: 1,
+                }}><Typography variant="regularText" fontWeight="700">Corsi Test</Typography></TableCell>
 
                                                 <TableCell><Typography variant="regularText">Little experience</Typography></TableCell>
                                                 <TableCell><Typography variant="regularText">Extensive experience</Typography></TableCell>
@@ -265,7 +290,12 @@ const NeuroPage = () => {
                                             </StyledTableRow>
 
                                             <StyledTableRow>
-                                                <TableCell><Typography variant="regularText" fontWeight="700">MMSE</Typography></TableCell>
+                                                <TableCell sx={{
+                  position: 'sticky',
+                  left: 0,
+                  backgroundColor: '#0B1231',
+                  zIndex: 1,
+                }}><Typography variant="regularText" fontWeight="700">MMSE</Typography></TableCell>
 
                                                 <TableCell><Typography variant="regularText">Little experience</Typography></TableCell>
                                                 <TableCell><Typography variant="regularText">Little experience</Typography></TableCell>
@@ -276,7 +306,12 @@ const NeuroPage = () => {
                                             </StyledTableRow>
 
                                             <StyledTableRow>
-                                                <TableCell><Typography variant="regularText" fontWeight="700">Digital Literacy</Typography></TableCell>
+                                                <TableCell sx={{
+                  position: 'sticky',
+                  left: 0,
+                  backgroundColor: '#0B1231',
+                  zIndex: 1,
+                }}><Typography variant="regularText" fontWeight="700">Digital Literacy</Typography></TableCell>
 
                                                 <TableCell><Typography variant="regularText">Considers themselves Proficient</Typography></TableCell>
                                                 <TableCell><Typography variant="regularText">Considers themselves Proficient</Typography></TableCell>
@@ -290,13 +325,7 @@ const NeuroPage = () => {
                                 </TableContainer>
                             </Box>
 
-                            <Typography variant="pRegularText" mt={4} sx={{
-                                my:  theme.spacing(2),
-                                pb: {
-                                xs: theme.spacing(5),
-                                sm: theme.spacing(5),
-                                }
-                            }}>
+                            <Typography variant="pRegularText">
                                 Overall, participants reported several challenges in remote test applications, including connection issues affecting communication and therapeutic relationships, low technological literacy among patients, poor camera resolution hindering facial expression reading, difficulties with visuospatial tasks, challenges in ensuring patients understand instructions, and assessing the validity of responses in temporal and spatial orientation tasks.
 
                                 For improvements, they suggested implementing a call quality notification with latency indicators, an instructional video with a pre-test, a pointer to clarify references, continuous display of the patient’s camera feed, and the ability for professionals to add notes to tests.
@@ -305,7 +334,7 @@ const NeuroPage = () => {
                             </Typography>
 
 
-                            <Typography variant="stepTitleHeader" display='block' fontWeight={700}>User personas</Typography>
+                            <Typography variant="stepTitleHeader" pt={4}>User personas</Typography>
 
                             <Typography variant="pRegularText" component='p'>
                                 The analysis of exploratory interviews with healthcare professionals using cognitive screening tests highlighted the heterogeneity of both examiners and examinees. While all interviewed professionals considered themselves technologically proficient, they acknowledged varying levels of digital literacy among their peers and noted some skepticism toward digital tools in healthcare. To address this, personas were created to represent different digital literacy profiles.
@@ -320,14 +349,13 @@ const NeuroPage = () => {
                             }}>
                                 <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
                                                                                                     
-                                    <Button variant="contained"
-                                        sx={{
-                                            background: "#44a28c", 
+                                    <Button variant="outlined"
+                                         sx={{
+                                            width: 260,
+                                            background: showIframeUserPersonas ? '#e2b92133' : 'unset',
                                             '&:hover':{
-                                                background: "#206d5b"
-                                            },
-                                            height: 50,
-                                            width: 260
+                                                background: showIframeUserPersonas ? '#e2b92133' : 'unset',
+                                            }
                                         }}
                                         color="primary"
                                         onClick={() => setShowIframeUserPersonas(prev => !prev)}>
@@ -371,12 +399,7 @@ const NeuroPage = () => {
                                 The prototype was designed to integrate cognitive screening tests into Microsoft Teams through a plugin, utilizing a widely accessible and commonly used tool. This approach aims to simplify the application of the tests, make it easier for users with lower digital literacy, and minimize technical issues.                            
                             </Typography>
                             
-                            <Box mx='auto' sx={{
-                                my:  theme.spacing(2),
-                                pb: {
-                                xs: theme.spacing(5),
-                                sm: theme.spacing(5),
-                                },
+                            <Box mt={4} sx={{
                                 display: {
                                     xs: 'none',
                                     sm: 'block',
@@ -457,14 +480,13 @@ const NeuroPage = () => {
                             }}>
                                 <Stack spacing={3} direction='row' justifyContent='center' alignItems={'center'} textAlign={'center'}>
                                                                                                     
-                                    <Button variant="contained"
+                                    <Button variant="outlined"
                                         sx={{
-                                            background: "#44a28c", 
+                                            width: 260,
+                                            background: showIframeDesignSystem ? '#e2b92133' : 'unset',
                                             '&:hover':{
-                                                background: "#206d5b"
-                                            },
-                                            height: 50,
-                                            width: 260
+                                                background: showIframeDesignSystem ? '#e2b92133' : 'unset',
+                                            }
                                         }}
                                         color="primary"
                                         onClick={() => setShowIframeDesignSystem(prev => !prev)}>

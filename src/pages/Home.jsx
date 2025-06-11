@@ -218,7 +218,7 @@ const Home = () => {
                 <Grid item xs={12} md={9} py={3}>
                   <Typography variant="stepTitle" component="p" fontWeight={500}>
 
-                    Olá! Mainly in <Typography variant="stepTitle" color={theme.palette.secondary.main}>healthcare</Typography>, I've been branding, designing and developing intuitive UI for enterprise digital products. Along the way, I’ve also crafted experiences for industries like <Typography variant="stepTitle" color={theme.palette.secondary.main}>textile manufacturing, eyewear and daycare</Typography> — picking up fresh ideas and new perspectives on each field. Take a look around, and if you think I can help with something, just <MUILink color={theme.palette.primary.main} href="mailto:pedrobaltazardesign@icloud.com">drop me a message</MUILink>!
+                    Olá! Mainly in <Typography variant="stepTitle" color={theme.palette.secondary.main}>healthcare</Typography>, I've been branding, designing, and developing intuitive UI for enterprise digital products. Along the way, I’ve also crafted experiences for industries like <Typography variant="stepTitle" color={theme.palette.secondary.main}>textile manufacturing, eyewear and daycare</Typography> — picking up fresh ideas and new perspectives on each field. Take a look around, and if you think I can help with something, just <MUILink color={theme.palette.primary.main} href="mailto:pedrobaltazardesign@icloud.com">drop me a message</MUILink>!
                     
                   </Typography>
                 </Grid>
@@ -226,7 +226,7 @@ const Home = () => {
               </Container>
               </Box>
 
-              <Box mt={5} p={5} >
+              <Box p={5} sx={{maxWidth: 1200, margin: '32px auto'}}>
                 <img src={Separator}/>
               </Box>
 
@@ -245,7 +245,15 @@ const Home = () => {
                   lg: 3
                 }}
                 mb={5}
-                mt={3}>
+                mt={3}
+                sx={{
+                  '@-moz-document url-prefix()': {
+                    textAlign: 'center',
+                  },
+                  '@supports (-webkit-hyphens: none) and (not (hyphens: none))': {
+                    textAlign: 'center',
+                  },
+                }}>
                 {projectCardsProps.map((props, path) => (
                     <Grid item mt={4} xs={props.itemGrid.xs} 
                         sm={props.itemGrid.sm}

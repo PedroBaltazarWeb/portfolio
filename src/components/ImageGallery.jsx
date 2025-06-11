@@ -36,15 +36,10 @@ const ImageGallery =  ({ images, widthGallery = 800, marginTop = 0, heightGaller
 
       <Stack direction={"row"} spacing={2} justifyContent="center"
               alignItems="center" mt={2}>
-        <Button variant="contained" onClick={handlePrevious} sx={{background: "#44a28c", 
-        '&:hover':{
-          background: "#206d5b"
-        }}}>
+        <Button variant="outlined" onClick={handlePrevious}>
           Previous
         </Button>
-        <Button variant="contained" sx={{background: "#44a28c", '&:hover':{
-          background: "#206d5b"
-        }}} onClick={handleNext}>
+        <Button variant="outlined" onClick={handleNext}>
           Next
           </Button>
         </Stack>

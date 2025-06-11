@@ -70,9 +70,9 @@ const LibraryCard = () => {
             '&.MuiBox-root': {
                 '&.notepaper':{
                     position: 'relative',
-                    margin: '40px auto',
+                    margin: '0px auto',
                     padding: '29px 0 20px 0',
-                    width: '650px',
+                    width: '100%',
                     lineHeight: '30px',
                     color: '#0c5777',
                     backgroundColor: '#d6ebf3',
@@ -123,7 +123,8 @@ const LibraryCard = () => {
                         padding: theme.spacing(2),
                     },
                     '& .instructions-title':{
-                        paddingLeft: "45px"
+                        paddingLeft: "45px",
+                        paddingRight: "32px"
                     }
                 },
                 '&.title-sections-h2':{

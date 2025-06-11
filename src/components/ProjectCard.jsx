@@ -15,17 +15,6 @@ const ProjectCard = ({ imageSrc, altText, company, projectTitle, numberBadge, pr
 
   return (
   <>
-
-    {/* <Box mt={4} sx={{
-          position: 'absolute',
-          top: 0,
-          right: -80,
-          zIndex: 2,
-          mixBlendMode: 'plus-lighter'
-    }}>
-          <img position='absolute' src={shining} width='100%' />
-    </Box> */}
-
     <Box sx={{
           position: 'absolute',
           top: -60,

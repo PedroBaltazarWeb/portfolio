@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Router } from "@reach/router"; 
 import { ThemeProvider } from "@mui/material";
 import theme from '../../themes/mui-theme';
 import CssBaseline from '@mui/material/CssBaseline';
 import Layout from '../components/Layout';
 import Home from './Home';
-import Footer from '../components/Footer';
+import { Helmet } from "react-helmet";
+
 const App = () => {
   const [isClient, setIsClient] = useState(false);
 
@@ -22,6 +22,9 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+       <Helmet>
+        <title>Pedro Baltazar</title>
+      </Helmet>
         <Layout>
           <Home path="/Home" />
         </Layout>

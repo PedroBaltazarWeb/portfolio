@@ -24,6 +24,23 @@ theme = createTheme(theme , {
         }
       `,
       },
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            fontFamily: "manrope, sans-serif",
+            textTransform: "none",
+            color: "#ffffff",
+            minHeight: 50
+          },
+        },
+      },
+      MuiListItemIcon: {
+        styleOverrides: {
+          root: {
+            minWidth: 32
+          }
+        }
+      }
     },
     typography: {
       projectTitleHeader: { 
@@ -46,10 +63,7 @@ theme = createTheme(theme , {
         fontSize: 22,
         color: '#fff',
         fontFamily: "manrope, sans-serif",
-        fontWeight: 600,
-        [theme.breakpoints.up('md')]: {
-          padding: '0px 160px'
-        }
+        fontWeight: 600
       },
       stepTitle: {
         fontSize: 20,
@@ -63,9 +77,7 @@ theme = createTheme(theme , {
         color: '#fff',
         fontWeight: 600,
         fontFamily: "manrope, sans-serif",
-        [theme.breakpoints.up('md')]: {
-          padding: '0px 160px'
-        }
+        maxWidth: '60ch'
       },
       miniTitle: {
         fontSize: 20,
@@ -80,19 +92,18 @@ theme = createTheme(theme , {
         color: '#fff',
         fontFamily: "manrope, sans-serif",
         fontWeight: 300,
-        lineHeight: 1.5,
+        lineHeight: 1.7,
         letterSpacing: 0
       },
       pRegularText: {
         fontSize: 18,
         color: '#fff',
         fontFamily: "manrope, sans-serif",
-        lineHeight: 1.5,
+        lineHeight: 1.7,
         fontWeight: 300,
         letterSpacing: 0,
-        [theme.breakpoints.up('md')]: {
-          padding: '32px 160px'
-        }
+        padding: '64px 0',
+        maxWidth: '60ch'
       },
       emphasisRegularText: {
         fontSize: 28,
@@ -101,9 +112,8 @@ theme = createTheme(theme , {
         lineHeight: 1.5,
         fontWeight: 500,
         letterSpacing: '-.028em',
-        [theme.breakpoints.up('md')]: {
-          padding: '32px 160px'
-        }
+        padding: '64px 0',
+        maxWidth: '38ch',
       },
       caption: {
         fontSize: 14,

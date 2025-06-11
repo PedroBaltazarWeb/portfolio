@@ -67,12 +67,7 @@ const MpdsWeb = () => {
           fifthProjectStep={
           <>
             <ProjectSection topic="">
-              <Typography variant="pRegularText" component='p' sx={{
-                        pb: {
-                          xs: theme.spacing(5),
-                          sm: theme.spacing(5),
-                        },
-                    }}>
+              <Typography variant="pRegularText" component='p'>
                   MPDS Web allows user to easily manage and access the status of all the processes of each patient and it is connected to Mpds Wounds. As a sequel for the mobile app, Mpds Web was born to be a "plus extension" of patient's management. Created for the web, React.JS was my main tool to replicate what the prototype brought. The journey beginned in 2018.
               </Typography>
               
@@ -84,12 +79,7 @@ const MpdsWeb = () => {
                         }} heightGallery={510} marginTop={4}/>
            
               
-              <Typography variant="pRegularText" component='p' mt={5} sx={{
-                        pb: {
-                          xs: theme.spacing(5),
-                          sm: theme.spacing(5),
-                        },
-                    }}>
+              <Typography variant="pRegularText" component='p'>
                 UI oriented, I took advantage of the top libraries in the "Web Dev Scene" to build all the prototype components and to make sure the responsive aspect of the app perform in all the major devices. Thinking of cross-browser support and scability, the UI tests were also a weighty objective.
               </Typography>
 
@@ -100,12 +90,7 @@ const MpdsWeb = () => {
                           lg: 800
                         }} heightGallery={510} marginTop={4}/>
 
-           <Typography variant="pRegularText" component='p' mt={5} sx={{
-                        pb: {
-                          xs: theme.spacing(5),
-                          sm: theme.spacing(5),
-                        },
-                    }}>
+           <Typography variant="pRegularText" component='p'>
               It was a great experience for the "Dev" Team to bring to life a brotherhood of apps, both developed in such different tech environments.
               Later, I was back to collaborate with the Marketing team to define and design the identity of the product: now limited to logo, illustrations and landing page. 
             </Typography>

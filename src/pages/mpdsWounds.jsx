@@ -30,20 +30,11 @@ const MpdsWoundsPage = () => {
                 fifthProjectStep={
                   <ProjectSection topic="">
                     
-                    <Typography variant="pRegularText" component='p' sx={{
-                        pb: {
-                          xs: theme.spacing(5),
-                          sm: theme.spacing(5),
-                        },
-                    }}>
+                    <Typography variant="pRegularText" component='p'>
                       The MpDS Wounds app ensures the automatic capture of imaging from which the characterisation and assessment process of wounds is made, through an image pre-processing and segmentation algorithm, based on the visual characteristics of different wounds.    
                     </Typography>
 
                     <Box textAlign='center' sx={{
-                        pb: {
-                          xs: theme.spacing(5),
-                          sm: theme.spacing(5),
-                        },
                         mx: 'auto'
                     }}
                     width={{
@@ -62,12 +53,7 @@ const MpdsWoundsPage = () => {
                       }} alt="Mpds Wounds Hospital Illustration"/>
                     </Box>
                     
-                    <Typography variant="pRegularText" component='p' sx={{
-                        pb: {
-                          xs: theme.spacing(5),
-                          sm: theme.spacing(5),
-                        },
-                    }}>
+                    <Typography variant="pRegularText" component='p'>
                       As a Android Developer at the time, my main task was to follow and code all the UI/UX guidelines traced during the prototyping and usuability tests. For this to be accomplished, I needed to put aside most of the web patterns, and just focus on all that Android environment could give me. The journey beginned in 2018.
                     </Typography>
                   
@@ -78,10 +64,6 @@ const MpdsWoundsPage = () => {
                           lg: 600
                         }}
                         sx={{
-                          pb: {
-                            xs: theme.spacing(5),
-                            sm: theme.spacing(5),
-                          },
                           mx: 'auto'
                       }}>
                       <img src={mpdsWoundsPatientList} style={{
@@ -94,22 +76,13 @@ const MpdsWoundsPage = () => {
                       }} alt="Patient List UI" />
                     </Box>
 
-                    <Typography variant="pRegularText" component='p' sx={{
-                        pb: {
-                          xs: theme.spacing(5),
-                          sm: theme.spacing(5),
-                        },
-                    }}>
+                    <Typography variant="pRegularText" component='p'>
                       The UI was also tested by me in several Android devices, meticulously searching for any inconsistency. 
                       Furthermore, the "Dev" Team which I belonged, was constantly managed by the UX Designer and Business Manager, which consequently drove
                       the solution to what the user expected when he tested the prototype and gave us their respectives suggestions.
                     </Typography>
 
                     <Box textAlign='center' sx={{
-                        pb: {
-                          xs: theme.spacing(5),
-                          sm: theme.spacing(5),
-                        },
                         mx: 'auto'
                     }}
                     width={{
@@ -128,12 +101,7 @@ const MpdsWoundsPage = () => {
                       }} alt="Screen Shoots"/>
                     </Box>
 
-                    <Typography variant="pRegularText" component='p' sx={{
-                        pb: {
-                          xs: theme.spacing(5),
-                          sm: theme.spacing(5),
-                        },
-                    }}>
+                    <Typography variant="pRegularText" component='p'>
                       Besides all the development effort, I was recruited to help the Marketing team creating
                       the identity of the product, which had impact in the aesthetic aspect of the product: logo,
                       colors, illustrations and empty states.
@@ -162,8 +130,7 @@ const MpdsWoundsPage = () => {
                     direction="row"
                     justifyContent="center"
                     alignItems="stretch"
-                    spacing={2}
-                    mt={2}>
+                    spacing={2}>
                       <Grid item xs={12} sm={12} lg={6}>
                     
                           <iframe loading="lazy" width="100%" height="315" src="https://www.youtube.com/embed/fU0UvvScXkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

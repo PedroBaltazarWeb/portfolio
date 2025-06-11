@@ -39,7 +39,7 @@ const LayoutProject = ({header, projectSteps, firstProjectStep, secondProjectSte
         </Container>
       </Box>
       <Box sx={{bgcolor: '#0c0e22' }} py={5}>
-        <Container  maxWidth='lg'>
+        <Container maxWidth='lg'>
           {firstProjectStep}
         </Container>
       </Box>
