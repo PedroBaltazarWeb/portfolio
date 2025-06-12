@@ -153,11 +153,3 @@ button {
 .BasicPlane img {
   display: none;
 }
-
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) {
-    .safari-none {
-      display: 'none',
-    }
-  }
-}

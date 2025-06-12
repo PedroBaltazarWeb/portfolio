@@ -15,13 +15,22 @@ const ProjectCard = ({ imageSrc, altText, company, projectTitle, numberBadge, pr
 
   return (
   <>
-    <Box className="safari-center" sx={{
+    <Box className="safari-none" sx={{
           position: 'absolute',
           top: -60,
           zIndex: 2,
           left: '50%',
           transform: 'translateX(-50%)'
-    }}>
+    }}
+    styles={{
+        '@media not all and (min-resolution: 0.001dpcm)': {
+          '@supports (-webkit-appearance: none)': {
+            '& img': {
+              textAlign: 'center',
+            },
+          },
+        },
+      }}>
       {numberBadge}
     </Box>
 
