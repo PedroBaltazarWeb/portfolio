@@ -237,7 +237,6 @@ const Home = () => {
             <Container maxWidth="lg" component='main' sx={useStyles["&.MuiContainer-root"]}>
               <Grid
                 container
-                className="safari-center"
                 direction="row"
                 justifyContent="space-between"
                 alignItems="stretch"

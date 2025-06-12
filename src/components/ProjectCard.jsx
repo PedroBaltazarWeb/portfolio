@@ -15,7 +15,7 @@ const ProjectCard = ({ imageSrc, altText, company, projectTitle, numberBadge, pr
 
   return (
   <>
-    <Box sx={{
+    <Box className="safari-center" sx={{
           position: 'absolute',
           top: -60,
           zIndex: 2,
