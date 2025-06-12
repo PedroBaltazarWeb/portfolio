@@ -20,17 +20,15 @@ const ProjectCard = ({ imageSrc, altText, company, projectTitle, numberBadge, pr
           top: -60,
           zIndex: 2,
           left: '50%',
-          transform: 'translateX(-50%)'
-    }}
-    styles={{
-        '@media not all and (min-resolution: 0.001dpcm)': {
+          transform: 'translateX(-50%)',
+          '@media not all and (min-resolution: 0.001dpcm)': {
           '@supports (-webkit-appearance: none)': {
             '& img': {
               textAlign: 'center',
             },
           },
         },
-      }}>
+    }}>
       {numberBadge}
     </Box>
 
