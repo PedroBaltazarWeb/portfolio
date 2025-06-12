@@ -157,7 +157,7 @@ button {
 @media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
     .safari-center {
-      text-align: 'center',
+      display: 'none',
     }
   }
 }

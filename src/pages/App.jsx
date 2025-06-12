@@ -22,10 +22,10 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-       <Helmet>
+        <Layout>
+          <Helmet>
         <title>Pedro Baltazar</title>
       </Helmet>
-        <Layout>
           <Home path="/Home" />
         </Layout>
     </ThemeProvider>
