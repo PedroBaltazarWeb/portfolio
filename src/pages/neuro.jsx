@@ -1,15 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
-import "@fontsource/work-sans";
-import "@fontsource/noto-sans";
 import "../../css/main.min.css";
 import LayoutProject from '../components/LayoutProject';
 import ProjectHeader from '../components/ProjectHeader';
 import ProjectBasicInfo from '../components/ProjectBasicInfo';
 import ProjectSteps from '../components/ProjectSteps';
 import { Box } from "@mui/material";
-import { ThemeProvider } from "@mui/material";
-import theme from '../../themes/mui-theme';
 import IframeWithLoading from '../components/IframeWithLoading';
 import ProjectSection from '../components/ProjectSection';
 import Typography from '@mui/material/Typography';
@@ -42,7 +38,6 @@ const NeuroPage = () => {
 
     return (
     <>
-        <ThemeProvider theme={theme}>
                 <LayoutProject
                     header={
                         <ProjectHeader
@@ -69,19 +64,19 @@ const NeuroPage = () => {
                         <ProjectSection topic="Introduction">
                                 <Typography variant="pRegularText" component='p' sx={{
                                 pb: {
-                                xs: theme.spacing(5),
-                                sm: theme.spacing(5),
+                                    xs: 5,
+                                    sm: 5,
                                 },
                             }}>
                                     The COVID-19 pandemic highlighted the necessity for digital alternatives to traditional cognitive screening tests, as remote interventions became crucial during lockdowns. These digital tools, such as the online versions of the MMSE, Corsi Block-Tapping Test, and MoCA, have proven effective in overcoming geographical and psychomotor limitations. They also significantly reduced healthcare costs and increased the efficiency of neurocognitive rehabilitation.
                                 </Typography>
 
                                 <Typography variant="emphasisRegularText" component='p'>
-                                    This platform, designed for healthcare professionals working with the elderly, addresses <Typography variant="emphasisRegularText" component='span' sx={{color: 'rgb(174 187 255)', [theme.breakpoints.up('md')]: {
+                                    This platform, designed for healthcare professionals working with the elderly, addresses <Typography variant="emphasisRegularText" component='span' sx={{color: 'rgb(174 187 255)'/* , [theme.breakpoints.up('md')]: {
           padding: 0
-        }}}>challenges such as reduced emotional contact and technical interruptions</Typography> during remote assessments, ensuring <Typography variant="emphasisRegularText" component='span' sx={{color: 'rgb(174 187 255)', [theme.breakpoints.up('md')]: {
+        } */}}>challenges such as reduced emotional contact and technical interruptions</Typography> during remote assessments, ensuring <Typography variant="emphasisRegularText" component='span' sx={{color: 'rgb(174 187 255)'/* , [theme.breakpoints.up('md')]: {
           padding: 0
-        }}}>more effective and accessible cognitive evaluations</Typography>.
+        } */}}>more effective and accessible cognitive evaluations</Typography>.
                                 </Typography>
 
                                 <Typography variant="pRegularText" component='p' >   
@@ -138,8 +133,8 @@ const NeuroPage = () => {
                                 background: "#17192b",
                                 width: '100%',
                                 borderRadius: 2,
-                                mb:  theme.spacing(3),
-                                p: theme.spacing(2),
+                                mb: 3,
+                                p: 2,
                                 display: {
                                     xs: 'block',
                                     sm: 'none',
@@ -155,8 +150,8 @@ const NeuroPage = () => {
                             <Typography variant="pRegularText" component='p' sx={{
                                 mb: 4,
                                 pb: {
-                                xs: theme.spacing(5),
-                                sm: theme.spacing(5),
+                                    xs: 5,
+                                    sm: 5,
                                 },
                                 display: {
                                     xs: 'none',
@@ -375,9 +370,9 @@ const NeuroPage = () => {
                                 background: "#17192b",
                                 width: '100%',
                                 borderRadius: 2,
-                                mt:  theme.spacing(2),
-                                mb:  theme.spacing(3),
-                                p: theme.spacing(2),
+                                mt: 2,
+                                mb: 3,
+                                p: 2,
                                 display: {
                                     xs: 'block',
                                     sm: 'none',
@@ -413,9 +408,9 @@ const NeuroPage = () => {
                                 background: "#17192b",
                                 width: '100%',
                                 borderRadius: 2,
-                                mt:  theme.spacing(2),
-                                mb:  theme.spacing(3),
-                                p: theme.spacing(2),
+                                mt: 2,
+                                mb: 3,
+                                p: 2,
                                 display: {
                                     xs: 'block',
                                     sm: 'none',
@@ -433,10 +428,10 @@ const NeuroPage = () => {
                             The Neuro tab in Teams allows healthcare professionals to access patient files, initiate cognitive screening tests via video call, and securely store data. Both the professional and the patient can see each other's cursors in real time, facilitating guidance. A text box is available for note-taking, and the system provides feedback based on the patient’s test history. At the end of the test, the professional can review scores, notes, and schedule the next session, while the patient does not have access to these screens.                            </Typography>
 
                             <Box mx='auto' sx={{
-                                my:  theme.spacing(2),
+                                my: 2,
                                 pb: {
-                                xs: theme.spacing(5),
-                                sm: theme.spacing(5),
+                                xs: 5,
+                                sm: 5,
                                 },
                                 display: {
                                     xs: 'none',
@@ -456,9 +451,9 @@ const NeuroPage = () => {
                                 background: "#17192b",
                                 width: '100%',
                                 borderRadius: 2,
-                                mt:  theme.spacing(2),
-                                mb:  theme.spacing(3),
-                                p: theme.spacing(2),
+                                mt: 2,
+                                mb: 3,
+                                p: 2,
                                 display: {
                                     xs: 'block',
                                     sm: 'none',
@@ -511,9 +506,9 @@ const NeuroPage = () => {
                                 background: "#17192b",
                                 width: '100%',
                                 borderRadius: 2,
-                                mt:  theme.spacing(2),
-                                mb:  theme.spacing(3),
-                                p: theme.spacing(2),
+                                mt: 2,
+                                mb: 3,
+                                p: 2,
                                 display: {
                                     xs: 'block',
                                     sm: 'none',
@@ -540,7 +535,6 @@ Additionally, a report generation feature or the ability to export results to di
                     
                     }
                 />
-        </ThemeProvider>
     </>
     )
 }

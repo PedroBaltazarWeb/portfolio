@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Container, Box, Typography } from "@mui/material"
-import theme from '../../themes/mui-theme'
 import "@fontsource/caveat";
 import "@fontsource/concert-one";
 
@@ -120,7 +119,7 @@ const LibraryCard = () => {
                 '&.title-sections': {
                     marginBottom: '4px',
                     '& h1':{
-                        padding: theme.spacing(2),
+                        padding: 2,
                     },
                     '& .instructions-title':{
                         paddingLeft: "45px",
@@ -133,7 +132,7 @@ const LibraryCard = () => {
                         textAlign: 'center'
                     },
                     '& h2, & h1':{
-                        padding: theme.spacing(2),
+                        padding: 2,
                     },
 
                   

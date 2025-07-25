@@ -1,12 +1,9 @@
 import * as React from "react"
 import { Typography, Stack } from "@mui/material"
 import badge from './../images/badge.webp'
-import { ThemeProvider } from "@mui/material";
-import theme from '../../themes/mui-theme';
 import CssBaseline from '@mui/material/CssBaseline';
 const ProjectHeader = ({projectTitle, entities, year}) => {
     return (<>
-     <ThemeProvider theme={theme}>
      <CssBaseline />
         <Stack 
             direction="column"
@@ -34,7 +31,6 @@ const ProjectHeader = ({projectTitle, entities, year}) => {
             <Typography variant="projectInfoHeader">{year}</Typography>
         </Stack>
 
-    </ThemeProvider>
         </>
     )
 }

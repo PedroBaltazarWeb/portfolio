@@ -1,10 +1,7 @@
 import * as React from "react"
-import "@fontsource/work-sans";
-import "@fontsource/noto-sans";
 import "../../css/main.min.css";
-import { ThemeProvider, Typography, Stack, Button, Link} from "@mui/material";
+import { Typography, Stack, Button, Link} from "@mui/material";
 import LayoutProject from '../components/LayoutProject';
-import theme from '../../themes/mui-theme'
 import ProjectHeader from '../components/ProjectHeader';
 import ProjectSection from '../components/ProjectSection';
 import mpdsAndroidFinalSection from '../images/mpdsAndroidProject/mpdsAndroidFinal.webp';
@@ -55,7 +52,6 @@ const imagesSecondGallery = [
 const MpdsWeb = () => {
   return (
   <>
-    <ThemeProvider theme={theme}>
       <LayoutProject
           header={
               <ProjectHeader
@@ -102,7 +98,7 @@ const MpdsWeb = () => {
               spacing={5}
               mt={5}>
               
-                <Link color={theme.palette.primary.main} href="https://mpds.f3m.pt/en/mpds-web-en/">
+                <Link href="https://mpds.f3m.pt/en/mpds-web-en/">
                   See the official website
                 </Link>
             </Stack>
@@ -112,7 +108,6 @@ const MpdsWeb = () => {
 </>
           }
       />
-    </ThemeProvider>
   </> )}
 
 export default MpdsWeb

@@ -1,39 +1,12 @@
 import * as React from "react"
-import { Container, Box } from "@mui/material"
-import pattern from '../images/pattern_wall.webp';
-import Separator from '../images/separator.svg';
+import { Container, Box } from "@mui/material";
 import Footer from "./Footer";
 
 const LayoutProject = ({header, projectSteps, firstProjectStep, secondProjectStep, thirdProjectStep, fourthProjectStep, fifthProjectStep}) => {
   return (
     <Box component="main">
       {header}
-      <Box sx={{background: `
-            url(${pattern}), 
-            linear-gradient(180deg, rgba(21,25,71,1) 0%, rgba(36,40,109,1) 82%)`,
-            backgroundPosition: 'top left',
-            backgroundRepeat: 'repeat no-repeat',
-            backgroundSize: '64rem, cover',
-            position: 'relative',
-            '&::after, &::before': {
-              background: `url(${Separator})`,
-              backgroundSize: 'cover',
-              height: 10,
-              content: '""',
-              width: '100%',
-              position: 'absolute',
-              left: 0,
-              right: 0,
-              margin: 'auto',
-              width: '70%',
-            },
-            '&::after': {
-              top: '-5px'
-            },
-            '&::before': {
-              bottom: '-5px'
-            }
-            }}>
+      <Box>
         <Container  maxWidth='lg'>
           {projectSteps}
         </Container>

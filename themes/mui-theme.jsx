@@ -1,5 +1,5 @@
-import { createTheme } from "@mui/material";
-
+/* import { createTheme } from "@mui/material";
+import useMediaQuery from '@mui/material/useMediaQuery';
 let theme = createTheme()
 
 theme = createTheme(theme , {
@@ -43,136 +43,39 @@ theme = createTheme(theme , {
       }
     },
     typography: {
-      projectTitleHeader: { 
-        fontSize: 64,
-        color: '#fff',
-        fontFamily: 'HarperScript',
-        fontWeight: 500,
+      fontFamily: 'Inter',
+      fontFeatureSettings: 'kern',
+      fontKerning: 'normal',
+      body:{
+        fontSize: '1rem',
+        lineHeight: '1.5rem',
+        fontWeight: 400,
+        color: "#fff"
+      },
+      h1:{
+        fontSize: '2rem',
+        lineHeight: '2.5rem',
       },
       h2:{
-        fontFamily: 'HarperScript',
-        fontSize: 64,
-        lineHeight: 1.4,
+        fontSize: '1.5rem',
+        lineHeight: '1.7rem',
       },
-      projectInfoHeader: { 
-        fontSize: 22,
-        color: '#fff',
-        fontFamily: "manrope, sans-serif",
+      h3:{
+        fontSize: '1.2rem',
+        lineHeight: '1.2rem',
       },
-      stepTitleHeader: {
-        fontSize: 22,
-        color: '#fff',
-        fontFamily: "manrope, sans-serif",
-        fontWeight: 600
+      h4:{
+        fontSize: '1.1rem',
+        lineHeight: '1.2rem',
       },
-      stepTitle: {
-        fontSize: 20,
-        color: '#fff',
-        fontFamily: "manrope, sans-serif",
-        fontWeight: 400,
-        lineHeight: 1.5
+      caption:{
+        fontSize: '0.8rem',
+        lineHeight: '2.4rem',
       },
-      stepText: {
-        fontSize: 28,
-        color: '#fff',
-        fontWeight: 600,
-        fontFamily: "manrope, sans-serif",
-        maxWidth: '60ch'
+      bigText:{
+        fontSize: '2rem',
+        lineHeight: '2.4rem',
       },
-      miniTitle: {
-        fontSize: 20,
-        fontWeight: 600,
-        color: '#fff',
-        fontFamily: "manrope, sans-serif",
-        lineHeight: 1.5,
-        letterSpacing: 0
-      },
-      regularText: {
-        fontSize: 18,
-        color: '#fff',
-        fontFamily: "manrope, sans-serif",
-        fontWeight: 300,
-        lineHeight: 1.7,
-        letterSpacing: 0
-      },
-      pRegularText: {
-        fontSize: 18,
-        color: '#fff',
-        fontFamily: "manrope, sans-serif",
-        lineHeight: 1.7,
-        fontWeight: 300,
-        letterSpacing: 0,
-        padding: '64px 0',
-        maxWidth: '60ch'
-      },
-      emphasisRegularText: {
-        fontSize: 28,
-        color: '#fff',
-        fontFamily: "manrope, sans-serif",
-        lineHeight: 1.5,
-        fontWeight: 500,
-        letterSpacing: '-.028em',
-        padding: '64px 0',
-        maxWidth: '38ch',
-      },
-      caption: {
-        fontSize: 14,
-        color: '#fff',
-        fontFamily: "manrope, sans-serif",
-        lineHeight: "32px",
-        fontStyle: 'italic',
-        fontWeight: 400,
-        letterSpacing: '-.018em'
-      },
-      cardCompanyHeader:{
-        fontFamily: "manrope, sans-serif",
-        letterSpacing: '.1em',
-        color: "#fff",
-        fontWeight: 200,
-        lineHeight: 1.6,
-      },
-      cardProjectTitle:{
-        fontFamily: "manrope, sans-serif",
-        letterSpacing: '.1em',
-        fontSize: 24,
-        fontWeight: '700',
-        lineHeight: 1.5
-      },
-      projectType:{
-        fontFamily: "manrope, sans-serif",
-        fontSize: 18,
-        fontWeight: '600',
-        lineHeight: 1.5
-      },
-      cardProjectSubtitle:{
-        fontFamily: "manrope, sans-serif",
-        letterSpacing: '.1em',
-        fontSize: 17,
-        fontWeight: '500',
-        lineHeight: 1.5
-      },
-      subjectText:{
-        fontFamily: "manrope, sans-serif",
-        fontWeight: 400, 
-        fontSize: 10,
-        opacity: .7
-      },
-      noteTitle:{ 
-        fontFamily: '"Concert One", sans-serif',
-        fontSize: 20
-      },
-      noteText:{
-        fontFamily: '"Caveat", cursive'
-      },
-      footerTools:{
-        fontSize: 16,
-        color: '#fff',
-        fontFamily: "manrope, sans-serif",
-        fontWeight: 400,
-        lineHeight: 1.6
-      },
-      // Disable h3 variant
-      h3: undefined,
     },
     palette: {
         primary: {
@@ -183,6 +86,7 @@ theme = createTheme(theme , {
         secondary: {
             main: 'rgb(174 187 255)',
             light: '#F5EBFF',
+            dark: '#020528',
             contrastText: '#47008F',
         },
         action: {
@@ -200,4 +104,4 @@ theme = createTheme(theme , {
     }
   });
 
-  export default theme;
+  export default theme; */

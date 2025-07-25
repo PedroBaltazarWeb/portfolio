@@ -1,6 +1,5 @@
 import { Typography, Box } from "@mui/material"
 import * as React from "react"
-import theme from '../../themes/mui-theme'
 
 const ProjectBasicInfo = ({info}) => {
     return (

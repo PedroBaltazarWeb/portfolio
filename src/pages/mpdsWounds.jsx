@@ -1,11 +1,8 @@
-import * as React from "react"
-import "@fontsource/work-sans";
-import "@fontsource/noto-sans";
+import * as React from "react";
 import "../../css/main.min.css";
 import mpdsWoundsPatientList from '../images/mpdsAndroidProject/patientList.webp';
-import { ThemeProvider, Typography, Stack, Box} from "@mui/material";
+import { Typography, Stack, Box} from "@mui/material";
 import LayoutProject from '../components/LayoutProject';
-import theme from '../../themes/mui-theme'
 import ProjectHeader from '../components/ProjectHeader';
 import ProjectSection from '../components/ProjectSection';
 import mpdsAndroidFirstSection from '../images/mpdsAndroidProject/mpdsAndroidBegin.webp';
@@ -17,8 +14,6 @@ const MpdsWoundsPage = () => {
 
   return (
   <>
-     <ThemeProvider theme={theme}>
-            
             <LayoutProject
                 header={
                     <ProjectHeader
@@ -152,7 +147,6 @@ const MpdsWoundsPage = () => {
                 
                
                 />
-                </ThemeProvider>
   </> )}
 
 export default MpdsWoundsPage

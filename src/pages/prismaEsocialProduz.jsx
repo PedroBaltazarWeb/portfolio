@@ -1,9 +1,5 @@
-import * as React from "react"
-import "@fontsource/work-sans";
-import "@fontsource/noto-sans";
+import * as React from "react";
 import "../../css/main.min.css";
-import { ThemeProvider } from "@mui/material";
-import theme from '../../themes/mui-theme'
 import LayoutProject from '../components/LayoutProject';
 import ProjectHeader from '../components/ProjectHeader';
 import Link from '@mui/material/Link';
@@ -42,8 +38,6 @@ const imagesFirstGallery = [
 const PrismaProduzESocialPage = () => {
   return (
   <>
-     <ThemeProvider theme={theme}>
-            
             <LayoutProject
                 header={
                     <ProjectHeader
@@ -229,7 +223,6 @@ const PrismaProduzESocialPage = () => {
 </ProjectSection>
                 }
                 />
-                </ThemeProvider>
   </> )}
 
 export default PrismaProduzESocialPage

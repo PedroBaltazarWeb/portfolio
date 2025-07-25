@@ -2,10 +2,10 @@ import { styled } from '@mui/material/styles';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 
-export const StyledTableCell = styled(TableCell)(({ theme }) => ({
+export const StyledTableCell = styled(TableCell)(({ }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: '#111e56',
-      color: theme.palette.common.white,
+      //color: theme.palette.common.white,
     },
     [`&.${tableCellClasses.body}`]: {
       fontSize: 14,
@@ -13,9 +13,9 @@ export const StyledTableCell = styled(TableCell)(({ theme }) => ({
     },
   }));
   
-export const StyledTableRow = styled(TableRow)(({ theme }) => ({
+export const StyledTableRow = styled(TableRow)(({ }) => ({
     '&:nth-of-type(odd)': {
-      backgroundColor: theme.palette.action.hover,
+      //backgroundColor: theme.palette.action.hover,
     },
     // hide last border
     '&:last-child td, &:last-child th': {
