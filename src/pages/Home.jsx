@@ -10,18 +10,13 @@ import PrismaProduzEsocialPreview from '../images/prismaPreview.webp';
 import MillerVillagePreview from '../images/millerVillagePreview.svg';
 import { Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import withLazyLoad from '../components/WithLazyLoading';
 import ProjectCard from '../components/ProjectCard';
-import WIP from '../images/WIP.png';
 import MUILink from '@mui/material/Link';
 import { Link } from "gatsby";
 import logo from '../images/logo.svg';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 
 const LazyProjectCard = withLazyLoad(ProjectCard);
 
@@ -53,7 +48,7 @@ const projectCardsProps = [
     id: 3,
     itemGrid: { xs: 12, sm: 6},
     path: '/prismaEsocialProduz',
-    imageSrc: /* PrismaProduzEsocialPreview */NeuroPreview, // Example image URL
+    imageSrc: PrismaProduzEsocialPreview,
     altText: 'Prisma, eSocial & Produz Image Preview',
     company: 'F3M',
     projectTitle: 'Prisma, eSocial & Produz',
@@ -64,18 +59,18 @@ const projectCardsProps = [
     id: 4,
     itemGrid: { xs: 12, sm: 6 },
     path: '/mpdsWounds',
-    imageSrc: /* MpdsWoundsPreview */NeuroPreview, // Example image URL
+    imageSrc: MpdsWoundsPreview,
     altText: 'MpDS Wounds Image Preview',
     company: 'F3M & Fraunhofer',
     projectTitle: 'MpDS Wounds',
     projectType: 'Show Case',
-    footerSubjects: ['Android Development', 'Wireframing & Prototyping<', 'Illustration', 'Illustration']
+    footerSubjects: ['Android Development', 'Wireframing & Prototyping', 'Illustration', 'Illustration']
   },
   {
     id: 5,
     itemGrid: { xs: 12, sm: 6},
     path: '/mpdsWeb',
-    imageSrc: /* SmMpdsWebPreview */NeuroPreview,
+    imageSrc: SmMpdsWebPreview,
     altText: 'MpDS Web Image Preview',
     company: 'F3M',
     projectTitle: 'MpDS Web',
@@ -127,6 +122,7 @@ const Home = () => {
                 }}
                 mb={5}
                 mt={3}
+                className="grid-container"
                 sx={{
                   '@-moz-document url-prefix()': {
                     textAlign: 'center',
