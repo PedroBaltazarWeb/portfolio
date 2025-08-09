@@ -1,26 +1,13 @@
 import React, { useEffect } from 'react';
-import { Box } from "@mui/material"
+import { Container } from "@mui/material"
 import Footer from '../components/Footer';
-const Layout = ({children, theme}) => {
-  /* const location = useLocation();
-
-  useEffect(() => {
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-
-    document.documentElement.style.scrollBehavior = "auto"; 
-    window.scrollTo(0, 0);
-  }, [location]); */
-
-  
+const Layout = ({children}) => {
   return (<>
-   <Box color="background.default">
+   <Container  maxWidth="false" sx={{backgroundColor:"background.default"}}>
       {children}
-    </Box>
-    <Footer />
+      <Footer />
+    </Container>
   </>
-   
   )
 }
 

@@ -1,7 +1,6 @@
 import React from 'react';
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/400-italic.css"
+import "@fontsource/manrope/400.css";
+import "@fontsource/manrope/500.css";
 import "../../css/main.min.css";
 import MpdsWoundsPreview from '../images/mpdsWoundsPreview.webp';
 import SmMpdsWebPreview from '../images/sm_mpdsWebPreview.webp'
@@ -15,7 +14,6 @@ import Container from '@mui/material/Container';
 import withLazyLoad from '../components/WithLazyLoading';
 import ProjectCard from '../components/ProjectCard';
 import MUILink from '@mui/material/Link';
-import { Link } from "gatsby";
 import logo from '../images/logo.svg';
 
 const LazyProjectCard = withLazyLoad(ProjectCard);
@@ -36,13 +34,13 @@ const projectCardsProps = [
     id: 2,
     itemGrid: { xs: 12, sm: 6},
     path: '/neuro',
-    imageSrc: NeuroPreview, // Example image URL
+    imageSrc: NeuroPreview,
     altText: 'Neuropsychological: Digital and remote application of Cognitive Deficit Screening Tests Preview Image',
     company: 'Fraunhofer & Univ. do Porto',
-    projectTitle: 'Neuropsychological',
+    projectTitle: 'Neuropsychological: Digital and remote application of Cognitive Deficit Screening Tests',
     projectType: 'Case Study',
     projectSubtitle: 'Digital and remote application of Cognitive Deficit Screening Tests',
-    footerSubjects: ['Wireframing & Prototyping', 'Interviews', '']
+    footerSubjects: ['Wireframing & Prototyping', 'Interviews', '-']
   },
   {
     id: 3,
@@ -53,7 +51,7 @@ const projectCardsProps = [
     company: 'F3M',
     projectTitle: 'Prisma, eSocial & Produz',
     projectType: 'Show Case',
-    footerSubjects: ['Front-End Development', 'UX Design', 'Illustration']
+    footerSubjects: ['Front-End Development', 'UX Design', 'Logo Design & Illustration']
   },
   {
     id: 4,
@@ -64,7 +62,7 @@ const projectCardsProps = [
     company: 'F3M & Fraunhofer',
     projectTitle: 'MpDS Wounds',
     projectType: 'Show Case',
-    footerSubjects: ['Android Development', 'Wireframing & Prototyping', 'Illustration', 'Illustration']
+    footerSubjects: ['Android Development', 'Wireframing & Prototyping', 'Illustration & Logo Design']
   },
   {
     id: 5,
@@ -75,37 +73,36 @@ const projectCardsProps = [
     company: 'F3M',
     projectTitle: 'MpDS Web',
     projectType: 'Show Case',
-    footerSubjects: ['React Dev.', 'Illustration']
+    footerSubjects: ['Front-end Development', 'Illustration & Logo Design', '-']
   }
 ];
 
 const Home = () => {
   return (
           <>
-              <Container maxWidth="md" component='header'>
-                <Grid container spacing={4} py={5} px={3} sx={{
-    justifyContent: "center",
-    alignItems: "center",
-  }}>
+              <Container maxWidth="md" disableGutters component='header' bgcolor='background.default'>
+                <Grid container spacing={4} py={3} sx={{
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}>
                 <Grid item size="auto" md={3}>
-                  <img height="175" src={logo}></img>
+                  <img height="175" src={logo} alt='Logo Pedro Baltazar'></img>
                 </Grid>
-                <Grid item xs={12} md={9} py={3}>
+                <Grid item xs={12} md={9}>
                   <Typography variant="body" component="p">
-
-                    Olá! Mainly in <Typography variant="stepTitle">healthcare</Typography>, I've been branding, designing, and developing intuitive UI for enterprise digital products. Along the way, I’ve also crafted experiences for industries like <Typography variant="stepTitle">textile manufacturing, eyewear and daycare</Typography> — picking up fresh ideas and new perspectives on each field. Take a look around, and if you think I can help with something, just <MUILink href="mailto:pedrobaltazardesign@icloud.com">drop me a message</MUILink>!
-                    
+                    Olá! Mainly in healthcare, I’ve been branding, designing and developing intuitive UIs for enterprise digital products. Along the way, I’ve also crafted experiences for industries like textile manufacturing, eyewear, and daycare — picking up fresh ideas and new perspectives from each field. Over the past few years, I’ve become increasingly interested in creating design systems and making products accessible. Take a look!
                   </Typography>
                 </Grid>
               </Grid>
               </Container>
  
-            <Container maxWidth="md" component='main'>
-              <Stack direction="row" spacing={2} sx={{
+            <Container maxWidth="md" disableGutters component='main' bgcolor='background.default'>
+              <Stack direction={{
+                          xs: "column",
+                          sm: "row"
+                        }} spacing={1} py={4} sx={{
                 justifyContent: "space-between",
-                alignItems: "center",
-                pb: 4,
-                pt: 5
+                alignItems: "flex-start",
               }}>
                 <Typography variant="h1" component="h1">Product Projects</Typography>
                 <Typography variant="body" component="p" >5 units</Typography>
@@ -114,14 +111,13 @@ const Home = () => {
               <Grid
                 container
                 direction="row"
-                justifyContent="space-between"
+                justifyContent="center"
                 alignItems="stretch"
+                pb={4}
                 spacing={{
-                  md: 2,
-                  lg: 3
+                  xs: 1,
+                  lg: 1
                 }}
-                mb={5}
-                mt={3}
                 className="grid-container"
                 sx={{
                   '@-moz-document url-prefix()': {
@@ -131,14 +127,13 @@ const Home = () => {
                     textAlign: 'center',
                   },
                 }}>
-                {projectCardsProps.map((props, path) => (
-                    <Grid item mt={4} xs={props.itemGrid.xs} 
+                {projectCardsProps.map((props) => (
+                    <Grid item xs={props.itemGrid.xs} 
                         sm={props.itemGrid.sm}
                         md={props.itemGrid.md} 
-                        lg={props.itemGrid.lg}>
-                        <Link to={props.path} key={props.id} style={{textDecoration: 'none', position: 'relative'}}>
-                            <LazyProjectCard {...props} />
-                        </Link>
+                        lg={props.itemGrid.lg}
+                        >
+                          <LazyProjectCard {...props} />
                     </Grid>
                 ))}
               </Grid>

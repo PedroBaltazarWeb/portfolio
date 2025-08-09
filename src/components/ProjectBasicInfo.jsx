@@ -1,20 +1,16 @@
-import { Typography, Box } from "@mui/material"
+import { Typography, Box, Stack } from "@mui/material"
 import * as React from "react"
 
-const ProjectBasicInfo = ({info}) => {
+const ProjectBasicInfo = ({info, children}) => {
     return (
-        <Box sx={{
-            border: '1px solid #E8B80E',
-            borderRadius: 2,
-            zIndex: 1
-        }} bgcolor={'#181C4F'} maxWidth={'70ch'} p={5} mt={'-70px'} mb={{
-            xs: 0,
-            sm: 0,
-            md: 0,
-            lg: '150px',
-            xl: '150px'
-          }}>
-            <Typography variant="regularText">{info}</Typography>
+        <Box py={5}>
+            <Stack direction='column' maxWidth='sm' margin='0 auto' spacing={2} px={{xs: 2, sm: 2, md:0}}>
+                <Typography variant="h2" component='h2'>Description</Typography>
+                <Typography component='p'  variant="body">{info}</Typography>
+            </Stack>
+            <Box maxWidth='md' margin='0 auto'>
+                {children}
+            </Box>
         </Box>
     )
 }

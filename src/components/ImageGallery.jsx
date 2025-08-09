@@ -28,7 +28,7 @@ const ImageGallery =  ({ images, widthGallery = 800, marginTop = 0, heightGaller
               <Typography gutterBottom variant="h5" component="div">
                 {currentImage.title}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="text.primary">
                 {currentImage.description}
               </Typography>
             </CardContent>
@@ -36,10 +36,10 @@ const ImageGallery =  ({ images, widthGallery = 800, marginTop = 0, heightGaller
 
       <Stack direction={"row"} spacing={2} justifyContent="center"
               alignItems="center" mt={2}>
-        <Button variant="outlined" onClick={handlePrevious}>
+        <Button component='button' variant="outlined" onClick={handlePrevious}>
           Previous
         </Button>
-        <Button variant="outlined" onClick={handleNext}>
+        <Button component='button' variant="outlined" onClick={handleNext}>
           Next
           </Button>
         </Stack>

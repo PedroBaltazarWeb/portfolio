@@ -1,44 +1,30 @@
 import * as React from "react"
-import { Container, Box } from "@mui/material";
-import Footer from "./Footer";
+import { Container, Stack, Box } from "@mui/material";
 
 const LayoutProject = ({header, projectSteps, firstProjectStep, secondProjectStep, thirdProjectStep, fourthProjectStep, fifthProjectStep}) => {
   return (
-    <Box component="main">
+    <Stack component="main" width='100%' bgcolor='background.default'>
       {header}
-      <Box>
-        <Container  maxWidth='lg'>
+      
+        <Container disableGutters maxWidth="lg" sx={{bgcolor: 'background.paper', borderRadius: 1}}>
           {projectSteps}
         </Container>
-      </Box>
-      <Box sx={{bgcolor: '#0c0e22' }} py={5}>
-        <Container maxWidth='lg'>
+        <Container disableGutters maxWidth="lg">
           {firstProjectStep}
         </Container>
-      </Box>
-      <Box sx={{bgcolor: '#181b43' }} py={5} hidden={secondProjectStep ? false : true}>
-        <Container maxWidth='lg' py={5}>
+        <Container disableGutters maxWidth="lg" hidden={secondProjectStep ? false : true}>
           {secondProjectStep}
         </Container>
-      </Box>
-      <Box sx={{bgcolor: '#0c0e22' }} py={5} hidden={thirdProjectStep ? false : true}>
-        <Container maxWidth='lg'>
+        <Container disableGutters maxWidth="lg" hidden={thirdProjectStep ? false : true}>
           {thirdProjectStep}
         </Container>
-      </Box>
-      <Box sx={{bgcolor: '#181b43' }} py={5} hidden={fourthProjectStep ? false : true}>
-        <Container maxWidth='lg'>
+        <Container disableGutters maxWidth="lg" hidden={fourthProjectStep ? false : true}>
           {fourthProjectStep}
         </Container>
-      </Box>
-      <Box sx={{background: 'rgb(21,25,71)',
-        background: 'linear-gradient(180deg, #0c0e22 55%, rgba(36,40,109,1) 100%)'}} py={5} hidden={fifthProjectStep ? false : true}>
-        <Container maxWidth='lg'>
+        <Container disableGutters maxWidth="lg" hidden={fifthProjectStep ? false : true}>
           {fifthProjectStep}
         </Container>
-      </Box>
-          <Footer />
-    </Box>
+    </Stack>
   )
 }
 
