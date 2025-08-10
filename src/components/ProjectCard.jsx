@@ -6,9 +6,11 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 const ProjectCard = ({ imageSrc, altText, company, projectTitle, id, projectType, onLoad, path}) => {
 
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
+  /* const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
       noSsr: true,
-  });
+  }); */
+
+  const prefersDarkMode = true;
   
   const handleImageLoad = () => {
     if (onLoad) {

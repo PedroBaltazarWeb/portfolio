@@ -53,9 +53,12 @@ const MillerVillageTycoonPage = () => {
     const [showIframeUserTaskFlow, setShowIframeUserTaskFlow] = useState(false);
     const [showIframeDesignSystem, setShowIframeDesignSystem] = useState(false);
     const [showIframeHumanResults, setShowIframeHumanResults] = useState(false);
-    const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
+    /* const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
         noSsr: true,
-    });
+    }); */
+
+    const prefersDarkMode = true;
+
     const handleClickOpen = () => {
         setOpen(true);
     };

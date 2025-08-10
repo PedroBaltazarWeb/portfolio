@@ -26,9 +26,12 @@ const NeuroPage = () => {
     const [showIframeInterviewGuide, setShowIframeInterviewGuide] = useState(false);
     const [showIframeUserPersonas, setShowIframeUserPersonas] = useState(false);
     const [showIframeDesignSystem, setShowIframeDesignSystem] = useState(false);
-    const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
+    /* const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
         noSsr: true,
-    });
+    }); */
+
+    const prefersDarkMode = true;
+
 
     return (
     <>

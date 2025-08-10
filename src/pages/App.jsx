@@ -15,11 +15,13 @@ import ScrollToTop from '../components/ScrollToTop';
 import getTheme from '../../themes/mui-theme';
 
 const App = () => {
-const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
+/* const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
   noSsr: true,
-});
+}); */
+const prefersDarkMode = true;
+const theme = React.useMemo(() => getTheme(prefersDarkMode), []);
   
-const theme = React.useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode]);
+//const theme = React.useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -28,6 +30,7 @@ const theme = React.useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode]);
           <Helmet>
             <title>Pedro Baltazar</title>
           </Helmet>
+          {typeof window !== "undefined" && (
           <Router>  
             <ScrollToTop />
           <Routes>
@@ -38,7 +41,8 @@ const theme = React.useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode]);
             <Route path="/mpdsWounds" element={<MpdsWounds />} />
             <Route path="/mpdsWeb" element={<MpdsWeb />} />
           </Routes>
-        </Router>
+          </Router>
+          )}
       </Layout>
     </ThemeProvider>
   );
