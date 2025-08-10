@@ -522,7 +522,7 @@ const NeuroPage = () => {
                                 Additionally, a report generation feature or the ability to export results to digital health platforms could be valuable future enhancements.                           </Typography>
                         <Stack maxWidth='sm' direction="column" width={'100%'}>
                         {typeof window !== "undefined" && (
-                            <Link to={'/'} key={1}><Typography variant='body' color='text.link' component='p' height={50} alignContent='end'>Return home</Typography></Link>
+                            <Link to={'/'} key={1}><Typography variant='body' sx={{color: 'text.link'}}  component='p' height={50} alignContent='end'>Return home</Typography></Link>
                         )}
                        </Stack>
                         </ProjectSection>

@@ -87,7 +87,7 @@ const MillerVillageTycoonPage = () => {
             firstProjectStep={
                 <ProjectSection topic="Research & Interviews" >
                     <Typography variant="body" maxWidth='sm' component='p'>
-                        All started with InspirersKids, an extension of the <Link color='text.link' href="https://cintesis.eu/en/portfolio-items/airdoc/">AIRDOC ecosystem</Link> by MEDIDA and CINTESIS, which developed a mobile app for caregivers of children and adolescents with chronic or acute respiratory conditions to securely transmit medical data to a central server.
+                        All started with InspirersKids, an extension of the <Link sx={{color: 'text.link'}} href="https://cintesis.eu/en/portfolio-items/airdoc/">AIRDOC ecosystem</Link> by MEDIDA and CINTESIS, which developed a mobile app for caregivers of children and adolescents with chronic or acute respiratory conditions to securely transmit medical data to a central server.
                     </Typography>
                         
                     <Grid container spacing={5}
@@ -1483,7 +1483,7 @@ const MillerVillageTycoonPage = () => {
     <Typography variant="body" maxWidth='sm' component='p' pb={4}>In conclusion, the usability tests revealed several areas for improvement, particularly in terms of clarity button labeling, and user guidance. Participants hesitated in text-heavy sections and found some button functions ambiguous, highlighting the need for clearer visual cues and improved feedback mechanisms. Additionally, the distinction between different FEM process stages must be reinforced to avoid confusion. To address these challenges, key adjustments will include refining button design, enhancing feedback with visuals, and reevaluating the help section’s effectiveness. These changes will aim to create a more intuitive and seamless user experience when the project is resumed.</Typography>
     <Stack maxWidth='sm' direction="column" width={'100%'}>
         {typeof window !== "undefined" && (
-            <LinkRoute to={'/'} key={2}><Typography variant='body' color='text.link' component='p' height={50} alignContent='end'>Return home</Typography></LinkRoute>
+            <LinkRoute to={'/'} key={2}><Typography variant='body' sx={{color: 'text.link'}} component='p' height={50} alignContent='end'>Return home</Typography></LinkRoute>
         )}
     </Stack>
                 </ProjectSection>     

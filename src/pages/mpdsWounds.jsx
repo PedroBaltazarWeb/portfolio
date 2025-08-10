@@ -125,7 +125,7 @@ const MpdsWoundsPage = () => {
                     </Box>
                     <Stack maxWidth='sm' direction="column" width={'100%'} pb={3}>
                       {typeof window !== "undefined" && (
-                      <LinkRoute to={'/'} key={2}><Typography variant='body' color='text.link' component='p' height={50} alignContent='end'>Return home</Typography></LinkRoute>
+                      <LinkRoute to={'/'} key={2}><Typography variant='body' sx={{color: 'text.link'}}  component='p' height={50} alignContent='end'>Return home</Typography></LinkRoute>
                       )}
                       </Stack>
                   </ProjectSection>

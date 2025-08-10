@@ -93,7 +93,7 @@ const MpdsWeb = () => {
                                   }}>
                                     <iframe loading="lazy" width="100%" height="315" src="https://www.youtube.com/embed/7dIgcDsFZY8?si=x42LdYemjwM_q6nv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                
-                                  <Link color='text.link' href="https://mpds.f3m.pt/en/mpds-web-en/">
+                                  <Link sx={{color: 'text.link'}} href="https://mpds.f3m.pt/en/mpds-web-en/">
                                     See the official website
                                   </Link>
                                  
@@ -114,7 +114,7 @@ const MpdsWeb = () => {
 </Box>
    <Stack maxWidth='sm' direction="column" width={'100%'} pb={3}>
       {typeof window !== "undefined" && (
-        <LinkRoute to={'/'} key={2}><Typography variant='body' color='text.link' component='p' height={50} alignContent='end'>Return home</Typography></LinkRoute>
+        <LinkRoute to={'/'} key={2}><Typography variant='body' sx={{color: 'text.link'}}  component='p' height={50} alignContent='end'>Return home</Typography></LinkRoute>
       )}
       </Stack>
 </ProjectSection>
