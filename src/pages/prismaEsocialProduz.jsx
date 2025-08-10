@@ -185,7 +185,9 @@ thirdProjectStep={
 
 <Typography variant="caption" component='p' pb={3} pt={2} textAlign='center'>I generated the illustrations used in this "Design Sprints" gallery in: https://lenimatic.com</Typography>
   <Stack maxWidth='sm' direction="column" width={'100%'}>
+      {typeof window !== "undefined" && (
       <LinkRoute to={'/'} key={2}><Typography variant='body' color='text.link' component='p' height={50} alignContent='end'>Return home</Typography></LinkRoute>
+      )}
   </Stack>
 
 </ProjectSection>

@@ -74,6 +74,7 @@ const ProjectCard = ({ imageSrc, altText, company, projectTitle, id, projectType
         </Grid>
       </Grid>
       <Grid item container >
+        {typeof window !== "undefined" && (
         <Link to={path} key={id} style={{width: '100%'}}>
           <img src={imageSrc} alt={altText} onLoad={handleImageLoad} style={{borderRadius: 16, borderWidth: '0.1rem',
           borderColor: prefersDarkMode ? '#00D76D' : '#0002ff',
@@ -81,6 +82,7 @@ const ProjectCard = ({ imageSrc, altText, company, projectTitle, id, projectType
           width: '100%', 
           height: 'auto' }}/>
         </Link>  
+        )}
       </Grid>
       <Grid 
         container
@@ -89,8 +91,10 @@ const ProjectCard = ({ imageSrc, altText, company, projectTitle, id, projectType
         alignItems="stretch">
           <Typography variant='body' component='p'>{company}</Typography>
           <Typography variant='body' component='p'>{projectType}</Typography>
+          {typeof window !== "undefined" && (
           <Link to={path} key={id}><Typography variant='body' color='card.link' component='p' height={50} alignContent='end'>Open project</Typography></Link>
-      </Grid>
+          )}
+          </Grid>
     </Grid>
     </Paper>
 
