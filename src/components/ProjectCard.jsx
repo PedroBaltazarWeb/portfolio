@@ -1,139 +1,101 @@
-import React, { useEffect, useState } from 'react';
-import { Grid, Link, Stack, Box, Typography } from '@mui/material';
-import EastIcon from '@mui/icons-material/East';
-import flashsProjectCardFirst from './../images/flashsProjectCardFirst.webp';
-import flashsProjectCardSecond from './../images/flashsProjectCardSecond.webp';
-import shining from '../images/shining.webp';
+import React, { useRef, useState, useEffect } from 'react';
+import { Typography, Grid, Tooltip } from '@mui/material';
+import { Link } from "react-router-dom";
+import Paper from '@mui/material/Paper';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-const ProjectCard = ({ imageSrc, altText, company, projectTitle, numberBadge, projectSubtitle, projectType, footerSubjects, onLoad }) => {
+const ProjectCard = ({ imageSrc, altText, company, projectTitle, id, projectType, onLoad, path}) => {
 
+  /* const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
+      noSsr: true,
+  }); */
+
+  const prefersDarkMode = true;
+  
   const handleImageLoad = () => {
     if (onLoad) {
       onLoad();
     }
   };
 
+  const textRef = useRef(null);
+  const [isTruncated, setIsTruncated] = useState(false);
+
+  useEffect(() => {
+    const el = textRef.current;
+    if (el) {
+      setIsTruncated(el.scrollHeight > el.clientHeight + 1);
+    }
+  }, [projectTitle]);
+
+  const typographyElement = <Typography variant='h2' 
+            ref={textRef} 
+            sx={{
+              display: '-webkit-box',
+              WebkitBoxOrient: 'vertical',
+              WebkitLineClamp: 2,
+              overflow: 'hidden',
+              color:'text.primary',
+              margin: 0,
+          }}>{projectTitle}</Typography>
+
   return (
   <>
-    <Box className="safari-none" sx={{
-          position: 'absolute',
-          top: -60,
-          zIndex: 2,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          '@media not all and (min-resolution: 0.001dpcm)': {
-          '@supports (-webkit-appearance: none)': {
-            '& img': {
-              textAlign: 'center',
-            },
-          },
-        },
-    }}>
-      {numberBadge}
-    </Box>
-
-    <Stack direction="column"
-      justifyContent="space-between"
-      alignItems="stretch"
-      spacing={2}
+    <Paper
+      bgcolor="background.paper" 
+      borderRadius={0}
       sx={{
-        position: 'relative', // Keeps content above animations
-        p: '16px',
-        borderRadius: 2,
-        background: 'rgba(24, 28, 79, 0.7)',
-        border: '#E8B80E solid 1px',
-        cursor: 'pointer',
-        overflow: 'hidden',
-        transition: 'opacity 1s ease-in-out, transform 1s ease-in-out',
-    
-        '&::before, &::after': {
-          content: '""',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundSize: 'cover',
-          opacity: 0,
-          zIndex: -1, // ✅ Keeps backgrounds behind content
-        },
-    
-        '&::before': {
-          backgroundImage: `url(${flashsProjectCardFirst}), url(${flashsProjectCardSecond})`,
-          transform: 'scale(1.05)',
-          backgroundBlendMode: 'color-dodge',
-        },
-    
-        '&::after': {
-          //backgroundImage: `url(${particlesFirst}), url(${particlesSecond})`,
-          transform: 'scale(1.02)',
-          backgroundBlendMode: 'multiply',
-        },
-    
-        '&:hover': {
-          transform: 'scale(1.01, 1.01)',
-          color: '#fff',
-          transition: 'opacity 1s ease-in-out, transform 0.5s ease-in-out',
-    
-          '&::before': {
-            opacity: 0.7,
-            animation: 'flashAnimation 3s infinite alternate ease-in-out',
-          },
-          '&::after': {
-            //opacity: 0.3,
-            //animation: 'particleAnimation 5s infinite alternate ease-in-out',
-          },
-        },
-    
-        '@keyframes flashAnimation': {
-          '0%': { opacity: 0, transform: 'scale(1) translateY(-15px)' },
-          '100%': { opacity: 0.7, transform: 'scale(1.1) translateY(5px)' },
-        },
-    
-        '@keyframes particleAnimation': {
-          '0%': { opacity: 0, transform: 'scale(1.02) translateX(-5px)' },
-          '100%': { opacity: 0.5, transform: 'scale(1.07) translateX(5px)' },
-        },
-    
-        '& img': {
-          borderRadius: 2,
-          border: '#fff solid 1px',
-          position: 'relative', // ✅ Keeps text & images above the background
-          zIndex: 2,
-        },
+        p: 3,
+        borderWidth: 1,
+        borderColor: "card.border",
+        borderStyle: 'solid',
+        height: {
+          xs: 425,
+          sm: 490,
+          md: 490,
+        }
       }}
-      height="100%">
-        
-        <Typography component="p" textAlign='center' pt={5} variant="cardCompanyHeader">{company}</Typography>
-        <Stack mt={2} flexGrow={1} justifyContent="center" alignItems="center">
-          <Typography component="p" pr={1} pb={1} textAlign='center' variant="cardProjectTitle" >
-            {projectTitle}
-          </Typography>
-          <Typography component="p" mb={1} pr={1} textAlign='center' variant="cardProjectSubtitle">
-            {projectSubtitle}
-          </Typography>
-        </Stack>
-        
-        <Box mt={4}>
-          <img position='absolute' src={imageSrc} alt={altText} width='100%' onLoad={handleImageLoad} />
-        </Box>
-        
-        <Typography variant="projectType" 
-        component='p' 
-        textAlign={'center'}
-        mt={3}
-        color={'#00ff7b'}>{projectType}</Typography>
-      
-
-      <Stack
-        direction="row"
-        height={128}
+    >
+      <Grid container 
+        direction="column"
+        justifyContent="space-between"
+        alignItems="stretch"
+        height={'100%'}>
+      <Grid item container direction="row" spacing={1} justifyContent="space-between"
+        alignItems="stretch" minHeight={'5rem'} >
+        <Grid item>
+          {isTruncated ? 
+            <Tooltip title={projectTitle}>
+              {typographyElement}
+            </Tooltip>
+           : 
+            typographyElement
+        }
+        </Grid>
+      </Grid>
+      <Grid item container >
+        <Link to={path} key={id} style={{width: '100%'}}>
+          <img src={imageSrc} alt={altText} onLoad={handleImageLoad} style={{borderRadius: 16, borderWidth: '0.1rem',
+          borderColor: prefersDarkMode ? '#00D76D' : '#0002ff',
+          borderStyle: 'solid',
+          width: '100%', 
+          height: 'auto' }}/>
+        </Link>  
+      </Grid>
+      <Grid 
+        container
+        direction="column"
         justifyContent="flex-start"
-        alignItems="center"
-        spacing={2}>
-        {footerSubjects}
-      </Stack>
-    </Stack>
+        alignItems="stretch">
+          <Typography variant='body' component='p'>{company}</Typography>
+          <Typography variant='body' component='p'>{projectType}</Typography>
+          <Link to={path} key={id}><Typography variant='body' color='card.link' component='p' height={50} alignContent='end'>Open project</Typography></Link>
+      </Grid>
+    </Grid>
+    </Paper>
+
+
+    
     </>
   );
 };

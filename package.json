@@ -18,13 +18,9 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@fontsource/archivo": "^5.2.5",
-    "@fontsource/caveat": "^5.1.0",
-    "@fontsource/concert-one": "^5.1.0",
-    "@fontsource/lato": "^5.2.5",
-    "@fontsource/manrope": "^5.0.18",
-    "@fontsource/noto-sans": "^4.5.9",
-    "@fontsource/work-sans": "^4.5.7",
+    "@fontsource/caveat": "^5.2.6",
+    "@fontsource/concert-one": "^5.2.6",
+    "@fontsource/manrope": "^5.2.6",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
@@ -42,6 +38,8 @@
     "react-curtains": "^1.0.10",
     "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
+    "react-router": "^6.16.0",
+    "react-router-dom": "^6.16.0",
     "sass": "^1.50.0"
   },
   "devDependencies": {

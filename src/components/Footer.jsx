@@ -1,42 +1,22 @@
-import * as React from "react"
-import Box from '@mui/material/Box';
-import { Typography, Button } from "@mui/material";
-import Stack from '@mui/material/Stack';
-import cityFooter from '../images/footer.svg';
-import theme from '../../themes/mui-theme'
-import EngineeringIcon from '@mui/icons-material/Engineering';
+import React from 'react';
+import { Stack, Box, Button, Typography, Link, Divider } from "@mui/material";
 
 const Footer = () => {
   return (
-    <Stack component="footer" textAlign="center" sx={{
-      background: 'rgba(36,40,109,1)'
-    }} spacing={0}>
-      <img src={cityFooter}></img>
-      <Stack
-        sx={{
-          background: '#0B0C27',
-          justifyContent: "center",
-          alignItems: "center"
-        }}
-        direction='column'
-        px={2}
-        pt={5}
-
-        spacing={{
-          xs: 5,
-          md: 5
-        }}>
- 
-<Box pt={3}>
-  <Button href="/files/cv_pedro_baltazar.pdf" download variant="outlined" sx={{width: 150, height: 44}}>
-    Download Resume
-  </Button>
-   </Box>   
-   <Box>
-        <EngineeringIcon fontSize="small" color="primary"></EngineeringIcon>
-        <Typography color={'#fff'} fontSize={14} pb={5} pt={1}>Eternal work in progress by <Typography component={'span'} fontSize={14} color={theme.palette.secondary.main}>Pedro Baltazar</Typography></Typography> 
-      </Box>
+    <Stack direction="row" spacing={2} justifyContent="space-between" pt={3} pb={4}
+    alignItems="center" maxWidth='md' margin='0 auto' width='100%' component='footer' bgcolor='background.default'>
+      <Stack direction="row" spacing={1}>
+        
+        <Link href="mailto:pedrobaltazardesign@icloud.com"  noWrap>
+          Drop me an email!
+        </Link>
       </Stack>
+      <Box width="100%">
+        <Divider sx={{borderColor: "primary.main"}} flexItem orientation='horizontal' width="100%"></Divider>
+      </Box>
+      <Button component='button' href="/files/cv_pedro_baltazar.pdf" download variant="outlined">
+        Download Resume
+      </Button>
     </Stack>
   )
 

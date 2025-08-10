@@ -1,67 +1,7 @@
 import * as React from "react"
 import { Container, Box, Typography } from "@mui/material"
-import theme from '../../themes/mui-theme'
 import "@fontsource/caveat";
 import "@fontsource/concert-one";
-
-{/* <style>
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 600;
-  font-style: normal;
-  color: #404040;
-  background: #0B1231;
-}
-
-
-</style> */}
 
 const LibraryCard = () => {
 
@@ -120,11 +60,12 @@ const LibraryCard = () => {
                 '&.title-sections': {
                     marginBottom: '4px',
                     '& h1':{
-                        padding: theme.spacing(2),
+                        padding: 2,
                     },
                     '& .instructions-title':{
                         paddingLeft: "45px",
-                        paddingRight: "32px"
+                        paddingRight: "32px",
+                        color: '#0c5777'
                     }
                 },
                 '&.title-sections-h2':{
@@ -133,7 +74,7 @@ const LibraryCard = () => {
                         textAlign: 'center'
                     },
                     '& h2, & h1':{
-                        padding: theme.spacing(2),
+                        padding: 2,
                     },
 
                   
@@ -156,7 +97,7 @@ const LibraryCard = () => {
     return (
     <Box component="article" sx={useStyles.root} className="notepaper">
         <Box component="section" sx={useStyles.root} className="title-sections">
-            <Typography component="h1" variant="noteTitle">
+            <Typography component="h1" variant="noteTitle" className="note-title">
                 TITLE
             </Typography>
             <Typography variant="noteText" className="instructions-title">
@@ -165,10 +106,10 @@ const LibraryCard = () => {
         </Box>
 
         <Box component="section" sx={useStyles.root} className="title-sections-h2">
-            <Typography component="h2" variant="noteTitle" >
+            <Typography component="h2" variant="noteTitle" className="note-title">
                 NUMBER
             </Typography>
-            <Typography component="h2" variant="noteTitle">
+            <Typography component="h2" variant="noteTitle" className="note-title">
                 TASK
             </Typography>
         </Box>
