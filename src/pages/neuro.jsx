@@ -521,7 +521,9 @@ const NeuroPage = () => {
                                 To address emotional distancing in remote sessions, avatars replaced emojis as they better represent facial expressions, and keeping the participants' video feeds visible enhances connection. Future solutions could include icebreaker activities or pre-recorded voice messages for network failures.
                                 Additionally, a report generation feature or the ability to export results to digital health platforms could be valuable future enhancements.                           </Typography>
                         <Stack maxWidth='sm' direction="column" width={'100%'}>
-                        <Link to={'/'} key={1}><Typography variant='body' color='text.link' component='p' height={50} alignContent='end'>Return home</Typography></Link>
+                        {typeof window !== "undefined" && (
+                            <Link to={'/'} key={1}><Typography variant='body' color='text.link' component='p' height={50} alignContent='end'>Return home</Typography></Link>
+                        )}
                        </Stack>
                         </ProjectSection>
                     }
