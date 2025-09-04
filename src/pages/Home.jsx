@@ -100,12 +100,11 @@ const Home = () => {
               <Stack direction={{
                           xs: "column",
                           sm: "row"
-                        }} spacing={1} py={4} sx={{
+                        }} spacing={1} pt={4} pb={3} sx={{
                 justifyContent: "space-between",
                 alignItems: "flex-start",
               }}>
-                <Typography variant="h1" component="h1">Product Projects</Typography>
-                <Typography variant="body" component="p" >5 units</Typography>
+                <Typography variant="h1" component="h1">Work</Typography>
               </Stack>
               
               <Grid
