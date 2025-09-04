@@ -85,8 +85,7 @@ const Home = () => {
           alignItems: "center",
         }}>
           <Grid item size="auto" xs={12} sm={3} md={2} mr={{
-            md:3,
-            lg:4
+            md:3
             }} borderRadius={'50%'}>
             <img height="155" style={{'border-radius': '50%', 'border': '2px #fff solid'}} src={PedroBaltazar} alt='Logo Pedro Baltazar'></img>
           </Grid>
