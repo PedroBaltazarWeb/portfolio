@@ -1,20 +1,20 @@
 import React from 'react';
 import "@fontsource/manrope/400.css";
 import "@fontsource/manrope/500.css";
+import "@fontsource/manrope/600.css";
 import "../../css/main.min.css";
 import MpdsWoundsPreview from '../images/mpdsWoundsPreview.webp';
 import SmMpdsWebPreview from '../images/sm_mpdsWebPreview.webp'
 import NeuroPreview from '../images/neuroPreview.svg';
 import PrismaProduzEsocialPreview from '../images/prismaPreview.webp';
 import MillerVillagePreview from '../images/millerVillagePreview.svg';
-import { Typography } from "@mui/material";
+import { Typography, Link } from "@mui/material";
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import withLazyLoad from '../components/WithLazyLoading';
 import ProjectCard from '../components/ProjectCard';
-import MUILink from '@mui/material/Link';
-import logo from '../images/logo.svg';
+import PedroBaltazar from '../images/pedroBaltazar_foto.png';
 
 const LazyProjectCard = withLazyLoad(ProjectCard);
 
@@ -79,66 +79,94 @@ const projectCardsProps = [
 
 const Home = () => {
   return (
-          <>
-              <Container maxWidth="md" disableGutters component='header' bgcolor='background.default'>
-                <Grid container spacing={4} py={3} sx={{
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}>
-                <Grid item size="auto" md={3}>
-                  <img height="175" src={logo} alt='Logo Pedro Baltazar'></img>
-                </Grid>
-                <Grid item xs={12} md={9}>
-                  <Typography variant="body" component="p">
-                    Olá! Mainly in healthcare, I’ve been branding, designing and developing intuitive UIs for enterprise digital products. Along the way, I’ve also crafted experiences for industries like textile manufacturing, eyewear, and daycare — picking up fresh ideas and new perspectives from each field. Over the past few years, I’ve become increasingly interested in creating design systems and making products accessible. Take a look!
-                  </Typography>
-                </Grid>
+    <>
+      <Container maxWidth="md" disableGutters component='header' bgcolor='background.default'>
+        <Grid container spacing={3} pb={3} pt={4} sx={{
+          alignItems: "center",
+        }}>
+          <Grid item size="auto" xs={12} sm={3} md={2} mr={{
+            md:3,
+            lg:4
+            }} borderRadius={'50%'}>
+            <img height="155" style={{'border-radius': '50%', 'border': '2px #fff solid'}} src={PedroBaltazar} alt='Logo Pedro Baltazar'></img>
+          </Grid>
+          <Grid item xs={12} sm={6} md={7} lg={7} xl={7} spacing={4}>
+            <Typography variant="intro" component="p" pb={2} pr={{
+              xs: 0,
+              sm: 0,
+              md: 4
+            }} >
+              Pedro Baltazar is a Product Designer at <Typography variant="intro" component='span' fontWeight={600}>F3M Information Systems S.A.</Typography>
+            </Typography>
+            <Typography variant="body" component="p" pr={{
+              xs: 0,
+              sm: 0,
+              md: 4
+            }}>
+              Develops enterprise products in multiple sectors, primarily focusing on healthcare. Experience includes web/app design, UI development, RWD, illustration, a11y, and design systems.
+            </Typography>
+          </Grid>
+          <Grid item size="auto" xs={12} sm={2} md={2} sx={{
+                height: '-webkit-fill-available',
+                alignContent: 'flex-end'
+          }}>
+            <Stack direction='column' spacing={1} justifyContent='bottom'>
+              <Link href="mailto:pedrobaltazardesign@icloud.com">
+                <Typography variant='body' color='card.link' component='p' alignContent='end'>Send e-mail</Typography>
+              </Link>
+              <Link href="/files/cv_pedro_baltazar.pdf">
+                <Typography variant='body' color='card.link' component='p' alignContent='end'>Download Resume</Typography>
+              </Link>
+              <Link href="https://dribbble.com/PedroBaltazar">
+                <Typography variant='body' color='card.link' component='p' alignContent='end'>Dribbble</Typography>
+              </Link>
+            </Stack>
+          </Grid>
+        </Grid>
+      </Container>
+
+      <Container maxWidth="md" disableGutters component='main' bgcolor='background.default'>
+        <Stack direction={{
+                    xs: "column",
+                    sm: "row"
+                  }} spacing={1} pt={4} pb={3} sx={{
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+        }}>
+          <Typography variant="h1" component="h1">Work</Typography>
+        </Stack>
+        
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="stretch"
+          pb={4}
+          spacing={{
+            xs: 1,
+            lg: 1
+          }}
+          className="grid-container"
+          sx={{
+            '@-moz-document url-prefix()': {
+              textAlign: 'center',
+            },
+            '@supports (-webkit-hyphens: none) and (not (hyphens: none))': {
+              textAlign: 'center',
+            },
+          }}>
+          {projectCardsProps.map((props) => (
+              <Grid item xs={props.itemGrid.xs} 
+                  sm={props.itemGrid.sm}
+                  md={props.itemGrid.md} 
+                  lg={props.itemGrid.lg}
+                  >
+                    <LazyProjectCard {...props} />
               </Grid>
-              </Container>
- 
-            <Container maxWidth="md" disableGutters component='main' bgcolor='background.default'>
-              <Stack direction={{
-                          xs: "column",
-                          sm: "row"
-                        }} spacing={1} py={4} sx={{
-                justifyContent: "space-between",
-                alignItems: "flex-start",
-              }}>
-                <Typography variant="h1" component="h1">Product Projects</Typography>
-                <Typography variant="body" component="p" >5 units</Typography>
-              </Stack>
-              
-              <Grid
-                container
-                direction="row"
-                justifyContent="center"
-                alignItems="stretch"
-                pb={4}
-                spacing={{
-                  xs: 1,
-                  lg: 1
-                }}
-                className="grid-container"
-                sx={{
-                  '@-moz-document url-prefix()': {
-                    textAlign: 'center',
-                  },
-                  '@supports (-webkit-hyphens: none) and (not (hyphens: none))': {
-                    textAlign: 'center',
-                  },
-                }}>
-                {projectCardsProps.map((props) => (
-                    <Grid item xs={props.itemGrid.xs} 
-                        sm={props.itemGrid.sm}
-                        md={props.itemGrid.md} 
-                        lg={props.itemGrid.lg}
-                        >
-                          <LazyProjectCard {...props} />
-                    </Grid>
-                ))}
-              </Grid>
-              </Container>
-          </>
+          ))}
+        </Grid>
+      </Container>
+    </>
   )
 }
 

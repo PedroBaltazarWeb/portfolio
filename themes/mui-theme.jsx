@@ -113,35 +113,48 @@ const getTheme = (prefersDarkMode) => createTheme({
     fontFamily: 'Manrope',
     fontFeatureSettings: 'kern',
     fontKerning: 'normal',
+    intro:{
+      fontFamily: 'Manrope',
+      fontSize: '1.5rem',
+      fontWeight: 400,
+      lineHeight: '2.25rem',
+    },
     body:{
+      fontFamily: 'Manrope',
       fontSize: '1rem',
       lineHeight: '1.55rem',
       fontWeight: 400,
     },
     h1:{
+      fontFamily: 'Manrope',
       fontSize: '2rem',
       lineHeight: '2.5rem',
       fontWeight: 500
     },
     h2:{
+      fontFamily: 'Manrope',
       fontSize: '1.4rem',
       lineHeight: '1.96rem',
       fontWeight: 500
     },
     h3:{
+      fontFamily: 'Manrope',
       fontSize: '1.2rem',
       lineHeight: '1.6rem',
       fontWeight: 500
     },
     h4:{
+      fontFamily: 'Manrope',
       fontSize: '1.1rem',
       lineHeight: '1.2rem',
     },
     caption:{
+      fontFamily: 'Manrope',
       fontSize: '0.8rem',
       lineHeight: '1.2rem',
     },
     bigText:{
+      fontFamily: 'Manrope',
       fontSize: '2rem',
       lineHeight: '2.8rem'
     },
