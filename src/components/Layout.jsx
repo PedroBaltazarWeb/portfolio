@@ -5,7 +5,7 @@ const Layout = ({children}) => {
   return (<>
    <Container  maxWidth="false" sx={{backgroundColor:"background.default"}}>
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   </>
   )

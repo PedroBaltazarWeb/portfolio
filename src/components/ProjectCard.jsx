@@ -50,7 +50,7 @@ const ProjectCard = ({ imageSrc, altText, company, projectTitle, id, projectType
         borderColor: "card.border",
         borderStyle: 'solid',
         height: {
-          xs: 425,
+          xs: 500,
           sm: 490,
           md: 490,
         }

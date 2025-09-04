@@ -15,7 +15,7 @@ const Footer = () => {
         <Divider sx={{borderColor: "primary.main"}} flexItem orientation='horizontal' width="100%"></Divider>
       </Box>
       <Link href="https://dribbble.com/PedroBaltazar" underline="none" target="_blank" sx={{p: 2}}>
-        <img src={DribbbleLogo} style={{height: 32}} />
+        <img src={DribbbleLogo} style={{height: 16}} />
       </Link>
       <Box width="100%" sx={{display: {xs: 'none', sm: 'block'}}}>
         <Divider sx={{borderColor: "primary.main"}} flexItem orientation='horizontal' width="100%"></Divider>
