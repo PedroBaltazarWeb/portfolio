@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Paper from '@mui/material/Paper';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-const ProjectCard = ({ imageSrc, altText, company, projectTitle, id, projectType, onLoad, path}) => {
+const ProjectCard = ({ imageSrc, altText, company, projectTitle, id, projectType, onLoad, path, description}) => {
 
   /* const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
       noSsr: true,
@@ -61,18 +61,24 @@ const ProjectCard = ({ imageSrc, altText, company, projectTitle, id, projectType
         justifyContent="space-between"
         alignItems="stretch"
         height={'100%'}>
-      <Grid item container direction="row" spacing={1} justifyContent="space-between"
-        alignItems="stretch" minHeight={'5rem'} >
-        <Grid item>
-          {isTruncated ? 
-            <Tooltip title={projectTitle}>
-              {typographyElement}
-            </Tooltip>
-           : 
-            typographyElement
-        }
+        <Grid item container direction="row" spacing={1} justifyContent="space-between"
+          alignItems="stretch" minHeight={'5rem'} >
+          <Grid item xs={3}>
+            {isTruncated ? 
+              <Tooltip title={projectTitle}>
+                {typographyElement}
+              </Tooltip>
+            : 
+              typographyElement
+          }
+          </Grid>
+          <Grid item xs={9} >
+            <Typography variant='intro'>
+              {description}
+            </Typography>
+            
+          </Grid>
         </Grid>
-      </Grid>
       <Grid item container >
         {typeof window !== "undefined" && (
         <Link to={path} key={id} style={{width: '100%'}}>

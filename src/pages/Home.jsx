@@ -22,18 +22,19 @@ const LazyProjectCard = withLazyLoad(ProjectCard);
 const projectCardsProps = [
   {
     id: 1,
-    itemGrid: { xs: 12, sm: 6},
+    itemGrid: { xs: 12},
     path: '/millerVillageTycoon',
     imageSrc: MillerVillagePreview, 
     altText: 'Miller Village Tycoon Image Preview',
     company: 'Cintesis & Univ. do Porto',
     projectTitle: 'Miller Village Tycoon',
+    description: 'Gamifies the asthma monitoring process: Forced Expiratory Maneuver — for adolescents aged 14 to 17 by integrating it into a village-building game, aiming to enhance adherence to disease monitoring.',
     projectType: 'Case Study',
     footerSubjects: ['Wireframing & Prototyping', 'Interviews & Usability Tests', 'Illustration']
   },
   {
     id: 2,
-    itemGrid: { xs: 12, sm: 6},
+    itemGrid: { xs: 12},
     path: '/neuro',
     imageSrc: NeuroPreview,
     altText: 'Neuropsychological: Digital and remote application of Cognitive Deficit Screening Tests Preview Image',
@@ -45,7 +46,7 @@ const projectCardsProps = [
   },
   {
     id: 3,
-    itemGrid: { xs: 12, sm: 6},
+    itemGrid: { xs: 12},
     path: '/prismaEsocialProduz',
     imageSrc: PrismaProduzEsocialPreview,
     altText: 'Prisma, eSocial & Produz Image Preview',
@@ -56,7 +57,7 @@ const projectCardsProps = [
   },
   {
     id: 4,
-    itemGrid: { xs: 12, sm: 6 },
+    itemGrid: { xs: 12},
     path: '/mpdsWounds',
     imageSrc: MpdsWoundsPreview,
     altText: 'MpDS Wounds Image Preview',
