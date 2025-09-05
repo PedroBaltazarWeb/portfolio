@@ -125,6 +125,12 @@ const getTheme = (prefersDarkMode) => createTheme({
       lineHeight: '1.55rem',
       fontWeight: 400,
     },
+    body2:{
+      fontFamily: 'Manrope',
+      fontSize: '1.1rem',
+      lineHeight: '1.55rem',
+      fontWeight: 500,
+    },
     h1:{
       fontFamily: 'Manrope',
       fontSize: '2rem',

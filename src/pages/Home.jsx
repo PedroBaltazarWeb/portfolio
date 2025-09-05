@@ -15,6 +15,7 @@ import Container from '@mui/material/Container';
 import withLazyLoad from '../components/WithLazyLoading';
 import ProjectCard from '../components/ProjectCard';
 import PedroBaltazar from '../images/pedroBaltazar_foto.png';
+import Divider from '@mui/material/Divider';
 
 const LazyProjectCard = withLazyLoad(ProjectCard);
 
@@ -105,11 +106,11 @@ const Home = () => {
               Develops enterprise products in multiple sectors, primarily focusing on healthcare. Experience includes web/app design, UI development, RWD, illustration, a11y, and design systems.
             </Typography>
           </Grid>
-          <Grid item size="auto" xs={12} sm={2} md={2} sx={{
-                height: '-webkit-fill-available',
-                alignContent: 'flex-end'
-          }}>
+          <Divider orientation="vertical" variant='middle' flexItem component="div" />
+          <Grid item size="auto" xs={12} sm={2} md={2}>
+             
             <Stack direction='column' spacing={1} justifyContent='bottom'>
+              <Typography variant='body2' fontWeight={500} component='p' alignContent='end'>Let's connect</Typography>
               <Link href="mailto:pedrobaltazardesign@icloud.com">
                 <Typography variant='body' color='card.link' component='p' alignContent='end'>Send e-mail</Typography>
               </Link>
