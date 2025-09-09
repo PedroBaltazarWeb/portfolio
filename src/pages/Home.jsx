@@ -5,9 +5,10 @@ import "@fontsource/manrope/600.css";
 import "../../css/main.min.css";
 import MpdsWoundsPreview from '../images/mpdsWoundsPreview.webp';
 import SmMpdsWebPreview from '../images/sm_mpdsWebPreview.webp'
-import NeuroPreview from '../images/neuroPreview.svg';
+import NeuroPreview from '../images/neuroPreview.webp';
+import WoundsAIPreview from '../images/woundsAI_preview.webp';
 import PrismaProduzEsocialPreview from '../images/prismaPreview.webp';
-import MillerVillagePreview from '../images/millerVillagePreview.svg';
+import MillerVillagePreview from '../images/millerVillagePreview.webp';
 import { Typography, Link } from "@mui/material";
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
@@ -35,13 +36,14 @@ const projectCardsProps = [
   {
     id: 2,
     itemGrid: { xs: 12},
-    path: '/neuro',
-    imageSrc: NeuroPreview,
-    altText: 'Neuropsychological: Digital and remote application of Cognitive Deficit Screening Tests Preview Image',
-    company: 'Fraunhofer & Univ. do Porto',
-    projectTitle: 'Neuropsychological: Digital and remote application of Cognitive Deficit Screening Tests',
-    projectType: 'Case Study',
-    projectSubtitle: 'Digital and remote application of Cognitive Deficit Screening Tests',
+    path: '',
+    imageSrc: WoundsAIPreview,
+    altText: 'Wounds AI',
+    company: 'F3M & Fraunhofer',
+    projectTitle: 'Wounds AI',
+    description: 'An advanced tool that effectively captures wound images, analyzes their sizes and tissue compositions, and confidently provides diagnoses and tailored treatment recommendations from a clinical perspective.',
+    projectType: 'Ongoing',
+    projectSubtitle: 'Digital and remote application of CDS Tests',
     footerSubjects: ['Wireframing & Prototyping', 'Interviews', '-']
   },
   {
@@ -52,6 +54,7 @@ const projectCardsProps = [
     altText: 'Prisma, eSocial & Produz Image Preview',
     company: 'F3M',
     projectTitle: 'Prisma, eSocial & Produz',
+    description: 'Prisma provides software solutions for the optics sector to help businesses run efficiently and integrate smoothly. Produz offers management software for the textile industry that boosts productivity and simplifies processes. eSocial helps manage Institutions for Social Solidarity (IPSS), such as elderly care and child care facilities.',
     projectType: 'Show Case',
     footerSubjects: ['Front-End Development', 'UX Design', 'Logo Design & Illustration']
   },
@@ -63,20 +66,35 @@ const projectCardsProps = [
     altText: 'MpDS Wounds Image Preview',
     company: 'F3M & Fraunhofer',
     projectTitle: 'MpDS Wounds',
+    description: 'Automatically captures images for the characterization and assessment of wounds using a pre-processing and segmentation algorithm based on the visual characteristics of various wounds.',
     projectType: 'Show Case',
     footerSubjects: ['Android Development', 'Wireframing & Prototyping', 'Illustration & Logo Design']
   },
   {
     id: 5,
-    itemGrid: { xs: 12, sm: 6},
+    itemGrid: { xs: 12 },
     path: '/mpdsWeb',
     imageSrc: SmMpdsWebPreview,
     altText: 'MpDS Web Image Preview',
     company: 'F3M',
     projectTitle: 'MpDS Web',
+    description: 'Enables users to efficiently manage and monitor the status of all patient processes. It is integrated with MPDS Wounds, serving as an extension of patient management that builds upon the mobile app.',
     projectType: 'Show Case',
     footerSubjects: ['Front-end Development', 'Illustration & Logo Design', '-']
-  }
+  },
+  {
+    id: 6,
+    itemGrid: { xs: 12},
+    path: '/neuro',
+    imageSrc: NeuroPreview,
+    altText: 'Neuropsychological: Digital and remote application of CDS Tests Preview Image',
+    company: 'Fraunhofer & Univ. do Porto',
+    projectTitle: 'Neuropsychological: Digital and remote application of CDS Tests',
+    description: 'The Portuguese Directorate-General of Health (DGS) highlights the need for cognitive screening to identify cognitive decline and dementia. Key tests include the Mini-Mental State Examination (MMSE), Corsi Block-Tapping Test, and Montreal Cognitive Assessment (MoCA). However, access can be difficult due to location and patients abilities. To address this, I collaborated with a healthcare professional to create digital versions of these tests, focusing on real-life interviews and research.',
+    projectType: 'Case Study',
+    projectSubtitle: 'Digital and remote application of CDS Tests',
+    footerSubjects: ['Wireframing & Prototyping', 'Interviews', '-']
+  },
 ];
 
 const Home = () => {
@@ -104,7 +122,7 @@ const Home = () => {
               sm: 0,
               md: 4
             }}>
-              Develops enterprise products in multiple sectors, primarily focusing on healthcare. Experience includes web/app design, UI development, RWD, illustration, a11y, and design systems.
+              Creates products for various sectors, primarily focusing on healthcare. Experience includes web and app design, UI development, illustration, accessibility, and design systems.
             </Typography>
           </Grid>
           <Divider orientation="vertical" variant='middle' flexItem component="div" />
