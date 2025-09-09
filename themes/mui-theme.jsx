@@ -119,6 +119,12 @@ const getTheme = (prefersDarkMode) => createTheme({
       fontWeight: 400,
       lineHeight: '2.25rem',
     },
+    projectDescription:{
+      fontFamily: 'Manrope',
+      fontSize: '1.2rem',
+      fontWeight: 400,
+      lineHeight: '1.8rem',
+    },
     body:{
       fontFamily: 'Manrope',
       fontSize: '1rem',
@@ -139,13 +145,13 @@ const getTheme = (prefersDarkMode) => createTheme({
     },
     h2:{
       fontFamily: 'Manrope',
-      fontSize: '1.4rem',
-      lineHeight: '1.96rem',
+      fontSize: '1.6rem',
+      lineHeight: '2.4rem',
       fontWeight: 500
     },
     h3:{
       fontFamily: 'Manrope',
-      fontSize: '1.2rem',
+      fontSize: '1.4rem',
       lineHeight: '1.6rem',
       fontWeight: 500
     },
