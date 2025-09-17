@@ -19,7 +19,7 @@ const withLazyLoad = (Component) => {
             alignItems="center"
             sx={{ height: 50 }}
           >
-            <CircularProgress />
+            
           </Grid>
         )}
         <Suspense
@@ -31,7 +31,7 @@ const withLazyLoad = (Component) => {
               alignItems="center"
               sx={{ height: 50 }}
             >
-              <CircularProgress />
+              
             </Grid>
           }
         >

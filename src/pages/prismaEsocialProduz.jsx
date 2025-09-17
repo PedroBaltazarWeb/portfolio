@@ -43,6 +43,7 @@ const PrismaProduzESocialPage = () => {
                         projectTitle='Prisma, eSocial & Produz' 
                         entities='F3M' 
                         year='2017 until Now'
+                        roles='Front-End Development, Co-Design Design Systems, Illustration, UX Design, Iconography'
                     ></ProjectHeader>
                 }
                 projectSteps={

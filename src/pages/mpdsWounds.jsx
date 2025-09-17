@@ -21,6 +21,7 @@ const MpdsWoundsPage = () => {
                         projectTitle='Mpds Wounds' 
                         entities='F3M & Fraunhofer' 
                         year='2018 - 2019'
+                        roles='Android Development, Illustration, Branding'
                     ></ProjectHeader>
                 }
                 projectSteps={

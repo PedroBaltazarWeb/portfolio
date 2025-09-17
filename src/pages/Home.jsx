@@ -117,12 +117,12 @@ const Home = () => {
             }} >
               Pedro Baltazar is a Product Designer at <Typography variant="intro" component='span' fontWeight={600}>F3M Information Systems S.A.</Typography>
             </Typography>
-            <Typography variant="body" component="p" pr={{
+            <Typography variant="bodyColorful" component="p" pr={{
               xs: 0,
               sm: 0,
               md: 4
             }}>
-              Creates products for various sectors, primarily focusing on healthcare. Experience includes web and app design, UI development, illustration, accessibility, and design systems.
+              Creates products for various sectors, primarily focusing on healthcare. Experience includes web and app design, front-end development, illustration, accessibility, and design systems.
             </Typography>
           </Grid>
           <Divider orientation="vertical" variant='middle' flexItem component="div" />
