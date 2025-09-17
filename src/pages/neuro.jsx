@@ -41,6 +41,7 @@ const NeuroPage = () => {
                             projectTitle='Neuropsychological: Digital and remote application of Cognitive Deficit Screening Tests' 
                             entities='Fraunhofer & Universidade do Porto' 
                             year='2022/2023'
+                            roles='UX Research, UX Design, UI Design'
                         ></ProjectHeader>
                     }
                     projectSteps={
@@ -169,13 +170,13 @@ const NeuroPage = () => {
                                                     position: 'sticky',
                                                     left: 0,
                                                     zIndex: 1,
-                }}><Typography variant="regularText" fontWeight="700">Participant</Typography></StyledTableCell>
-                                                <StyledTableCell><Typography variant="regularText" fontWeight="700">P1</Typography></StyledTableCell>
-                                                <StyledTableCell><Typography variant="regularText" fontWeight="700">P2</Typography></StyledTableCell>
-                                                <StyledTableCell><Typography variant="regularText" fontWeight="700">P3</Typography></StyledTableCell>
-                                                <StyledTableCell><Typography variant="regularText" fontWeight="700">P4</Typography></StyledTableCell>
-                                                <StyledTableCell><Typography variant="regularText" fontWeight="700">P5</Typography></StyledTableCell>
-                                                <StyledTableCell><Typography variant="regularText" fontWeight="700">P6</Typography></StyledTableCell>
+                }}><Typography variant="body" fontWeight="700">Participant</Typography></StyledTableCell>
+                                                <StyledTableCell><Typography variant="body" fontWeight="700">P1</Typography></StyledTableCell>
+                                                <StyledTableCell><Typography variant="body" fontWeight="700">P2</Typography></StyledTableCell>
+                                                <StyledTableCell><Typography variant="body" fontWeight="700">P3</Typography></StyledTableCell>
+                                                <StyledTableCell><Typography variant="body" fontWeight="700">P4</Typography></StyledTableCell>
+                                                <StyledTableCell><Typography variant="body" fontWeight="700">P5</Typography></StyledTableCell>
+                                                <StyledTableCell><Typography variant="body" fontWeight="700">P6</Typography></StyledTableCell>
                                             </TableRow>
                                         </TableHead>
                                         <TableBody>
@@ -185,13 +186,13 @@ const NeuroPage = () => {
                   left: 0,
                   zIndex: 1,
                   backgroundColor: 'background.paper',
-                }}><Typography variant="regularText" fontWeight="700">Age</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">31</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">32</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">27</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">33</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">36</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">26</Typography></TableCell>
+                }}><Typography variant="body" fontWeight="700">Age</Typography></TableCell>
+                                                <TableCell><Typography variant="body">31</Typography></TableCell>
+                                                <TableCell><Typography variant="body">32</Typography></TableCell>
+                                                <TableCell><Typography variant="body">27</Typography></TableCell>
+                                                <TableCell><Typography variant="body">33</Typography></TableCell>
+                                                <TableCell><Typography variant="body">36</Typography></TableCell>
+                                                <TableCell><Typography variant="body">26</Typography></TableCell>
                                             </StyledTableRow>
                                             <StyledTableRow>
                                                 <TableCell sx={{
@@ -199,29 +200,13 @@ const NeuroPage = () => {
                   left: 0,
                   zIndex: 1,
                   backgroundColor: 'background.paper',
-                }}><Typography variant="regularText" fontWeight="700">Gender</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">F</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">M</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">F</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">M</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">M</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">F</Typography></TableCell>
-                                            </StyledTableRow>
-
-                                            <StyledTableRow>
-                                                <TableCell sx={{
-                  position: 'sticky',
-                  left: 0,
-                  zIndex: 1,
-                  backgroundColor: 'background.paper',
-                }}><Typography variant="regularText" fontWeight="700">Education</Typography></TableCell>
-
-                                                <TableCell><Typography variant="regularText">Clinical and Health Psychology, Specialization in Neuropsychology</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Clinical and Health Psychology</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Clinical and Health Psychology, Specialization in Neuropsychology</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Clinical and Health Psychology, Specialization in Neuropsychology</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Occupational Therapy</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Clinical and Health Psychology</Typography></TableCell>
+                }}><Typography variant="body" fontWeight="700">Gender</Typography></TableCell>
+                                                <TableCell><Typography variant="body">F</Typography></TableCell>
+                                                <TableCell><Typography variant="body">M</Typography></TableCell>
+                                                <TableCell><Typography variant="body">F</Typography></TableCell>
+                                                <TableCell><Typography variant="body">M</Typography></TableCell>
+                                                <TableCell><Typography variant="body">M</Typography></TableCell>
+                                                <TableCell><Typography variant="body">F</Typography></TableCell>
                                             </StyledTableRow>
 
                                             <StyledTableRow>
@@ -230,14 +215,30 @@ const NeuroPage = () => {
                   left: 0,
                   zIndex: 1,
                   backgroundColor: 'background.paper',
-                }}><Typography variant="regularText" fontWeight="700">Profession</Typography></TableCell>
+                }}><Typography variant="body" fontWeight="700">Education</Typography></TableCell>
 
-                                                <TableCell><Typography variant="regularText">Psychologist and Researcher</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Researcher</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Researcher</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Psychologist</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">University Professor</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Psychologist</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Clinical and Health Psychology, Specialization in Neuropsychology</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Clinical and Health Psychology</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Clinical and Health Psychology, Specialization in Neuropsychology</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Clinical and Health Psychology, Specialization in Neuropsychology</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Occupational Therapy</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Clinical and Health Psychology</Typography></TableCell>
+                                            </StyledTableRow>
+
+                                            <StyledTableRow>
+                                                <TableCell sx={{
+                  position: 'sticky',
+                  left: 0,
+                  zIndex: 1,
+                  backgroundColor: 'background.paper',
+                }}><Typography variant="body" fontWeight="700">Profession</Typography></TableCell>
+
+                                                <TableCell><Typography variant="body">Psychologist and Researcher</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Researcher</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Researcher</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Psychologist</Typography></TableCell>
+                                                <TableCell><Typography variant="body">University Professor</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Psychologist</Typography></TableCell>
                                             </StyledTableRow>
 
                                             
@@ -247,14 +248,14 @@ const NeuroPage = () => {
                   left: 0,
                   zIndex: 1,
                   backgroundColor: 'background.paper',
-                }}><Typography variant="regularText" fontWeight="700">MoCA</Typography></TableCell>
+                }}><Typography variant="body" fontWeight="700">MoCA</Typography></TableCell>
 
-                                                <TableCell><Typography variant="regularText">Extensive experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Extensive experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Moderate experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Extensive experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Extensive experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Little experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Extensive experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Extensive experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Moderate experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Extensive experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Extensive experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Little experience</Typography></TableCell>
                                             </StyledTableRow>
                                             
                                             <StyledTableRow>
@@ -263,14 +264,14 @@ const NeuroPage = () => {
                   left: 0,
                   zIndex: 1,
                   backgroundColor: 'background.paper',
-                }}><Typography variant="regularText" fontWeight="700">Corsi Test</Typography></TableCell>
+                }}><Typography variant="body" fontWeight="700">Corsi Test</Typography></TableCell>
 
-                                                <TableCell><Typography variant="regularText">Little experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Extensive experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">No experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">No experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">No experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">No experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Little experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Extensive experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">No experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">No experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">No experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">No experience</Typography></TableCell>
                                             </StyledTableRow>
 
                                             <StyledTableRow>
@@ -279,14 +280,14 @@ const NeuroPage = () => {
                   left: 0,
                   zIndex: 1,
                   backgroundColor: 'background.paper',
-                }}><Typography variant="regularText" fontWeight="700">MMSE</Typography></TableCell>
+                }}><Typography variant="body" fontWeight="700">MMSE</Typography></TableCell>
 
-                                                <TableCell><Typography variant="regularText">Little experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Little experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Little experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Extensive experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Extensive experience</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Little experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Little experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Little experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Little experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Extensive experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Extensive experience</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Little experience</Typography></TableCell>
                                             </StyledTableRow>
 
                                             <StyledTableRow>
@@ -296,13 +297,13 @@ const NeuroPage = () => {
                                                     zIndex: 1,
                                                     backgroundColor: prefersDarkMode ? '#010312' : '#EEFAFF',
                                                     }}>
-                                                <Typography variant="regularText" fontWeight="700">Digital Literacy</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Considers themselves Proficient</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Considers themselves Proficient</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Considers themselves Proficient</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Considers themselves Proficient</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Considers themselves Proficient</Typography></TableCell>
-                                                <TableCell><Typography variant="regularText">Considers themselves Proficient</Typography></TableCell>
+                                                <Typography variant="body" fontWeight="700">Digital Literacy</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Considers themselves Proficient</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Considers themselves Proficient</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Considers themselves Proficient</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Considers themselves Proficient</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Considers themselves Proficient</Typography></TableCell>
+                                                <TableCell><Typography variant="body">Considers themselves Proficient</Typography></TableCell>
                                             </StyledTableRow>
                                         </TableBody>
                                     </Table>

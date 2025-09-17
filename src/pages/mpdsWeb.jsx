@@ -59,6 +59,7 @@ const MpdsWeb = () => {
                   projectTitle='Mpds Web' 
                   entities='F3M' 
                   year='2019 - 2020'
+                  roles='Front-End Development, Illustration, Branding'
               ></ProjectHeader>
           }
           projectSteps={

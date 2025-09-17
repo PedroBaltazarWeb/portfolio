@@ -125,11 +125,32 @@ const getTheme = (prefersDarkMode) => createTheme({
       fontWeight: 400,
       lineHeight: '1.8rem',
     },
+    phaseProjectTitle:{
+      fontFamily: 'Manrope',
+      fontSize: '1.15rem',
+      color: '#e4e6ff !important',
+      fontWeight: 500,
+      lineHeight: '1.875rem',
+    },
+    phaseProjectSubTitle:{
+      fontFamily: 'Manrope',
+      fontSize: '1rem',
+      color: '#e4e6ff !important',
+      fontWeight: 600,
+      lineHeight: '1.55rem',
+    },
     body:{
       fontFamily: 'Manrope',
       fontSize: '1rem',
       lineHeight: '1.55rem',
+      fontWeight: 400
+    },
+    bodyColorful:{
+      fontFamily: 'Manrope',
+      fontSize: '1rem',
+      lineHeight: '1.55rem',
       fontWeight: 400,
+      color: '#dde0ff !important'
     },
     body2:{
       fontFamily: 'Manrope',
@@ -154,11 +175,6 @@ const getTheme = (prefersDarkMode) => createTheme({
       fontSize: '1.4rem',
       lineHeight: '1.6rem',
       fontWeight: 500
-    },
-    h4:{
-      fontFamily: 'Manrope',
-      fontSize: '1.1rem',
-      lineHeight: '1.2rem',
     },
     caption:{
       fontFamily: 'Manrope',
