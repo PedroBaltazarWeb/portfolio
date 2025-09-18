@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "react-router-dom";
-import { Typography, Stack, Box } from "@mui/material"
+import { Typography, Stack } from "@mui/material";
 
 const ProjectHeader = ({projectTitle, entities, year, roles}) => {
     return (<>

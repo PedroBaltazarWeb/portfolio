@@ -98,7 +98,7 @@ const MillerVillageTycoonPage = () => {
 
                         <Stack direction='column' spacing={1} alignItems="center" margin='0 auto'>
                             <Typography variant="body" maxWidth='sm' component='p'>
-                                Cintesis asked me to make one functionality of the app more engaging for teenagers between he ages of 14 andt 17, so I researched their needs to develop a more interactive health monitoring approach. I found that teenagers seek independence, which guided me in designing an experience that allows them to manage their health without relying on their parents. This helps them feel more in control and confident about their health choices. Engaging disease management is expected to reduce anxiety and depression in adolescents, leading to better asthma treatment adherence and fewer exacerbations.
+                                Cintesis asked me to make one app feature more engaging for teens aged 14 to 17. After researching their needs, I developed an interactive health monitoring tool designed to facilitate independent asthma management. This approach helps teenagers manage their care without parent intervention, aiming to enhance treatment adherence and reduce anxiety, depression, and flare-ups.
                             </Typography>
                         </Stack>
 
@@ -120,7 +120,7 @@ const MillerVillageTycoonPage = () => {
 
                             <Stack direction='column' spacing={1} alignItems="center" margin='0 auto'>
                             <Typography variant="body" maxWidth='sm' component='p'>
-                                I conducted semi-structured interviews with adolescents and adults with asthma at the project's outset and throughout its duration, using a thematic question guide and mind maps. Prior to each interview, I obtained recording permissions and participant consent. I started with straightforward questions and maintained a compassionate approach. To facilitate the process, I created a two-part Informed Consent Form: an Information Sheet outlining study details and a Certificate of Consent for signatures, which includes an assent form for participants under 16. For reference, a link to the interview guide and a user persona is <Link sx={{color: 'text.link'}} target="_blank" href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FTawtNI1VrduA3p9H2oGNW2%2FPerfil-and-Interview-Guide---Miller-Village(English)%3Fnode-id%3D0-1%26t%3DFHXsDqmyNUFLqJGf-1">here</Link>.
+                                At the project’s outset and throughout its duration, I conducted semi-structured interviews with adolescents and adults with asthma, guided by thematic questions and mind maps. Before each session, I obtained consent and recording permissions, beginning with simple questions and maintaining a compassionate tone. For reference, a link to the interview guide and a user persona is <Link sx={{color: 'text.link'}} target="_blank" href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FTawtNI1VrduA3p9H2oGNW2%2FPerfil-and-Interview-Guide---Miller-Village(English)%3Fnode-id%3D0-1%26t%3DFHXsDqmyNUFLqJGf-1">here</Link>.
                             </Typography>
                         </Stack>
 
@@ -166,9 +166,12 @@ const MillerVillageTycoonPage = () => {
                             </Box>
                         </Stack>
 
-                        <Stack direction='column' spacing={1} alignItems="center" margin='0 auto'>
+                        <Stack direction='column' spacing={2} alignItems="center" margin='0 auto'>
                             <Typography variant="body" maxWidth='sm' component='p'>
-                                To understand the preferences of Portuguese teenagers, I conducted literature and online research, as well as in-person meetings and phone calls. Building on these insights, we created mood boards to explore their interests in games, TV shows, colors, and fashion. We considered a range of themes, from race cars to vessels inspired by the Age of Discovery. Ultimately, the 'city builder' concept resonated most with users and offered ongoing engagement. Progression through structures and technologies, combined with strategic planning, creates a visually immersive experience with meaningful challenges and encourages social interaction. To further motivate players to connect with others facing similar health challenges, we decided to add a trading feature (not intended to be designed at that time).
+                                To understand Portuguese teenagers’ preferences, I conducted research and meetings, then used mood boards to explore their interests. Among various themes, the ‘city builder’ concept resonated most, as progression through structures and technologies, combined with strategic planning, creates a visually immersive experience with meaningful challenges and encourages social interaction. To further motivate connection among players with similar health challenges, a trading feature was planned for later implementation.
+                            </Typography>
+                            <Typography variant="body" maxWidth='sm' component='p'>
+                                Each day, users are reminded — either when starting the game or via notification — that their mills need wind to generate electricity for the farms, village, or city. This integrates the FEM into the story.
                             </Typography>
                         </Stack>
                                                 
@@ -181,7 +184,10 @@ const MillerVillageTycoonPage = () => {
                             </Typography>
                         </Stack>
 
-                        <img src={MillerVillageThirdPreview} style={{borderRadius: '0.2rem'}} />
+                        <Stack spacing={2}>
+                            <img src={MillerVillageThirdPreview} style={{borderRadius: '0.2rem'}} />
+                            <Typography component='p' variant='caption' textAlign='center'>In-Game Menu, and two scenarios in which the user fails to perform the FEM as instructed.</Typography>
+                        </Stack>
 
                         <Stack direction='column' spacing={1} alignItems="center" margin='0 auto'>
                             <Typography variant="body" maxWidth='sm' component='p'>
@@ -1203,7 +1209,7 @@ const MillerVillageTycoonPage = () => {
                             <Typography variant="body" maxWidth='sm' component='p'>In conclusion, the usability tests revealed several areas for improvement, particularly in terms of clarity button labeling, and user guidance. Participants hesitated in text-heavy sections and found some button functions ambiguous, highlighting the need for clearer visual cues and improved feedback mechanisms. Additionally, the distinction between different FEM process stages must be reinforced to avoid confusion. To address these challenges, key adjustments will include refining button design, enhancing feedback with visuals, and reevaluating the help section’s effectiveness. These changes will aim to create a more intuitive and seamless user experience when the project is resumed.</Typography>  
                         </Stack>
                         
-                        <Stack maxWidth='sm' direction="column" margin='0 auto' alignItems="center" pb={5}>
+                        <Stack maxWidth='sm' direction="column" margin='0 auto' alignItems="center">
                             {typeof window !== "undefined" && (
                                 <LinkRoute to={'/'} key={2}><Typography variant='body' sx={{color: 'text.link'}} component='p' height={50} alignContent='end'>Return home</Typography></LinkRoute>
                             )}

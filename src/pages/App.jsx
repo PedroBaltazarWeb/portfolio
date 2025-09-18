@@ -13,6 +13,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from '../components/ScrollToTop';
 import getTheme from '../../themes/mui-theme';
+import Footer from './../components/Footer'
 
 const App = () => {
 /* const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
@@ -41,8 +42,10 @@ const theme = React.useMemo(() => getTheme(prefersDarkMode), []);
             <Route path="/mpdsWounds" element={<MpdsWounds />} />
             <Route path="/mpdsWeb" element={<MpdsWeb />} />
           </Routes>
+          <Footer />
           </Router>
           )}
+          
       </Layout>
     </ThemeProvider>
   );

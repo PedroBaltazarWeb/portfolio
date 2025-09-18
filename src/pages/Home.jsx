@@ -9,7 +9,7 @@ import NeuroPreview from '../images/neuroPreview.webp';
 import WoundsAIPreview from '../images/woundsAI_preview.webp';
 import PrismaProduzEsocialPreview from '../images/prismaPreview.webp';
 import MillerVillagePreview from '../images/millerVillagePreview.webp';
-import { Typography, Link } from "@mui/material";
+import { Typography, Link, Box } from "@mui/material";
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
@@ -17,6 +17,7 @@ import withLazyLoad from '../components/WithLazyLoading';
 import ProjectCard from '../components/ProjectCard';
 import PedroBaltazar from '../images/pedroBaltazar_foto.png';
 import Divider from '@mui/material/Divider';
+import { Dribbble, FileUser, Send } from 'lucide-react'; 
 
 const LazyProjectCard = withLazyLoad(ProjectCard);
 
@@ -128,17 +129,22 @@ const Home = () => {
           <Divider orientation="vertical" variant='middle' flexItem component="div" />
           <Grid item size="auto" xs={12} sm={2} md={2}>
              
-            <Stack direction='column' spacing={1} justifyContent='bottom'>
+            <Stack direction='column' spacing={2} justifyContent='bottom'>
               <Typography variant='body2' fontWeight={500} component='p' alignContent='end'>Let's connect</Typography>
-              <Link href="mailto:pedrobaltazardesign@icloud.com">
-                <Typography variant='body' color='card.link' component='p' alignContent='end'>Send e-mail</Typography>
-              </Link>
-              <Link href="/files/cv_pedro_baltazar.pdf">
-                <Typography variant='body' color='card.link' component='p' alignContent='end'>Download Resume</Typography>
-              </Link>
-              <Link href="https://dribbble.com/PedroBaltazar">
-                <Typography variant='body' color='card.link' component='p' alignContent='end'>Dribbble</Typography>
-              </Link>
+              <Stack direction='column' spacing={1}>
+                <Link href="mailto:pedrobaltazardesign@icloud.com" sx={{textDecoration: 'none', display: 'flex', alignItems: 'center' }}> 
+                  <Send size={20}/>
+                  <Typography variant='body' color='card.link' component='span' pl={1} alignContent='end'>Send e-mail</Typography>
+                </Link>
+                <Link href="/files/cv_pedro_baltazar.pdf" target="_blank" sx={{textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+                  <FileUser size={20}/>
+                  <Typography variant='body' color='card.link' component='span' pl={1} alignContent='end'>Resume</Typography>
+                </Link>
+                <Link href="https://dribbble.com/PedroBaltazar" target="_blank" sx={{textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+                  <Dribbble size={20}/>
+                  <Typography variant='body' color='card.link' component='span' pl={1}  alignContent='end'>Dribbble</Typography>
+                </Link>
+              </Stack>
             </Stack>
           </Grid>
         </Grid>
@@ -160,7 +166,6 @@ const Home = () => {
           direction="row"
           justifyContent="center"
           alignItems="stretch"
-          pb={4}
           spacing={{
             xs: 1,
             lg: 1
