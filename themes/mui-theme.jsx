@@ -118,6 +118,7 @@ const getTheme = (prefersDarkMode) => createTheme({
       fontSize: '1.5rem',
       fontWeight: 400,
       lineHeight: '2.25rem',
+      letterSpacing: '-0.02rem'
     },
     projectDescription:{
       fontFamily: 'Manrope',
