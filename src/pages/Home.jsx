@@ -116,7 +116,7 @@ const Home = () => {
               sm: 0,
               md: 4
             }} >
-              Pedro Baltazar is a Product Designer at <Typography variant="intro" component='span' fontWeight={600}>F3M Information Systems S.A.</Typography>
+              Pedro Baltazar is a product designer & front-end developer at <Typography variant="intro" component='span' fontWeight={600}>F3M Information Systems S.A.</Typography>
             </Typography>
             <Typography variant="bodyColorful" component="p" pr={{
               xs: 0,
@@ -128,10 +128,9 @@ const Home = () => {
           </Grid>
           <Divider orientation="vertical" variant='middle' flexItem component="div" />
           <Grid item size="auto" xs={12} sm={2} md={2}>
-             
             <Stack direction='column' spacing={2} justifyContent='bottom'>
               <Typography variant='body2' fontWeight={500} component='p' alignContent='end'>Let's connect</Typography>
-              <Stack direction='column' spacing={1}>
+              <Stack direction='column' spacing={2}>
                 <Link href="mailto:pedrobaltazardesign@icloud.com" sx={{textDecoration: 'none', display: 'flex', alignItems: 'center' }}> 
                   <Send size={20}/>
                   <Typography variant='body' color='card.link' component='span' pl={1} alignContent='end'>Send e-mail</Typography>
@@ -148,6 +147,7 @@ const Home = () => {
             </Stack>
           </Grid>
         </Grid>
+        
       </Container>
 
       <Container maxWidth="md" disableGutters component='main' bgcolor='background.default'>
