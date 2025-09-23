@@ -118,7 +118,7 @@ const MillerVillageTycoonPage = () => {
                             <Typography component='p' variant='caption' maxWidth='sm'>Forced Expiratory Maneuver in the context of spirometry</Typography>
                         </Stack>
 
-                            <Stack direction='column' spacing={1} alignItems="center" margin='0 auto'>
+                        <Stack direction='column' spacing={1} alignItems="center" margin='0 auto'>
                             <Typography variant="body" maxWidth='sm' component='p'>
                                 At the project’s outset and throughout its duration, I conducted semi-structured interviews with adolescents and adults with asthma, guided by thematic questions and mind maps. Before each session, I obtained consent and recording permissions, beginning with simple questions and maintaining a compassionate tone. For reference, a link to the interview guide and a user persona is <Link sx={{color: 'text.link'}} target="_blank" href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FTawtNI1VrduA3p9H2oGNW2%2FPerfil-and-Interview-Guide---Miller-Village(English)%3Fnode-id%3D0-1%26t%3DFHXsDqmyNUFLqJGf-1">here</Link>.
                             </Typography>
@@ -1199,7 +1199,6 @@ const MillerVillageTycoonPage = () => {
                                     </Accordion>
                                 </Box>
                             </Stack>
-
                         </Stack>
 
                         <Stack direction='column' spacing={1} alignItems="center" margin='0 auto'>
