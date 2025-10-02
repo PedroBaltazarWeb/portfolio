@@ -2,40 +2,14 @@ import * as React from "react";
 import "../../css/main.min.css";
 import LayoutProject from '../components/LayoutProject';
 import ProjectHeader from '../components/ProjectHeader';
-import ProjectSection from '../components/ProjectSection';
 import EsocialFirstIlus from '../images/prismaEsocialProduz/esocialIlust1.webp';
-import designSprintOne from '../images/prismaEsocialProduz/designsprint1.webp';
-import designSprintTwo from '../images/prismaEsocialProduz/designsprint2.webp';
-import designSprintThree from '../images/prismaEsocialProduz/designsprint3.webp';
 import PrismaFirstIlus from '../images/prismaEsocialProduz/prismaIlust1.webp';
 import ProduzFirstIlus from '../images/prismaEsocialProduz/produzIlust1.webp';
-import PrismaLogin from '../images/prismaEsocialProduz/prismaLogin.webp';
-import AllThree from '../images/prismaEsocialProduz/allThree.webp';
-import ProjectBasicInfo from '../components/ProjectBasicInfo';
-import { Link as LinkRoute } from "react-router-dom";
-import { Typography, Stack, Box, List, ListItem, ListItemIcon, ListItemText, Grid } from "@mui/material";
-import ImageGallery from "../components/ImageGallery";
+import { Typography, Stack, Box, Grid } from "@mui/material";
 import PrismaProduzEsocialPreview from '../images/prismaPreview.webp';
 import EsocialPreview from '../images/esocialPreview.webp';
 import ProduzPreview from '../images/prismaEsocialProduz/produzPreview.webp';
-
-const imagesFirstGallery = [
-  {
-    src: designSprintOne,
-    title: 'Design Sprint Process',
-    description: 'Photo of the team on the first day!'
-  },
-  {
-    src: designSprintThree,
-    title: 'Design Sprint Process',
-    description: 'Turning storyboard into a prototype'
-  },
-  {
-    src: designSprintTwo,
-    title: 'Design Sprint Process',
-    description: 'Interviewing users and learning by watching them react to your prototype'
-  }
-];
+import { Link as LinkRoute } from "react-router-dom";
 
 const PrismaProduzESocialPage = () => {
   return (
@@ -62,7 +36,7 @@ const PrismaProduzESocialPage = () => {
                         <Grid item xs={12} sm={12} md={4}>
                           <img
                             style={{
-                              borderRadius: '8px',
+                              borderRadius: '0.2rem',
                               maxWidth: '100%',
                               width: '100%',
                               height: 'auto',
@@ -73,7 +47,7 @@ const PrismaProduzESocialPage = () => {
                         <Grid item xs={12} sm={12} md={4}>
                           <img
                             style={{
-                              borderRadius: '8px',
+                              borderRadius: '0.2rem',
                               maxWidth: '100%',
                               width: '100%',
                               height: 'auto',
@@ -84,7 +58,7 @@ const PrismaProduzESocialPage = () => {
                         <Grid item xs={12} sm={12} md={4}>
                           <img
                             style={{
-                              borderRadius: '8px',
+                              borderRadius: '0.2rem',
                               maxWidth: '100%',
                               width: '100%',
                               height: 'auto',
@@ -128,14 +102,17 @@ const PrismaProduzESocialPage = () => {
                     </Stack>
 
                     <Stack direction='column' spacing={2} alignItems="center" margin='0 auto'>
-                        <Typography variant="body" maxWidth='sm' component='p'>Below are examples of Prisma in the Services section and Produz in the Add Article section, in use.</Typography>
-
+                      <Typography variant="body" maxWidth='sm' component='p'>Below are examples of Prisma in the Services section and Produz in the Add Article section, in use.</Typography>
                       <Box maxWidth='sm' margin='0 auto' spacing={2}>
                         <iframe loading="lazy" width={'100%'} height="315" src="https://www.youtube.com/embed/63C5xBjOlqk?si=YcL8xztyWmpZM_sp&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <iframe loading="lazy" width={'100%'} height="315" src="https://www.youtube.com/embed/vezjG8Q9xg0?si=59_hZWP5-5_XMgqE&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
                       </Box>
                     </Stack>
-
+                    <Stack maxWidth='sm' direction="column" margin='0 auto' alignItems="center">
+                      {typeof window !== "undefined" && (
+                      <LinkRoute to={'/'} key={2}><Typography variant='body' sx={{color: 'text.link'}}  component='p' height={50} alignContent='end'>Return home</Typography></LinkRoute>
+                      )}
+                    </Stack>
                   </Stack>
                 } />
   </> )}
