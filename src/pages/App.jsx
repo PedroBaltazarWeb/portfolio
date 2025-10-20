@@ -21,7 +21,7 @@ const App = () => {
 }); */
 const prefersDarkMode = true;
 const theme = React.useMemo(() => getTheme(prefersDarkMode), []);
-  
+
 //const theme = React.useMemo(() => getTheme(prefersDarkMode), [prefersDarkMode]);
 
   return (

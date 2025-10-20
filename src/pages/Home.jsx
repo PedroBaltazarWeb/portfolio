@@ -16,6 +16,7 @@ import Container from '@mui/material/Container';
 import withLazyLoad from '../components/WithLazyLoading';
 import ProjectCard from '../components/ProjectCard';
 import PedroBaltazar from '../images/pedroBaltazar_foto.png';
+import Moldura from '../images/moldura.svg';
 import Divider from '@mui/material/Divider';
 import { Dribbble, FileUser, Send } from 'lucide-react'; 
 
@@ -99,34 +100,43 @@ const projectCardsProps = [
 ];
 
 const Home = () => {
+  
   return (
     <>
-      <Container maxWidth="md" disableGutters component='header' bgcolor='background.default'>
-        <Grid container spacing={3} pb={3} pt={4} sx={{
-          alignItems: "center",
+      <Container maxWidth="md" disableGutters component='header' sx={{pt: 4}} bgcolor='background.default'>
+        <Grid container spacing={3}  alignItems={{
+          xs: 'flex-start',
+          sm: 'center',
+          md: 'center',
+          lg: 'center',
+        }} direction={{
+          xs: 'column-reverse',
+          sm: 'row',
+          md: 'row',
+          lg: 'row'
         }}>
-          <Grid item size="auto" xs={12} sm={3} md={2} mr={{
-            md:3
-            }} borderRadius={'50%'}>
-            <img height="155" style={{'border-radius': '50%', 'border': '2px #fff solid'}} src={PedroBaltazar} alt='Logo Pedro Baltazar'></img>
+          <Grid item xs={12} sm={8} md={8} lg={8} xl={8} spacing={1}>
+              <Typography variant="intro" component="p" pb={2} pr={{
+                xs: 0,
+                sm: 0,
+                md: 4
+              }} >
+                Pedro Baltazar is a product designer & front-end developer at <Typography variant="intro" component='span' fontWeight={600}>F3M Information Systems S.A.</Typography>
+              </Typography>
+              <Typography variant="bodyColorful" component="p" pb={1}>
+                Creates products for various sectors, primarily focusing on healthcare. Experience includes web and app design, front-end development, illustration, accessibility, and design systems.
+              </Typography>
           </Grid>
-          <Grid item xs={12} sm={6} md={7} lg={7} xl={7} spacing={4}>
-            <Typography variant="intro" component="p" pb={2} pr={{
-              xs: 0,
-              sm: 0,
-              md: 4
-            }} >
-              Pedro Baltazar is a product designer & front-end developer at <Typography variant="intro" component='span' fontWeight={600}>F3M Information Systems S.A.</Typography>
-            </Typography>
-            <Typography variant="bodyColorful" component="p" pr={{
-              xs: 0,
-              sm: 0,
-              md: 4
-            }}>
-              Creates products for various sectors, primarily focusing on healthcare. Experience includes web and app design, front-end development, illustration, accessibility, and design systems.
-            </Typography>
+          <Grid item xs={12} sm={4} md={4} lg={4} xl={4} spacing={1}>
+              <Box sx={{position: 'relative', height: 220}}>
+                <img height="155" style={{'position': 'absolute', 'top': '35px', 'left': '30px', 'border-radius': '50%'}} src={PedroBaltazar} alt='Logo Pedro Baltazar'></img>
+                <img style={{'position': 'absolute', 'top': '0'}} height="220" src={Moldura} alt='Moldura'></img>
+              </Box>
           </Grid>
-          <Divider orientation="vertical" variant='middle' flexItem component="div" />
+        </Grid>
+          
+          
+          {/* <Divider orientation="vertical" variant='middle' flexItem component="div" />
           <Grid item size="auto" xs={12} sm={2} md={2}>
             <Stack direction='column' spacing={2} justifyContent='bottom'>
               <Typography variant='body2' fontWeight={500} component='p' alignContent='end'>Let's connect</Typography>
@@ -145,9 +155,7 @@ const Home = () => {
                 </Link>
               </Stack>
             </Stack>
-          </Grid>
-        </Grid>
-        
+          </Grid> */}
       </Container>
 
       <Container maxWidth="md" disableGutters component='main' bgcolor='background.default'>
