@@ -36,7 +36,7 @@ const MpdsWeb = () => {
                     md: 800,
                     lg: 800
                   }}>
-                    <iframe loading="lazy" width="100%" height="315" src="https://www.youtube.com/embed/7dIgcDsFZY8?si=x42LdYemjwM_q6nv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe referrerpolicy="no-referrer" loading="lazy" width="100%" height="315" src="https://www.youtube.com/embed/7dIgcDsFZY8?si=x42LdYemjwM_q6nv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 
                   <Link sx={{color: 'text.link'}} href="https://mpds.f3m.pt/en/mpds-web-en/">
                     See the official website

@@ -104,8 +104,8 @@ const PrismaProduzESocialPage = () => {
                     <Stack direction='column' spacing={2} alignItems="center" margin='0 auto'>
                       <Typography variant="body" maxWidth='sm' component='p'>Below are examples of Prisma in the Services section and Produz in the Add Article section, in use.</Typography>
                       <Box maxWidth='sm' margin='0 auto' spacing={2}>
-                        <iframe loading="lazy" width={'100%'} height="315" src="https://www.youtube.com/embed/63C5xBjOlqk?si=YcL8xztyWmpZM_sp&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe loading="lazy" width={'100%'} height="315" src="https://www.youtube.com/embed/vezjG8Q9xg0?si=59_hZWP5-5_XMgqE&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+                        <iframe referrerpolicy="no-referrer" loading="lazy" width={'100%'} height="315" src="https://www.youtube.com/embed/63C5xBjOlqk?si=YcL8xztyWmpZM_sp&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe referrerpolicy="no-referrer" loading="lazy" width={'100%'} height="315" src="https://www.youtube.com/embed/vezjG8Q9xg0?si=59_hZWP5-5_XMgqE&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
                       </Box>
                     </Stack>
                     <Stack maxWidth='sm' direction="column" margin='0 auto' alignItems="center">

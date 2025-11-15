@@ -68,8 +68,8 @@ const MpdsWoundsPage = () => {
                     </Stack>
                     <Stack direction='column' spacing={2} alignItems="center" margin='0 auto'>
                       <Box maxWidth='sm' margin='0 auto' spacing={2}>
-                          <iframe loading="lazy" width="100%" height="315" src="https://www.youtube.com/embed/nDxhJGgn7us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <iframe loading="lazy" width="100%" height="315" src="https://www.youtube.com/embed/fU0UvvScXkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
+                          <iframe referrerpolicy="no-referrer" loading="lazy" width="100%" height="315" src="https://www.youtube.com/embed/nDxhJGgn7us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <iframe referrerpolicy="no-referrer" loading="lazy" width="100%" height="315" src="https://www.youtube.com/embed/fU0UvvScXkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
                       </Box>
                     </Stack>
                     <Stack maxWidth='sm' direction="column" margin='0 auto' alignItems="center">

@@ -42,6 +42,7 @@ const IframeWithLoading = ({ src }) => {
             height="450" 
             allowFullScreen
             loading='lazy'
+            referrerpolicy="no-referrer"
         />
       </Box>
     );
